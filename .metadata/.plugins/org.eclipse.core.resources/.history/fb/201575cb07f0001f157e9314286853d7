@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Thông tin người dùng</title>
+<link src="Login.html">
+</head>
+<body>
+	<form action="Login.jsp">
+	
+	</form>
+</body>
+</html>

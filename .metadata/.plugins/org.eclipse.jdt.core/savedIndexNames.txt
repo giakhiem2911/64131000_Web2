@@ -1,0 +1,8 @@
+INDEX VERSION 1.134+C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\.metadata\.plugins\org.eclipse.jdt.core
+1734703654.index
+1865797976.index
+2530802075.index
+990359816.index
+1193317543.index
+2203392308.index
+2060243813.index

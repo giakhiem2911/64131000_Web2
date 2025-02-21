@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="sum.jsp">
+		a = <input type="number" name="a">
+		b = <input type="number" name="b">
+		<input type="submit" value="Tính tổng">
+	</form>
+</body>
+</html>

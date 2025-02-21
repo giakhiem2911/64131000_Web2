@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login</title>	
+</head>
+<body>
+		<form action="Login.jsp" method="post">
+		<div>
+			<p>Tên đăng nhập = <input type="text" name="ten"></p>
+			<p>Mật khẩu = <input type="password" name="mk"></p>
+			<input type="submit" value="Đăng nhập">
+		</div>
+		</form>
+</body>
+</html>
