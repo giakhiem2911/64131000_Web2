@@ -1,7 +1,0 @@
-INDEX VERSION 1.4+C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-1193317543.index
-2203392308.index
-2530802075.index
-1734703654.index
-3757006701.index
-2060243813.index
