@@ -4,4 +4,5 @@
   <module moduleId="org.eclipse.jst.jee.server:ViduHelloWorld" serverId="Tomcat v11.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:HelloJSP" serverId="Tomcat v11.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:BMI" serverId="Tomcat v11.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:SpringMVCBai1Maven" serverId="Tomcat v11.0 Server at localhost"/>
 </modules>
