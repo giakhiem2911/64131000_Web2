@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<center>
+		<form method="post" action="addCalPost">
+			Số thứ nhất: <input type="text" name="a"><br>
+			Số thứ hai: <input type="text" name="b"><br>
+			<input type="submit" value="Tính">
+		</form>
+		KẾT QUẢ: <span th:text="${aaa}"/> + <span th:text="${bbb}"/> = <span th:text="${kq}"/>
+	</center>
+</body>
+</html>
