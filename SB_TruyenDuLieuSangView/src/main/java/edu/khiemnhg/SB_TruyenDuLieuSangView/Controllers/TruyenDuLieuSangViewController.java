@@ -4,8 +4,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import edu.khiemnhg.SB_TruyenDuLieuSangView.Model.SinhVien;
+import jakarta.servlet.http.HttpServletRequest;
 
 @Controller
 public class TruyenDuLieuSangViewController {
@@ -30,5 +34,11 @@ public class TruyenDuLieuSangViewController {
 		dsSinhVien.add(new SinhVien("64131002", "Triết", 21));
 		m.addAttribute("dssv", dsSinhVien);
 		return "dssv";
+	}
+	@RequestMapping("login")
+	public String login(HttpServletRequest request) {
+		String id = request.getParameter("id");
+		String pw = request.getParameter("pw");
+		return "login";
 	}
 }
