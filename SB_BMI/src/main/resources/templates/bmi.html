@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>BMI</title>
+</head>
+<style>
+	body{
+		font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: grey;
+	}
+	.form{
+		background: white;
+		display: flex;
+		width: 30%;
+		text-align: center;
+		padding: 30px;
+		border-radius: 20px;
+	}
+	input{
+		width: auto;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+	}
+	button {
+            width: 50%;
+		    padding: 12px;
+		    background: grey; /* Hiệu ứng gradient */
+		    color: white;
+		    border: none;
+		    border-radius: 25px; /* Bo tròn góc */
+		    cursor: pointer;
+		    font-size: 16px;
+		    font-weight: bold;
+		    text-transform: uppercase;
+		    transition: all 0.3s ease-in-out;
+		    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        button:hover {
+            background: green;
+        }
+</style>
+<body>
+	<div class="form">
+		<form action="/bmi" method="get">
+			<h2>BMI - Chỉ số theo dõi sức khỏe</h2>
+			<h4>Nhập vào chiều cao và cân nặng</h4>
+			<input name="height" placeholder="Fill your height (m)">
+			<input name="weight" placeholder="Fill your weight (kg)">
+			<button value="Submit" type="submit">Submit</button>
+			<p style="color: red;" th:if="${error}" th:text="${error}"></p>
+			<p>Tình trạng sức khỏe: <span th:text="${result}"></span></p>
+		</form>
+	</div>
+</body>
+</html>
