@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Apple Store</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body>
+<div th:fragment="dauTrang"> 
+	<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Apple Store</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Trang chủ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Iphone</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Macbook</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Ipad</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Phụ kiện
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Tai nghe</a></li>
+            <li><a class="dropdown-item" href="#">Sạc dự phòng</a></li>
+            <li><a class="dropdown-item" href="#">Ốp lưng</a></li>
+            <li><a class="dropdown-item" href="#">Apple Watch</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Xem thêm phụ kiện</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Tìm sản phẩm" aria-label="Tìm kiếm">
+        <button class="btn btn-outline-success" type="submit">Tìm</button>
+      </form>
+    </div>
+  </div>
+</nav>
+</div>
+<div th:fragment="bootstrap"> 
+	<div id="carouselExample" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/banner1.png" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="images/banner2.png" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="images/banner3.png" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div>
+<div th:fragment="noiDung"> 
+<div class="container">
+	<h2>Sản phẩm</h2>
+	<div class="d-flex flex-wrap gap-3">
+		<div class="card" style="width: 16rem;">
+		  <img src="images/product1.png" class="card-img-top" alt="...">
+		  <div class="card-body">
+		    <h5 class="card-title">iPhone 16 Pro 128GB</h5>
+		    <p class="card-text">iPhone 16 Pro. Sở hữu thiết kế titan tuyệt đẹp. Điều Khiển Camera. 4K Dolby Vision tốc độ 120 fps. Và chip A18 Pro.</p>
+		  </div>
+		  <ul class="list-group list-group-flush">
+		    <li class="list-group-item">25.490.000₫</li>
+		  </ul>
+		  <div class="card-body">
+		    <a href="#" class="btn btn-primary flex-grow-1 mx-1">Mua ngay</a>
+		    <a href="#" class="btn btn-outline-secondary flex-grow-1 mx-1">Thêm vào giỏ hàng</a>
+		  </div>
+		</div>
+		
+		<div class="card" style="width: 16rem;">
+		  <img src="images/product2.png" class="card-img-top" alt="...">
+		  <div class="card-body">
+		    <h5 class="card-title">iPhone 16 Plus 128GB</h5>
+		    <p class="card-text">iPhone 16 Plus. Giới thiệu Điều Khiển Camera. Camera Fusion 48MP. Năm màu rực rỡ. Và chip A18.</p>
+		  </div>
+		  <ul class="list-group list-group-flush">
+		    <li class="list-group-item">25.490.000₫</li>
+		  </ul>
+		  <div class="card-body">
+		    <a href="#" class="btn btn-primary flex-grow-1 mx-1">Mua ngay</a>
+		    <a href="#" class="btn btn-outline-secondary flex-grow-1 mx-1">Thêm vào giỏ hàng</a>
+		  </div>
+		</div>
+		
+		<div class="card" style="width: 16rem;">
+		  <img src="images/product3.png" class="card-img-top" alt="...">
+		  <div class="card-body">
+		    <h5 class="card-title">iPhone 15</h5>
+		    <p class="card-text">iPhone 15 sở hữu Dynamic Island, camera Chính 48MP và USB-C trong thiết kế bằng kính pha màu và nhôm bền bỉ.</p>
+		  </div>
+		  <ul class="list-group list-group-flush">
+		    <li class="list-group-item">25.490.000₫</li>
+		  </ul>
+		  <div class="card-body">
+		    <a href="#" class="btn btn-primary flex-grow-1 mx-1">Mua ngay</a>
+		    <a href="#" class="btn btn-outline-secondary flex-grow-1 mx-1">Thêm vào giỏ hàng</a>
+		  </div>
+		</div>
+	</div>
+</div>
+
+</div>
+<div th:fragment="sideBar"> 
+<ol class="list-group">
+	<h2>Tin tức công nghệ</h2>
+	  <li class="list-group-item d-flex justify-content-between align-items-start">
+	    <div class="ms-2 me-auto">
+	      iPad Pro 11 inch M4 WiFi 256GB giá chỉ từ 27.890.000 đồng, trả chậm 0% lãi suất, trả trước từ 20%
+	    </div>
+	    <div><img alt="" src="images/new1.png" width="100px"></div>
+	  </li>
+	  <li class="list-group-item d-flex justify-content-between align-items-start">
+	    <div class="ms-2 me-auto">
+	      iPad mini 7 giá chỉ từ 13.990.000 đồng, mua trả chậm 0% lãi suất, trả trước từ 20% tại TopZone
+	    </div>
+	    <div><img alt="" src="images/new3.png" width="100px"></div>
+	  </li>
+	  <li class="list-group-item d-flex justify-content-between align-items-start">
+	    <div class="ms-2 me-auto">
+	      iMac M4 giá chỉ từ 33.990.000 đồng, mua trả chậm 0% lãi suất, trả trước từ 30% tại TopZone
+	    </div>
+	    <div><img alt="" src="images/new2.png" width="100px"></div>
+	  </li>
+	  <li class="list-group-item d-flex justify-content-between align-items-start">
+	    <div class="ms-2 me-auto">
+	      iPad mini 7 giá chỉ từ 13.990.000 đồng, mua trả chậm 0% lãi suất, trả trước từ 20% tại TopZone
+	    </div>
+	    <div><img alt="" src="images/new3.png" width="100px"></div>
+	  </li>
+	  <li class="list-group-item d-flex justify-content-between align-items-start">
+	    <div class="ms-2 me-auto"></div>
+	      Mac mini M4 giá chỉ từ 14.990.000 đồng, mua trả chậm 0% lãi suất, trả trước từ 20% tại TopZone
+	    <div><img alt="" src="images/new4.png" width="100px"></div>
+	  </li>
+	  <li class="list-group-item d-flex justify-content-between align-items-start">
+	    <div class="ms-2 me-auto">
+	      AirPods Pro 2 giá từ 5.790.000 đồng, mua trả chậm 0% lãi suất, trả trước từ 10% tại TopZone
+	    </div>
+	    <div><img alt="" src="images/new5.png" width="100px"></div>
+	  </li>
+</ol>
+</div>
+<div th:fragment="chanTrang"> 
+	<footer class="bg-dark text-white pt-5 pb-4" style="margin-top:30px">
+    <div class="container text-center text-md-start">
+        <div class="row">
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+                <h5 class="text-uppercase fw-bold">Shop Online</h5>
+                <p>Cửa hàng trực tuyến cung cấp sản phẩm chất lượng với giá tốt nhất!</p>
+            </div>
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                <h5 class="text-uppercase fw-bold">Danh mục</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white text-decoration-none">Iphone</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Macbook</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Ipad</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Phụ kiện</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Giảm giá</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                <h5 class="text-uppercase fw-bold">Hỗ trợ</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white text-decoration-none">Chính sách bảo hành</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Chính sách đổi trả</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Giao hàng & Thanh toán</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">FAQs</a></li>
+                </ul>
+            </div>
+            
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-4">
+                <h5 class="text-uppercase fw-bold">Liên hệ</h5>
+                <p><i class="fas fa-home me-2"></i> 123 Đường ABC, Nha Trang</p>
+                <p><i class="fas fa-envelope me-2"></i> shoponline@email.com</p>
+                <p><i class="fas fa-phone me-2"></i> +84 123 456 789</p>
+            </div>
+        </div>
+        <hr class="my-3">
+
+        <div class="row">
+            <div class="col-md-6">
+                <p class="mb-0">&copy; 2025 Shop Online. All Rights Reserved.</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</body>
+</html>
