@@ -8,7 +8,6 @@
     <fullyQualifiedTypeName name="edu.khiemnhg.SinhVien.Model.SinhVien"/>
     <fullyQualifiedTypeName name="edu.khiemnhg.SinhVien.SinhVienController"/>
     <fullyQualifiedTypeName name="edu.khiemnhg.SB_TruyenDuLieuSangView.Model.SinhVien"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMethod"/>
     <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServletRequest"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
@@ -16,4 +15,6 @@
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
     <fullyQualifiedTypeName name="org.springframework.ui.ModelMap"/>
+    <fullyQualifiedTypeName name="edu.khiemnhg.TongHopGK.models.SinhVien"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>

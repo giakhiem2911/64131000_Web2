@@ -14,6 +14,6 @@ public class HomepageController {
 	public String homepage(ModelMap model) {
 		ArrayList<SinhVien> dssv = new ArrayList<SinhVien>();
 		model.addAttribute("dssv", dssv);
-		return "index";
+		return "frontEndViews/index";
 	}
 }
