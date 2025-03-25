@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <div th:replace="~{/frontEndViews/FrontEndModel::dauTrang}"></div>
+    <div class="about-container">
+        <h1>About Us</h1>
+        <p>Welcome to our website! We are dedicated to providing the best services to our customers.</p>
+
+        <div class="about-content">
+            <img src="images/anh1.png" alt="About Us">
+            <div class="about-text">
+                <h2>Our Mission</h2>
+                <p>We aim to deliver high-quality products and services that enhance your experience.</p>
+
+                <h2>Our Team</h2>
+                <p>Our team consists of skilled professionals passionate about what they do.</p>
+            </div>
+        </div>
+    </div>
+    <div th:replace="~{/frontEndViews/FrontEndModel::chanTrang}"></div>
+</body>
+</html>
