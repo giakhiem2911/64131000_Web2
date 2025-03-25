@@ -6206,3 +6206,279 @@ END
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-03-21 12:15:12.735
 !MESSAGE Started org.springframework.tooling.boot.ls LS process 11016
+!SESSION 2025-03-24 17:30:50.717 -----------------------------------------------
+eclipse.buildId=4.34.0.20241128-0756
+java.version=21.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=vi_VN
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY ch.qos.logback.classic 1 0 2025-03-24 17:30:56.665
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY org.eclipse.lemminx.uber-jar 4 0 2025-03-24 17:30:57.367
+!MESSAGE bundle org.eclipse.lemminx.uber-jar:0.29.0 (1045) Component descriptor entry 'OSGI-INF/*.xml' not found
+
+!ENTRY ch.qos.logback.classic 1 0 2025-03-24 17:30:59.354
+!MESSAGE Logback config file: C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.7.0.20241001-1350.xml
+
+!ENTRY org.eclipse.ui 2 0 2025-03-24 17:31:00.310
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-03-24 17:31:00.310
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2025-03-24 17:31:00.916
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-03-24 17:31:00.916
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-03-24 17:31:10.422
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\ADMIN'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-24 17:31:11.146
+!MESSAGE Boot project ADDED: ChaoSpringBoot
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-24 17:31:11.148
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-24 17:31:11.153
+!MESSAGE Started Boot LS process
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-24 17:31:11.180
+!MESSAGE Boot project ADDED: HelloSpringMVC
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-03-24 17:31:11.181
+!MESSAGE Command list starting LS: org.springframework.tooling.boot.ls
+START:
+C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.6.v20250130-0529\jre\bin\javaw.exe
+-Dsts.lsp.client=eclipse
+-Xmx1024m
+-XX:TieredStopAtLevel=1
+-Dspring.config.location=classpath:/application.properties
+-Xlog:jni+resolve=off
+-XX:ErrorFile=C:/NhaTrang_University/HKII_2024_2025/Phat_Trien_UD_Web2/code/.metadata/.plugins/org.springframework.tooling.boot.ls/fatal-error-spring-boot_1742812271180
+-Dlanguageserver.hover-timeout=225
+-jar
+C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\eclipse\plugins\org.springframework.tooling.boot.ls_1.60.0.202502031607\servers\spring-boot-language-server\spring-boot-language-server-1.60.0-SNAPSHOT-exec.jar
+END
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-24 17:31:11.183
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-24 17:31:11.204
+!MESSAGE Boot project ADDED: SB_BMI
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-24 17:31:11.213
+!MESSAGE Boot project ADDED: SB_TruyenDuLieuSangView
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-03-24 17:31:11.215
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 2444
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-24 17:31:11.219
+!MESSAGE Boot project ADDED: SB_TruyenDuLieuTuViewSangController
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-24 17:31:11.256
+!MESSAGE Boot project ADDED: SpringMVCBai1Maven
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-24 17:31:11.294
+!MESSAGE Boot project ADDED: TinhToanSoHoc
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-24 17:31:11.295
+!MESSAGE Boot project ADDED: ToChucBoCuc
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-03-25 08:33:39.436
+!MESSAGE ExecutionException occurred during shutdown of EndpointProxy for org.eclipse.lsp4j.jsonrpc.RemoteEndpoint@7be4dd59
+!STACK 0
+java.util.concurrent.ExecutionException: org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: The pipe is being closed
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.LanguageServerWrapper$LanguageServerContext.close(LanguageServerWrapper.java:165)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+Caused by: org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: The pipe is being closed
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:72)
+	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$3(LanguageServerWrapper.java:356)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.request(RemoteEndpoint.java:171)
+	at org.eclipse.lsp4j.jsonrpc.services.EndpointProxy.invoke(EndpointProxy.java:91)
+	at jdk.proxy13/jdk.proxy13.$Proxy35.shutdown(Unknown Source)
+	at org.eclipse.lsp4e.LanguageServerWrapper$LanguageServerContext.close(LanguageServerWrapper.java:163)
+	... 7 more
+Caused by: java.io.IOException: The pipe is being closed
+	at java.base/java.io.FileOutputStream.writeBytes(Native Method)
+	at java.base/java.io.FileOutputStream.write(FileOutputStream.java:367)
+	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:125)
+	at java.base/java.io.BufferedOutputStream.implFlush(BufferedOutputStream.java:252)
+	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:240)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:69)
+	... 12 more
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-03-25 08:33:39.442
+!MESSAGE ExecutionException occurred during shutdown of EndpointProxy for org.eclipse.lsp4j.jsonrpc.RemoteEndpoint@48f98083
+!STACK 0
+java.util.concurrent.ExecutionException: org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: The pipe is being closed
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.LanguageServerWrapper$LanguageServerContext.close(LanguageServerWrapper.java:165)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+Caused by: org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: The pipe is being closed
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:72)
+	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$3(LanguageServerWrapper.java:356)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.request(RemoteEndpoint.java:171)
+	at org.eclipse.lsp4j.jsonrpc.services.EndpointProxy.invoke(EndpointProxy.java:91)
+	at jdk.proxy12/jdk.proxy12.$Proxy34.shutdown(Unknown Source)
+	at org.eclipse.lsp4e.LanguageServerWrapper$LanguageServerContext.close(LanguageServerWrapper.java:163)
+	... 7 more
+Caused by: java.io.IOException: The pipe is being closed
+	at java.base/java.io.FileOutputStream.writeBytes(Native Method)
+	at java.base/java.io.FileOutputStream.write(FileOutputStream.java:367)
+	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:125)
+	at java.base/java.io.BufferedOutputStream.implFlush(BufferedOutputStream.java:252)
+	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:240)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:69)
+	... 12 more
+!SESSION 2025-03-25 08:39:44.350 -----------------------------------------------
+eclipse.buildId=4.34.0.20241128-0756
+java.version=21.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=vi_VN
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY ch.qos.logback.classic 1 0 2025-03-25 08:39:51.921
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY org.eclipse.lemminx.uber-jar 4 0 2025-03-25 08:39:52.596
+!MESSAGE bundle org.eclipse.lemminx.uber-jar:0.29.0 (1045) Component descriptor entry 'OSGI-INF/*.xml' not found
+
+!ENTRY ch.qos.logback.classic 1 0 2025-03-25 08:39:54.310
+!MESSAGE Logback config file: C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.7.0.20241001-1350.xml
+
+!ENTRY org.eclipse.ui 2 0 2025-03-25 08:39:54.940
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-03-25 08:39:54.940
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2025-03-25 08:39:55.356
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-03-25 08:39:55.356
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-03-25 08:40:03.841
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\ADMIN'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-25 08:40:04.133
+!MESSAGE Boot project ADDED: ChaoSpringBoot
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-25 08:40:04.136
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-25 08:40:04.147
+!MESSAGE Started Boot LS process
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-25 08:40:04.165
+!MESSAGE Boot project ADDED: HelloSpringMVC
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-03-25 08:40:04.173
+!MESSAGE Command list starting LS: org.springframework.tooling.boot.ls
+START:
+C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.6.v20250130-0529\jre\bin\javaw.exe
+-Dsts.lsp.client=eclipse
+-Xmx1024m
+-XX:TieredStopAtLevel=1
+-Dspring.config.location=classpath:/application.properties
+-Xlog:jni+resolve=off
+-XX:ErrorFile=C:/NhaTrang_University/HKII_2024_2025/Phat_Trien_UD_Web2/code/.metadata/.plugins/org.springframework.tooling.boot.ls/fatal-error-spring-boot_1742866804171
+-Dlanguageserver.hover-timeout=225
+-jar
+C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\eclipse\plugins\org.springframework.tooling.boot.ls_1.60.0.202502031607\servers\spring-boot-language-server\spring-boot-language-server-1.60.0-SNAPSHOT-exec.jar
+END
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-25 08:40:04.175
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-25 08:40:04.181
+!MESSAGE Boot project ADDED: SB_BMI
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-03-25 08:40:04.190
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 7624
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-25 08:40:04.204
+!MESSAGE Boot project ADDED: SB_TruyenDuLieuSangView
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-25 08:40:04.227
+!MESSAGE Boot project ADDED: SB_TruyenDuLieuTuViewSangController
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-25 08:40:04.251
+!MESSAGE Boot project ADDED: SpringMVCBai1Maven
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-25 08:40:04.259
+!MESSAGE Boot project ADDED: TinhToanSoHoc
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-25 08:40:04.263
+!MESSAGE Boot project ADDED: ToChucBoCuc
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-25 09:04:51.066
+!MESSAGE Classpath changed for project: TongHopGK
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-25 09:04:51.070
+!MESSAGE Boot project ADDED: TongHopGK
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-25 09:04:51.612
+!MESSAGE Classpath changed for project: TongHopGK
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-25 09:04:54.035
+!MESSAGE Classpath changed for project: TongHopGK
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-25 09:05:03.977
+!MESSAGE Classpath changed for project: TongHopGK
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-25 09:07:09.058
+!MESSAGE Classpath changed for project: TongHopGK
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-25 09:07:09.062
+!MESSAGE Boot project REMOVED: TongHopGK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2025-03-25 09:07:09.069
+!MESSAGE Failed to refresh Code Minings for editor.
+!STACK 1
+Java Model Exception: Error in Java Model (code 969): TongHopGK does not exist
+	at org.eclipse.jdt.internal.core.JavaElement.newNotPresentException(JavaElement.java:546)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getPerProjectInfoCheckExistence(JavaModelManager.java:2535)
+	at org.eclipse.jdt.internal.core.JavaProject.getPerProjectInfo(JavaProject.java:2329)
+	at org.eclipse.jdt.internal.core.JavaProject.getRawClasspath(JavaProject.java:2372)
+	at org.springframework.tooling.ls.eclipse.commons.STS4LanguageClientImpl.lambda$9(STS4LanguageClientImpl.java:439)
+	at org.springframework.tooling.jdt.ls.commons.classpath.ReusableClasspathListenerHandler$CallbackJob.lambda$0(ReusableClasspathListenerHandler.java:76)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.tooling.jdt.ls.commons.classpath.ReusableClasspathListenerHandler$CallbackJob.run(ReusableClasspathListenerHandler.java:76)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2025-03-25 09:07:09.071
+!MESSAGE TongHopGK does not exist
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-25 09:07:38.464
+!MESSAGE Classpath changed for project: TongHopGK
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-25 09:07:38.484
+!MESSAGE Boot project ADDED: TongHopGK
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-25 09:07:39.222
+!MESSAGE Classpath changed for project: TongHopGK
