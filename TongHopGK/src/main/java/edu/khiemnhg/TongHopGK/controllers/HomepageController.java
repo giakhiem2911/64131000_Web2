@@ -21,6 +21,8 @@ public class HomepageController {
 	@GetMapping("/list")
 	public String list(ModelMap model) {
 		ArrayList<SinhVien> dssv = new ArrayList<SinhVien>();
+		SinhVien sinhVien = new SinhVien("64131000", "Gia Khiêm", 8.5f);
+		dssv.add(sinhVien);
 		model.addAttribute("dssv", dssv);
 		return "frontEndViews/studentList";
 	}

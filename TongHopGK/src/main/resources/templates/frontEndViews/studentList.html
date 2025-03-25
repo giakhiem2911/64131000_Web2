@@ -9,7 +9,7 @@
     <div th:replace="~{/frontEndViews/FrontEndModel::dauTrang}"></div>
     
     <h1>Danh sách sinh viên</h1>
-    <table>
+    <table border="1px">
         <thead>
             <tr>
                 <th>MSSV</th>
@@ -26,6 +26,6 @@
         </tbody>
     </table>
     
-    <div th:replace="~{/frontEndViews/FrontEndModel::chanTrang}"></div>
+    <div th:replace="/frontEndViews/FrontEndModel::chanTrang"></div>
 </body>
 </html>
