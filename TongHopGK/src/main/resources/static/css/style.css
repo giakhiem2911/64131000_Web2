@@ -1,5 +1,64 @@
+body{
+	padding:0px;
+	margin:0px;
+}
 .header img{
 	width:100%;
-	height:300px;
+	height:250px;
 	object-fit: cover;
 }
+.menu {
+	height: 20px;
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 10px 0;
+    align-items: center;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    background-color: #ff9800;
+    border-radius: 5px;
+}
+
+.body .col-left{
+	width: 70%;
+}
+.body .col-right{
+	width:30%;
+}
+.body .col-right img{
+	object-fit: cover;
+	width:100%;
+}
+.body{
+	display: flex;
+}
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 16px;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer a {
+    color: #ff9800;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+

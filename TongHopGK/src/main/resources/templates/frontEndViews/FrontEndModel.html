@@ -7,9 +7,22 @@
 </head>
 <body>
 	<div th:fragment="dauTrang" class="header">
-		<img alt="bg-image" src="images/bg-image.png">
+	    <img alt="bg-image" src="images/bg-image.png">
+	    <nav class="menu">
+	        <a href="#">Home</a>
+	        <a href="#">About</a>
+	        <a href="#">List</a>
+	        <a href="#">Add new</a>
+	    </nav>
 	</div>
-	<div th:fragment="noiDung"></div>
-	<div th:fragment="chanTrang"></div>
+	<div th:fragment="noiDung" class="body">
+		<div class="col-left"></div>
+		<div class="col-right">
+			<img alt="anh" src="images/anh1.png">
+		</div>
+	</div>
+	<div th:fragment="chanTrang" class="footer">
+	    <p>&copy; Nguyễn Hoàng Gia Khiêm</p>
+	</div>
 </body>
 </html>
