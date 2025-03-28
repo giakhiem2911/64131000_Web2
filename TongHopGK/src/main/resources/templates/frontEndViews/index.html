@@ -7,7 +7,33 @@
 </head>
 <body>
 	<div th:replace="frontEndViews/FrontEndModel::dauTrang"></div>
-	<div th:replace="frontEndViews/FrontEndModel::noiDung"></div>
+	<div class="content">
+		<div class="col-left">
+			<table class="danhsach">
+		        <thead>
+		            <tr>
+		                <th>MSSV</th>
+		                <th>Họ tên</th>
+		                <th>Điểm TB</th>
+		                <th>Hành động</th>
+		            </tr>
+		        </thead>
+		        <tbody>
+		            <tr th:each="sv : ${dssv}">
+		                <td th:text="${sv.mssv}"></td>
+		                <td th:text="${sv.hoTen}"></td>
+		                <td th:text="${sv.diemTB}"></td>
+		                <td>
+		                	<div class="hanhdong">
+			                	<a th:href="@{/add}">Thêm</a>
+		                	</div>
+		                </td>
+		            </tr>
+		        </tbody>
+		    </table>
+		</div>
+		<div th:replace="frontEndViews/FrontEndModel::noiDung"></div>
+	</div>
 	<div th:replace="frontEndViews/FrontEndModel::chanTrang"></div>
 </body>
 </html>

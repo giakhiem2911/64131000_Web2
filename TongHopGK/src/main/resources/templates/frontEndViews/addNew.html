@@ -1,10 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+    <meta charset="UTF-8">
+    <title>Thêm Sinh Viên</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <style>
+        body {	
+            align-items: center;
+        }
+        .container {
+            background: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 50px;
+            width: 400px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            float:left;
+        }
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .submit-btn:hover {
+            background-color: blue;
+        }
+    </style>
 </head>
 <body>
-	Thêm mới sinh viên
+    <div th:replace="~{/frontEndViews/FrontEndModel::dauTrang}"></div>
+    <center>
+    	<div class="container">
+	        <h2>Thêm Sinh Viên</h2>
+	        <form th:action="add" method="get" class="themSinhVien">
+	            <div class="form-group">
+	                <label for="id">Mã số sinh viên:</label>
+	                <input type="text" id="id" name="id" required>
+	            </div>
+	            <div class="form-group">
+	                <label for="hoTen">Họ và tên:</label>
+	                <input type="text" id="hoTen" name="hoTen" required>
+	            </div>
+	            <div class="form-group">
+	                <label for="diemTB">Điểm:</label>
+	                <input type="number" id="diemTB" name="diemTB" step="0.1" min="0" max="10" required>
+	            </div>
+	            <button type="submit" class="submit-btn">Thêm</button>
+	        </form>
+    	</div>
+    </center>
+    <div th:replace="/frontEndViews/FrontEndModel::chanTrang"></div>
 </body>
 </html>

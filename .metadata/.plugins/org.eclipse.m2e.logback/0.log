@@ -4043,3 +4043,803 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact javax.servlet
 2025-03-25 15:22:13,857 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
 2025-03-25 15:22:13,859 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
 2025-03-25 15:22:13,864 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:05:18,026 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2025-03-25 21:06:04,083 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:06:04,122 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 8 resources from src\main\resources to target\classes
+2025-03-25 21:06:04,145 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:06:25,712 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:06:25,715 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:06:25,720 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:06:49,561 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:06:49,564 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:06:49,569 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:08:55,745 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:08:55,748 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:08:55,754 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:09:23,567 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:09:23,574 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:09:23,585 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:09:36,730 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:09:36,732 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:09:36,737 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:09:59,533 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:09:59,535 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:09:59,540 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:11:06,739 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:11:06,741 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:11:06,746 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:11:29,669 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:11:29,672 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:11:29,682 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:11:47,254 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:11:47,256 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:11:47,260 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:11:55,351 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:11:55,353 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:11:55,358 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:22:07,244 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:22:07,246 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:22:07,252 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:22:17,787 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:22:17,789 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:22:17,794 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:22:26,432 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:22:26,434 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:22:26,439 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:22:34,797 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:22:34,799 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:22:34,803 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:22:46,421 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:22:46,423 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:22:46,427 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:22:59,590 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:22:59,592 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:22:59,596 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:23:25,385 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:23:25,387 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:23:25,391 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:24:18,805 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:24:18,807 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:24:18,810 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:24:33,511 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:24:33,513 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:24:33,516 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:25:27,133 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:25:27,135 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:25:27,139 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:25:33,466 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:25:33,468 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:25:33,471 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:26:30,058 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:26:30,061 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:26:30,065 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:27:24,345 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:27:24,348 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:27:24,352 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:27:55,512 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:27:55,514 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:27:55,518 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:28:14,559 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:28:14,561 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:28:14,565 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:30:00,469 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:30:00,471 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:30:00,478 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:31:35,840 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:31:35,843 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:31:35,847 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:31:42,413 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:31:42,415 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:31:42,418 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:31:54,863 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:31:54,865 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:31:54,869 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:32:02,702 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:32:02,704 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:32:02,708 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:32:17,963 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:32:17,965 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:32:17,970 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:32:21,957 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:32:21,959 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:32:21,963 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:32:36,672 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:32:36,675 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:32:36,680 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:32:43,775 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:32:43,777 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:32:43,781 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:32:56,090 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:32:56,092 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:32:56,095 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:36:43,583 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:36:43,585 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:36:43,590 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:36:58,510 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:36:58,512 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:36:58,516 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:37:00,255 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:37:00,257 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:37:00,261 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:37:05,391 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:37:05,393 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:37:05,396 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:38:41,187 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:38:41,190 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:38:41,195 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:38:56,068 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:38:56,070 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:38:56,074 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:39:04,633 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:39:04,635 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:39:04,640 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:40:50,475 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:40:50,477 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources from src\main\resources to target\classes
+2025-03-25 21:40:50,484 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:41:11,609 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:41:11,610 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:41:11,614 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:41:16,755 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:41:16,757 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:41:16,761 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:41:26,296 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:41:26,298 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:41:26,303 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:41:29,944 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:41:29,946 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:41:29,950 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:42:03,428 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:42:03,436 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:42:03,445 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:42:10,009 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:42:10,010 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:42:10,015 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:42:24,810 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:42:24,812 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:42:24,818 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:42:30,935 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:42:30,937 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:42:30,941 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:43:07,641 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:43:07,643 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:43:07,646 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:43:18,847 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:43:18,849 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:43:18,853 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:45:04,220 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:45:04,222 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:45:04,226 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:45:34,765 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:45:34,767 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:45:34,771 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:45:59,091 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:45:59,093 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:45:59,096 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:46:09,554 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:46:09,557 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:46:09,560 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:46:28,731 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:46:28,733 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:46:28,736 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:46:44,606 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:46:44,608 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:46:44,611 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:47:01,165 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:47:01,168 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:47:01,174 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:47:10,312 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:47:10,314 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:47:10,318 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:47:15,234 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:47:15,236 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:47:15,240 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:47:43,705 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:47:43,707 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:47:43,714 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:48:17,149 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:48:17,157 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:48:17,163 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:48:23,645 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:48:23,647 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:48:23,651 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:48:32,715 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:48:32,717 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:48:32,721 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:48:52,178 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:48:52,184 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:48:52,190 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:48:57,492 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:48:57,494 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:48:57,498 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:49:03,824 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:49:03,826 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:49:03,829 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:49:09,764 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:49:09,767 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:49:09,771 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:50:01,010 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 21:50:01,012 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:50:01,017 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:54:09,432 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:54:09,437 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 8 resources from src\main\resources to target\classes
+2025-03-25 21:54:09,441 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:54:47,698 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:54:47,703 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 8 resources from src\main\resources to target\classes
+2025-03-25 21:54:47,707 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:54:53,461 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:54:53,466 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 8 resources from src\main\resources to target\classes
+2025-03-25 21:54:53,471 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 21:57:58,263 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 21:57:58,267 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 8 resources from src\main\resources to target\classes
+2025-03-25 21:57:58,271 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 22:00:48,448 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 22:00:48,451 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 22:00:48,456 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 22:01:29,396 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 22:01:29,399 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 22:01:29,404 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 22:01:51,072 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 22:01:51,077 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 22:01:51,081 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 22:01:58,966 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 22:01:58,968 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 22:01:58,971 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 22:02:19,070 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 22:02:19,073 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 22:02:19,076 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 22:02:31,991 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 22:02:31,993 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 22:02:31,996 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 22:02:42,835 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 22:02:42,837 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 22:02:42,840 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 22:03:06,880 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 22:03:06,884 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 22:03:06,888 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 22:03:14,457 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 22:03:14,460 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 22:03:14,463 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 22:04:27,723 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 22:04:27,725 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 22:04:27,731 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 22:05:09,992 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 22:05:09,994 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 22:05:09,998 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 22:05:17,061 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 22:05:17,063 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 22:05:17,067 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 22:05:21,986 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 22:05:21,987 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 22:05:21,992 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-25 22:05:32,959 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-25 22:05:32,961 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-25 22:05:32,965 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-26 16:16:04,327 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2025-03-27 14:16:26,687 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2025-03-27 14:17:21,145 [Worker-3: Launching TongHopGK - TongHopGkApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 14:17:21,167 [Worker-3: Launching TongHopGK - TongHopGkApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 8 resources from src\main\resources to target\classes
+2025-03-27 14:17:21,187 [Worker-3: Launching TongHopGK - TongHopGkApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 14:18:49,946 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 14:18:49,951 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 14:18:49,959 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 14:23:49,656 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 14:23:49,666 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 8 resources from src\main\resources to target\classes
+2025-03-27 14:23:49,681 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 14:26:15,800 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 14:26:15,810 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 8 resources from src\main\resources to target\classes
+2025-03-27 14:26:15,820 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 14:28:08,582 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 14:28:08,589 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 8 resources from src\main\resources to target\classes
+2025-03-27 14:28:08,595 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 14:28:23,205 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 14:28:23,210 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 8 resources from src\main\resources to target\classes
+2025-03-27 14:28:23,220 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 14:28:45,465 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 14:28:45,471 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 8 resources from src\main\resources to target\classes
+2025-03-27 14:28:45,479 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 14:33:31,497 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 14:33:31,500 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 14:33:31,506 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 14:34:30,210 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 14:34:30,213 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 14:34:30,218 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 14:34:47,118 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 14:34:47,118 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 14:34:47,126 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 14:34:56,265 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 14:34:56,276 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 8 resources from src\main\resources to target\classes
+2025-03-27 14:34:56,287 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 14:35:47,004 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 14:35:47,007 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 14:35:47,013 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 14:36:39,400 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 14:36:39,406 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 14:36:39,412 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 14:37:20,709 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 14:37:20,712 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 14:37:20,717 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 14:37:42,912 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 14:37:42,915 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 14:37:42,919 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 14:38:06,933 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 14:38:06,949 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 8 resources from src\main\resources to target\classes
+2025-03-27 14:38:06,960 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 14:42:29,215 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 14:42:29,224 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 8 resources from src\main\resources to target\classes
+2025-03-27 14:42:29,231 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 14:43:07,562 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 14:43:07,572 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 8 resources from src\main\resources to target\classes
+2025-03-27 14:43:07,580 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 14:43:59,702 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 14:43:59,719 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 8 resources from src\main\resources to target\classes
+2025-03-27 14:43:59,725 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 14:45:05,633 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 14:45:05,639 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 8 resources from src\main\resources to target\classes
+2025-03-27 14:45:05,647 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 14:45:51,796 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 14:45:51,804 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 8 resources from src\main\resources to target\classes
+2025-03-27 14:45:51,812 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 14:47:01,777 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 14:47:01,785 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 8 resources from src\main\resources to target\classes
+2025-03-27 14:47:01,793 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 14:47:19,019 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 14:47:19,026 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 8 resources from src\main\resources to target\classes
+2025-03-27 14:47:19,049 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 14:47:37,361 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 14:47:37,372 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 8 resources from src\main\resources to target\classes
+2025-03-27 14:47:37,378 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 14:47:56,657 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2025-03-27 14:51:50,012 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 14:51:50,035 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 8 resources from src\main\resources to target\classes
+2025-03-27 14:51:50,046 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 14:51:51,706 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 14:51:51,712 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 8 resources from src\main\resources to target\classes
+2025-03-27 14:51:51,718 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 14:54:06,916 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 14:54:06,936 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 8 resources from src\main\resources to target\classes
+2025-03-27 14:54:06,956 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 14:54:46,871 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 14:54:46,883 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 8 resources from src\main\resources to target\classes
+2025-03-27 14:54:46,890 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 14:56:05,056 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 14:56:05,067 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 8 resources from src\main\resources to target\classes
+2025-03-27 14:56:05,073 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 14:56:13,090 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 14:56:13,102 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 8 resources from src\main\resources to target\classes
+2025-03-27 14:56:13,106 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 14:56:52,138 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 14:56:52,144 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 14:56:52,151 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 14:57:00,478 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 14:57:00,481 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 14:57:00,487 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 14:57:49,013 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 14:57:49,017 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 14:57:49,022 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 14:57:58,633 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 14:57:58,636 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 14:57:58,643 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 14:58:15,378 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 14:58:15,381 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 14:58:15,385 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 14:58:21,055 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 14:58:21,058 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 14:58:21,066 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 14:58:35,253 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 14:58:35,256 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 14:58:35,264 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 14:58:42,861 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 14:58:42,864 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 14:58:42,871 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 14:58:44,006 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 14:58:44,049 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 14:58:44,055 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 15:00:51,099 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 15:00:51,102 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 15:00:51,108 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 15:00:56,283 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 15:00:56,286 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 15:00:56,290 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 15:01:11,857 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 15:01:11,861 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 15:01:11,867 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 15:01:21,142 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 15:01:21,145 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 15:01:21,150 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 15:02:35,601 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 15:02:35,605 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 15:02:35,610 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 15:03:22,603 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 15:03:22,605 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 15:03:22,610 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 15:03:37,334 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 15:03:37,342 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 15:03:37,351 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 15:04:47,730 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 15:04:47,733 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 15:04:47,738 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 15:04:59,556 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 15:04:59,559 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 15:04:59,564 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 15:05:28,936 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 15:05:28,939 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 15:05:28,944 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 15:05:47,089 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 15:05:47,092 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 15:05:47,097 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 15:06:04,995 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 15:06:04,998 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 15:06:05,003 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 15:06:34,468 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 15:06:34,471 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 15:06:34,476 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 15:06:50,097 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 15:06:50,101 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 15:06:50,106 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 15:07:40,627 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 15:07:40,630 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 15:07:40,635 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 15:08:14,955 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 15:08:14,960 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 15:08:14,970 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 15:08:35,503 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 15:08:35,508 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 15:08:35,514 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 15:08:44,824 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 15:08:44,828 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 15:08:44,834 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 15:10:07,980 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 15:10:07,989 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 15:10:07,992 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 15:12:01,729 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 15:12:01,735 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 15:12:01,741 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 15:12:16,154 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 15:12:16,158 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 15:12:16,163 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 15:12:29,630 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 15:12:29,637 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 15:12:29,644 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 15:12:37,054 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 15:12:37,057 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 15:12:37,062 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 15:12:50,539 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 15:12:50,543 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 15:12:50,548 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 15:12:58,091 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 15:12:58,094 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 15:12:58,100 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 15:13:02,237 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 15:13:02,240 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 15:13:02,245 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 15:13:35,832 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 15:13:35,872 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 15:13:35,879 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 15:14:17,547 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 15:14:17,550 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 15:14:17,554 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 15:14:35,323 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 15:14:35,326 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 15:14:35,331 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 15:14:44,172 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 15:14:44,175 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 15:14:44,180 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 15:15:03,499 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 15:15:03,500 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 15:15:03,506 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 15:15:13,020 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 15:15:13,022 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 15:15:13,026 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 15:15:35,511 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 15:15:35,513 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 15:15:35,518 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 15:16:51,254 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 15:16:51,261 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 15:16:51,270 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 15:18:30,289 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 15:18:30,293 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 15:18:30,297 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 15:18:57,642 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 15:18:57,644 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 15:18:57,652 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 15:19:00,732 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 15:19:00,735 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 15:19:00,739 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 15:19:04,534 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 15:19:04,537 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 15:19:04,542 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 15:19:08,118 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 15:19:08,121 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 15:19:08,125 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 15:20:58,614 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 15:20:58,618 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 15:20:58,624 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 15:21:42,440 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 15:21:42,444 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 15:21:42,450 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 15:22:03,942 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 15:22:03,945 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 15:22:03,950 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 15:22:11,147 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 15:22:11,151 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 15:22:11,156 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 15:22:23,483 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 15:22:23,488 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 15:22:23,493 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 15:22:45,444 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 15:22:45,448 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 15:22:45,457 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 15:23:17,176 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 15:23:17,179 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 15:23:17,184 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 15:23:18,602 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-27 15:23:18,605 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-27 15:23:18,609 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-27 15:23:57,017 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2025-03-28 09:20:58,157 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2025-03-28 09:22:51,811 [Worker-18: Launching TongHopGK - TongHopGkApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 09:22:51,841 [Worker-18: Launching TongHopGK - TongHopGkApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 8 resources from src\main\resources to target\classes
+2025-03-28 09:22:51,893 [Worker-18: Launching TongHopGK - TongHopGkApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 09:22:55,085 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 09:22:55,108 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 09:22:55,143 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\ChaoSpringBoot\src\test\resources
+2025-03-28 09:22:57,333 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 09:22:57,375 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 09:22:57,402 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\SB_BMI\src\test\resources
+2025-03-28 09:22:59,193 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 09:22:59,226 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 4 resources from src\main\resources to target\classes
+2025-03-28 09:22:59,282 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\SB_TruyenDuLieuSangView\src\test\resources
+2025-03-28 09:23:00,938 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 09:23:00,965 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources from src\main\resources to target\classes
+2025-03-28 09:23:00,981 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\SB_TruyenDuLieuTuViewSangController\src\test\resources
+2025-03-28 09:23:01,706 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 8 resources from src\main\resources to target\classes
+2025-03-28 09:23:01,755 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\SpringMVCBai1Maven\src\test\resources
+2025-03-28 09:23:04,271 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 09:23:04,301 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 09:23:04,313 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TinhToanSoHoc\src\test\resources
+2025-03-28 09:23:05,715 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 09:23:05,738 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 15 resources from src\main\resources to target\classes
+2025-03-28 09:23:05,819 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\ToChucBoCuc\src\test\resources
+2025-03-28 09:24:26,856 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 09:24:26,909 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 09:24:26,915 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 09:27:56,819 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 09:27:56,823 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 09:27:56,827 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 09:28:12,773 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 09:28:12,776 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 09:28:12,782 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 09:31:03,176 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 09:31:03,181 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 09:31:03,188 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 09:32:10,776 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 09:32:10,780 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 09:32:10,827 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 09:32:19,591 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 09:32:19,595 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 09:32:19,602 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 09:32:57,903 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 09:32:57,909 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 09:32:57,921 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 09:33:44,517 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 09:33:44,520 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 09:33:44,525 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 09:35:48,428 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 09:35:48,430 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 09:35:48,436 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 09:36:26,484 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 09:36:26,487 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 09:36:26,494 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 09:36:34,272 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 09:36:34,275 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 09:36:34,280 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 09:36:42,680 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 09:36:42,683 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 09:36:42,690 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 09:37:13,857 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 09:37:13,859 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 09:37:13,863 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 09:37:36,239 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 09:37:36,242 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 09:37:36,247 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 09:37:42,627 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 09:37:42,631 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 09:37:42,637 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 09:39:49,551 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 09:39:49,555 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources from src\main\resources to target\classes
+2025-03-28 09:39:49,582 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 09:44:37,108 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 09:44:37,112 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 09:44:37,121 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 09:45:53,192 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 09:45:53,196 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 09:45:53,201 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 09:46:26,005 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 09:46:26,009 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 09:46:26,015 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 09:46:37,178 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 09:46:37,181 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 09:46:37,185 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 09:49:41,582 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 09:49:41,587 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 09:49:41,592 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 09:51:00,090 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 09:51:00,094 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 09:51:00,103 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 09:52:00,707 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 09:52:00,713 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 09:52:00,721 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 09:52:13,280 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 09:52:13,284 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 09:52:13,289 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 09:52:17,070 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 09:52:17,073 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 09:52:17,078 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 09:53:27,731 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 09:53:27,734 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 09:53:27,739 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 09:54:40,139 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 09:54:40,145 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 09:54:40,153 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 09:55:06,250 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 09:55:06,253 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 09:55:06,265 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 09:55:32,122 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 09:55:32,125 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 09:55:32,130 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 09:55:42,537 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 09:55:42,540 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 09:55:42,544 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 09:56:21,669 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 09:56:21,673 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 09:56:21,679 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 09:57:20,722 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 09:57:20,730 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 09:57:20,735 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 09:57:51,058 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 09:57:51,061 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 09:57:51,065 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 09:58:07,399 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 09:58:07,402 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 09:58:07,406 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 09:58:12,846 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 09:58:12,850 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 09:58:12,856 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 09:59:13,133 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 09:59:13,137 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 09:59:13,140 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 09:59:43,416 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 09:59:43,421 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 09:59:43,427 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 09:59:47,799 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 09:59:47,805 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 09:59:47,814 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 10:00:16,518 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 10:00:16,523 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 10:00:16,527 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 10:00:22,777 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 10:00:22,782 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 10:00:22,788 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 10:01:42,317 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 10:01:42,323 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 10:01:42,333 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 10:02:37,289 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 10:02:37,292 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 10:02:37,297 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 10:03:29,673 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 10:03:29,676 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 10:03:29,682 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 10:03:57,523 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 10:03:57,526 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 10:03:57,536 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 10:04:29,120 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 10:04:29,124 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 10:04:29,130 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 10:04:39,944 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 10:04:39,948 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 10:04:39,953 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 10:05:20,016 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 10:05:20,022 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 10:05:20,030 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 10:06:46,351 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 10:06:46,354 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 10:06:46,359 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 10:07:07,362 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 10:07:07,364 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 10:07:07,370 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 10:08:10,633 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 10:08:10,637 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 10:08:10,642 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 10:08:32,332 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 10:08:32,334 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 10:08:32,339 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 10:08:44,668 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 10:08:44,670 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 10:08:44,676 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 10:10:58,944 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 10:10:58,957 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 9 resources from src\main\resources to target\classes
+2025-03-28 10:10:58,965 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 10:15:08,322 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 10:15:08,327 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 10:15:08,332 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 10:15:42,751 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 10:15:42,754 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 10:15:42,759 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 10:15:59,577 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 10:15:59,582 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 10:15:59,588 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 10:16:04,460 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 10:16:04,462 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 10:16:04,468 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 10:16:53,572 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 10:16:53,575 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 10:16:53,581 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 10:17:09,921 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 10:17:09,932 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 10:17:09,946 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 10:17:22,729 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 10:17:22,733 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 10:17:22,739 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 10:18:10,927 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 10:18:10,931 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 10:18:10,937 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 10:18:26,709 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 10:18:26,711 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 10:18:26,715 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 10:20:19,164 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 10:20:19,168 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 10:20:19,181 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 10:20:32,808 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 10:20:32,812 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 10:20:32,818 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 10:20:43,353 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 10:20:43,361 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 10:20:43,375 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 10:20:51,795 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 10:20:51,798 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 10:20:51,804 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 10:21:22,359 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 10:21:22,361 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 10:21:22,366 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 10:21:49,263 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 10:21:49,266 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 10:21:49,271 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 10:21:57,904 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 10:21:57,906 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 10:21:57,912 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 10:22:13,144 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 10:22:13,147 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 10:22:13,152 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 10:22:30,524 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 10:22:30,527 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 10:22:30,531 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 10:23:01,207 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 10:23:01,211 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 10:23:01,218 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 10:23:44,787 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 10:23:44,791 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 10:23:44,799 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 10:25:09,059 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 10:25:09,064 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 10:25:09,073 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 10:25:24,961 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 10:25:24,966 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 10:25:24,971 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 10:25:32,902 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 10:25:32,906 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 10:25:32,912 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 10:25:38,571 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 10:25:38,576 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 10:25:38,583 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 10:26:39,996 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 10:26:39,999 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 10:26:40,004 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 10:26:44,815 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 10:26:44,858 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 10:26:44,866 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 10:26:49,815 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 10:26:49,819 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 10:26:49,825 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources
+2025-03-28 10:26:57,448 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-28 10:26:57,450 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-28 10:26:57,458 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\TongHopGK\src\test\resources

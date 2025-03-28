@@ -7,11 +7,10 @@
 </head>
 <body>
     <div th:replace="~{/frontEndViews/FrontEndModel::dauTrang}"></div>
-    <div class="about-container">
-        <h1>About Us</h1>
-        <p>Welcome to our website! We are dedicated to providing the best services to our customers.</p>
-
-        <div class="about-content">
+    <div class="content">
+        <div class="col-left">        
+	        <h1>About Us</h1>
+	        <p>Welcome to our website! We are dedicated to providing the best services to our customers.</p>
             <img src="images/anh1.png" alt="About Us">
             <div class="about-text">
                 <h2>Our Mission</h2>
@@ -21,6 +20,7 @@
                 <p>Our team consists of skilled professionals passionate about what they do.</p>
             </div>
         </div>
+        <div th:replace="~{/frontEndViews/FrontEndModel::noiDung}"></div>
     </div>
     <div th:replace="~{/frontEndViews/FrontEndModel::chanTrang}"></div>
 </body>
