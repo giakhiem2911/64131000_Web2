@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" th:href="@{/css/style.css}">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div th:fragment="dauTrang" class="header">
+		<img alt="" src="images/banner.jpg">
+		<div class="menu">
+			<a>Trang chủ</a>
+			<a>About John</a>
+			<a>Các nhà đầu tư</a>
+			<a>Thêm nhà đầu tư</a>
+		</div>
+	</div>
+	<div th:fragment="sidebar" class="sideBar">
+		<img alt="" src="">
+	</div>
+	<div th:fragment="chanTrang" class="footer">
+		<p>Nguyễn Hoàng Gia Khiêm</p>
+	</div>
+</body>
+</html>
