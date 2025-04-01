@@ -8,6 +8,7 @@
 <body>
     <div th:replace="frontEndViews/FrontEndModel::dauTrang"></div>
     <div class="content">
+        <div th:replace="frontEndViews/FrontEndModel::sideBar"></div>
         <div class="col-left">
             <table class="danhsach">
                 <thead>
@@ -32,7 +33,6 @@
                 </tbody>
             </table>
         </div>
-        <div th:replace="frontEndViews/FrontEndModel::sideBar"></div>
     </div>
     <div th:replace="frontEndViews/FrontEndModel::chanTrang"></div>
 </body>
