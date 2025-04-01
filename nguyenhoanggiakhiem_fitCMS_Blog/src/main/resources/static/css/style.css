@@ -22,15 +22,14 @@ body {
     align-items: center;
 }
 
-.header .menu a {
-    margin-right: 15px;
-    text-decoration: none;
+.header .logo p {
+    font-size: 14px;
     color: #333;
-    font-weight: bold;
 }
 
-.header .menu a:hover {
-    color: #007bff;
+.header .username p {
+    font-size: 14px;
+    color: #333;
 }
 
 /* Main Content Area */
@@ -48,12 +47,6 @@ body {
     border-right: 1px solid #ddd;
 }
 
-/* Content Area Styling */
-.col-left {
-    flex: 1;
-    padding: 20px;
-}
-
 .sideBar p {
     font-weight: bold;
     margin-bottom: 10px;
@@ -68,6 +61,12 @@ body {
 
 .sideBar a:hover {
     color: #007bff;
+}
+
+/* Content Area Styling */
+.col-left {
+    flex: 1;
+    padding: 20px;
 }
 
 /* Table Styling */

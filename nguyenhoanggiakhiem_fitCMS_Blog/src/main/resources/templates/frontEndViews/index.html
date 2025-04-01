@@ -10,28 +10,7 @@
     <div class="content">
         <div th:replace="frontEndViews/FrontEndModel::sideBar"></div>
         <div class="col-left">
-            <table class="danhsach">
-                <thead>
-                    <tr>
-                        <th>id</th>
-                        <th>Pagename</th>
-                        <th>parentPageId</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr th:each="page : ${pageList}">
-                        <td th:text="${page.id}"></td>
-                        <td th:text="${page.pageName}"></td>
-                        <td th:text="${page.parentPageId}"></td>
-                        <td>
-                            <a th:href="@{/page/view/{id}(id=${page.id})}">[View]</a>
-                            <a th:href="@{/page/edit/{id}(id=${page.id})}">[Edit]</a>
-                            <a th:href="@{/page/delete/{id}(id=${page.id})}">[Delete]</a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <img alt="" src="images/cv.png">
         </div>
     </div>
     <div th:replace="frontEndViews/FrontEndModel::chanTrang"></div>
