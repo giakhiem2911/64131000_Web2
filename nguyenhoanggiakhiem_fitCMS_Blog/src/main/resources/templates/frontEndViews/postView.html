@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Xem Post</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <div th:replace="frontEndViews/FrontEndModel::dauTrang"></div>
+    <div class="content">
+        <div th:replace="frontEndViews/FrontEndModel::sideBar"></div>
+        <div class="col-right">
+            <h2>Xem chi tiết Post</h2>
+            <p><strong>ID:</strong> <span th:text="${post.id}"></span></p>
+            <p><strong>Tiêu đề:</strong> <span th:text="${post.title}"></span></p>
+            <p><strong>Nội dung:</strong> <span th:text="${post.content}"></span></p>
+            <p><strong>ID Danh mục:</strong> <span th:text="${post.categoryId}"></span></p>
+            <p><strong>URL hình ảnh thumbnail:</strong> <span th:text="${post.duThumbnailImage}"></span></p>
+            <a th:href="@{/post/all}">Quay lại danh sách</a>
+        </div>
+    </div>
+    <div th:replace="frontEndViews/FrontEndModel::chanTrang"></div>
+</body>
+</html>

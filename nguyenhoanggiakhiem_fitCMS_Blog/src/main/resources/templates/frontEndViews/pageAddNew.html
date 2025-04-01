@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Thêm mới Page</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <div th:replace="frontEndViews/FrontEndModel::dauTrang"></div>
+    <div class="content">
+        <div th:replace="frontEndViews/FrontEndModel::sideBar"></div>
+        <div class="col-right">
+            <h2>Thêm mới Page</h2>
+            <form th:action="@{/page/new}" th:object="${page}" method="post">
+                <div>
+                    <label for="pageName">Tên Page:</label>
+                    <input type="text" id="pageName" th:field="*{pageName}" required>
+                </div>
+                <div>
+                    <label for="keyword">Từ khóa:</label>
+                    <input type="text" id="keyword" th:field="*{keyword}">
+                </div>
+                <div>
+                    <label for="content">Nội dung:</label>
+                    <textarea id="content" th:field="*{content}"></textarea>
+                </div>
+                <div>
+                    <label for="parentPageId">ID Page cha:</label>
+                    <input type="number" id="parentPageId" th:field="*{parentPageId}">
+                </div>
+                <div>
+                    <label for="duThumbnailImage">URL hình ảnh thumbnail:</label>
+                    <input type="text" id="duThumbnailImage" th:field="*{duThumbnailImage}">
+                </div>
+                <button type="submit">Lưu</button>
+            </form>
+        </div>
+    </div>
+    <div th:replace="frontEndViews/FrontEndModel::chanTrang"></div>
+</body>
+</html>

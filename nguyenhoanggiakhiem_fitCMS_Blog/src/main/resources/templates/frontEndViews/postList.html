@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Danh sách Post</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <div th:replace="frontEndViews/FrontEndModel::dauTrang"></div>
+    <div class="content">
+        <div th:replace="frontEndViews/FrontEndModel::sideBar"></div>
+        <div class="col-right">
+            <h2>Danh sách Post</h2>
+            <table class="danhsach">
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>Tiêu đề</th>
+                        <th>ID Danh mục</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="post : ${postList}">
+                        <td th:text="${post.id}"></td>
+                        <td th:text="${post.title}"></td>
+                        <td th:text="${post.categoryId}"></td>
+                        <td>
+                            <a th:href="@{/post/view/{id}(id=${post.id})}">[View]</a>
+                            <a th:href="@{/post/edit/{id}(id=${post.id})}">[Edit]</a>
+                            <a th:href="@{/post/delete/{id}(id=${post.id})}">[Delete]</a>
+                        </td>
+                    </tr>
+                    <tr th:if="${postList.isEmpty()}">
+                        <td colspan="4">Không có Post nào.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div th:replace="frontEndViews/FrontEndModel::chanTrang"></div>
+</body>
+</html>

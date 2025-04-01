@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Page List</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <div th:replace="frontEndViews/FrontEndModel::dauTrang"></div>
+    <div class="content">
+        <div th:replace="frontEndViews/FrontEndModel::sideBar"></div>
+        <div class="col-right">
+            <h2>Danh sách Page</h2>
+            <table class="danhsach">
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>Page Name</th>
+                        <th>Parent Page ID</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="page : ${pageList}">
+                        <td th:text="${page.id}"></td>
+                        <td th:text="${page.pageName}"></td>
+                        <td th:text="${page.parentPageId}"></td>
+                        <td>
+                            <a th:href="@{/page/view/{id}(id=${page.id})}">[View]</a>
+                            <a th:href="@{/page/edit/{id}(id=${page.id})}">[Edit]</a>
+                            <a th:href="@{/page/delete/{id}(id=${page.id})}">[Delete]</a>
+                        </td>
+                    </tr>
+                    <tr th:if="${pageList.isEmpty()}">
+                        <td colspan="4">Không có Page nào.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div th:replace="frontEndViews/FrontEndModel::chanTrang"></div>
+</body>
+</html>
