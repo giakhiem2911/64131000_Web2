@@ -30,7 +30,6 @@ public class HomeController {
         return "frontEndViews/index";
     }
 
-    // Page Operations
     @GetMapping("/page/all")
     public String pageList(ModelMap model) {
         model.addAttribute("pageList", pageList);
@@ -100,6 +99,6 @@ public class HomeController {
     @GetMapping("/post/delete/{id}")
     public String deletePost(@PathVariable("id") Long id) {
         postList.removeIf(post -> post.getId().equals(id));
-        return "redirect:/post/list";
+        return "redirect:/post/all";
     }
 }
