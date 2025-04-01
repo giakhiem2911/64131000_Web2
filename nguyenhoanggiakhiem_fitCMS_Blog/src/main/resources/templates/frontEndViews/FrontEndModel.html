@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>TongHopGK</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <div th:fragment="dauTrang" class="header">
+        <img alt="bg-image" th:src="@{/images/bg-image.png}">
+        <nav class="menu">
+            <a th:href="@{/}">Home</a>
+            <a th:href="@{/about}">About</a>
+            <a th:href="@{/list}">List</a>
+            <a th:href="@{/add}">Add new</a>
+        </nav>
+    </div>
+    <div th:fragment="sideBar" class="sideBar">
+        <img alt="anh" th:src="@{/images/sidebar.png}">
+    </div>
+    <div th:fragment="chanTrang" class="footer">
+        <p>© Nguyễn Hoàng Gia Khiêm</p>
+    </div>
+</body>
+</html>
