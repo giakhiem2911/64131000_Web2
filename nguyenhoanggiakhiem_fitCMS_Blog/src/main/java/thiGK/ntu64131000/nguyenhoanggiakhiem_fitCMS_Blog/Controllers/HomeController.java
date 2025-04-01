@@ -31,23 +31,23 @@ public class HomeController {
     }
 
     // Page Operations
-    @GetMapping("/page/list")
+    @GetMapping("/page/all")
     public String pageList(ModelMap model) {
         model.addAttribute("pageList", pageList);
         return "frontEndViews/pageList";
     }
 
-    @GetMapping("/page/addnew")
+    @GetMapping("/page/new")
     public String addNewPage(ModelMap model) {
         model.addAttribute("page", new Page());
         return "frontEndViews/pageAddNew";
     }
 
-    @PostMapping("/page/addnew")
+    @PostMapping("/page/new")
     public String saveNewPage(@ModelAttribute("page") Page page) {
         page.setId(pageIdCounter++);
         pageList.add(page);
-        return "redirect:/page/list";
+        return "redirect:/page/all";
     }
 
     @GetMapping("/page/view/{id}")
@@ -64,27 +64,26 @@ public class HomeController {
     @GetMapping("/page/delete/{id}")
     public String deletePage(@PathVariable("id") Long id) {
         pageList.removeIf(page -> page.getId().equals(id));
-        return "redirect:/page/list";
+        return "redirect:/page/all";
     }
 
-    // Post Operations
-    @GetMapping("/post/list")
+    @GetMapping("/post/all")
     public String postList(ModelMap model) {
         model.addAttribute("postList", postList);
         return "frontEndViews/postList";
     }
 
-    @GetMapping("/post/addnew")
+    @GetMapping("/post/new")
     public String addNewPost(ModelMap model) {
         model.addAttribute("post", new Post());
         return "frontEndViews/postAddNew";
     }
 
-    @PostMapping("/post/addnew")
+    @PostMapping("/post/new")
     public String saveNewPost(@ModelAttribute("post") Post post) {
         post.setId(postIdCounter++);
         postList.add(post);
-        return "redirect:/post/list";
+        return "redirect:/post/all";
     }
 
     @GetMapping("/post/view/{id}")
@@ -94,7 +93,7 @@ public class HomeController {
             model.addAttribute("post", post.get());
             return "frontEndViews/postView";
         } else {
-            return "redirect:/post/list";
+            return "redirect:/post/all";
         }
     }
 
