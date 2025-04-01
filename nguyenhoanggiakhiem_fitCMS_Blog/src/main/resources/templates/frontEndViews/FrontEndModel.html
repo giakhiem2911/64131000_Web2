@@ -7,16 +7,16 @@
 </head>
 <body>
     <div th:fragment="dauTrang" class="header">
-        <img alt="bg-image" th:src="@{/images/bg-image.png}">
-        <nav class="menu">
-            <a th:href="@{/}">Home</a>
-            <a th:href="@{/about}">About</a>
-            <a th:href="@{/list}">List</a>
-            <a th:href="@{/add}">Add new</a>
-        </nav>
+        <div class="menu">
+            <a th:href="@{/dashboard}">Dashboard</a>
+            <a th:href="@{/page/list}">Page - List</a>
+            <a th:href="@{/page/addnew}">Page - Addnew</a>
+            <a th:href="@{/post/list}">Post - List</a>
+            <a th:href="@{/post/addnew}">Post - Addnew</a>
+        </div>
     </div>
     <div th:fragment="sideBar" class="sideBar">
-        <img alt="anh" th:src="@{/images/sidebar.png}">
+        <p>Sidebar content here</p>
     </div>
     <div th:fragment="chanTrang" class="footer">
         <p>© Nguyễn Hoàng Gia Khiêm</p>

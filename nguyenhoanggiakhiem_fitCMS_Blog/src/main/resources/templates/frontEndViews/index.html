@@ -1,39 +1,39 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="UTF-8">
-<title>Trang chủ</title>
-<link rel="stylesheet" th:href="@{/css/style.css}">
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
-	<div th:replace="frontEndViews/FrontEndModel::dauTrang"></div>
-	<div class="content">
-		<div class="col-left">
-			<table class="danhsach">
-		        <thead>
-		            <tr>
-		                <th>MSSV</th>
-		                <th>Họ tên</th>
-		                <th>Điểm TB</th>
-		                <th>Hành động</th>
-		            </tr>
-		        </thead>
-		        <tbody>
-		            <tr th:each="sv : ${dssv}">
-		                <td th:text="${sv.mssv}"></td>
-		                <td th:text="${sv.hoTen}"></td>
-		                <td th:text="${sv.diemTB}"></td>
-		                <td>
-		                	<div class="hanhdong">
-			                	<a th:href="@{/add}">Thêm</a>
-		                	</div>
-		                </td>
-		            </tr>
-		        </tbody>
-		    </table>
-		</div>
-		<div th:replace="frontEndViews/FrontEndModel::sideBar"></div>
-	</div>
-	<div th:replace="frontEndViews/FrontEndModel::chanTrang"></div>
+    <div th:replace="frontEndViews/FrontEndModel::dauTrang"></div>
+    <div class="content">
+        <div class="col-left">
+            <table class="danhsach">
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>Pagename</th>
+                        <th>parentPageId</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="page : ${pageList}">
+                        <td th:text="${page.id}"></td>
+                        <td th:text="${page.pageName}"></td>
+                        <td th:text="${page.parentPageId}"></td>
+                        <td>
+                            <a th:href="@{/page/view/{id}(id=${page.id})}">[View]</a>
+                            <a th:href="@{/page/edit/{id}(id=${page.id})}">[Edit]</a>
+                            <a th:href="@{/page/delete/{id}(id=${page.id})}">[Delete]</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div th:replace="frontEndViews/FrontEndModel::sideBar"></div>
+    </div>
+    <div th:replace="frontEndViews/FrontEndModel::chanTrang"></div>
 </body>
 </html>
