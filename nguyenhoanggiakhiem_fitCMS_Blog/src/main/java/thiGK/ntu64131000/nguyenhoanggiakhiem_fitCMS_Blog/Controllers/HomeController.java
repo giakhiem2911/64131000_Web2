@@ -13,7 +13,6 @@ import java.util.Optional;
 @Controller
 public class HomeController {
 
-    // In-memory storage for Pages and Posts
     private List<Page> pageList = new ArrayList<>();
     private List<Post> postList = new ArrayList<>();
     private Long pageIdCounter = 1L;
@@ -32,23 +31,23 @@ public class HomeController {
     }
 
     // Page Operations
-    @GetMapping("/page/all")
+    @GetMapping("/page/list")
     public String pageList(ModelMap model) {
         model.addAttribute("pageList", pageList);
         return "frontEndViews/pageList";
     }
 
-    @GetMapping("/page/new")
+    @GetMapping("/page/addnew")
     public String addNewPage(ModelMap model) {
         model.addAttribute("page", new Page());
         return "frontEndViews/pageAddNew";
     }
 
-    @PostMapping("/page/new")
+    @PostMapping("/page/addnew")
     public String saveNewPage(@ModelAttribute("page") Page page) {
         page.setId(pageIdCounter++);
         pageList.add(page);
-        return "redirect:/page/all";
+        return "redirect:/page/list";
     }
 
     @GetMapping("/page/view/{id}")
@@ -65,27 +64,27 @@ public class HomeController {
     @GetMapping("/page/delete/{id}")
     public String deletePage(@PathVariable("id") Long id) {
         pageList.removeIf(page -> page.getId().equals(id));
-        return "redirect:/page/all";
+        return "redirect:/page/list";
     }
 
     // Post Operations
-    @GetMapping("/post/all")
+    @GetMapping("/post/list")
     public String postList(ModelMap model) {
         model.addAttribute("postList", postList);
         return "frontEndViews/postList";
     }
 
-    @GetMapping("/post/new")
+    @GetMapping("/post/addnew")
     public String addNewPost(ModelMap model) {
         model.addAttribute("post", new Post());
         return "frontEndViews/postAddNew";
     }
 
-    @PostMapping("/post/new")
+    @PostMapping("/post/addnew")
     public String saveNewPost(@ModelAttribute("post") Post post) {
         post.setId(postIdCounter++);
         postList.add(post);
-        return "redirect:/post/all";
+        return "redirect:/post/list";
     }
 
     @GetMapping("/post/view/{id}")
@@ -95,13 +94,13 @@ public class HomeController {
             model.addAttribute("post", post.get());
             return "frontEndViews/postView";
         } else {
-            return "redirect:/post/all";
+            return "redirect:/post/list";
         }
     }
 
     @GetMapping("/post/delete/{id}")
     public String deletePost(@PathVariable("id") Long id) {
         postList.removeIf(post -> post.getId().equals(id));
-        return "redirect:/post/all";
+        return "redirect:/post/list";
     }
 }

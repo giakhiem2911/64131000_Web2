@@ -11,7 +11,7 @@
         <div th:replace="frontEndViews/FrontEndModel::sideBar"></div>
         <div class="col-right">
             <h2>Thêm mới Page</h2>
-            <form th:action="@{/page/new}" th:object="${page}" method="post">
+            <form th:action="@{/page/addnew}" th:object="${page}" method="post">
                 <div>
                     <label for="pageName">Tên Page:</label>
                     <input type="text" id="pageName" th:field="*{pageName}" required>
