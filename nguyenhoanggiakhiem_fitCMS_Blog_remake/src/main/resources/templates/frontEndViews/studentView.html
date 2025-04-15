@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Xem Student</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <div class="content">
+        <div th:replace="frontEndViews/FrontEndModel::sideBar"></div>
+        <div class="col-right">
+            <div th:replace="frontEndViews/FrontEndModel::dauTrang"></div>
+            <h2>Xem chi tiết Student</h2>
+            <p><strong>ID:</strong> <span th:text="${student.id}"></span></p>
+            <p><strong>Tên Student:</strong> <span th:text="${student.name}"></span></p>
+            <p><strong>ID Nhóm:</strong> <span th:text="${student.groupId}"></span></p>
+            <a th:href="@{/student/all}">Quay lại danh sách</a>
+        </div>
+    </div>
+    <div th:replace="frontEndViews/FrontEndModel::chanTrang"></div>
+</body>
+</html>

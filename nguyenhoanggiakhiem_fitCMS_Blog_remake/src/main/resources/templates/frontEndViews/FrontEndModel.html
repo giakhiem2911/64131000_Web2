@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <div th:fragment="dauTrang" class="header">
+        <div class="username">
+            <p>Nguyễn Hoàng Gia Khiêm</p>
+        </div>
+    </div>
+    <div th:fragment="sideBar" class="sideBar">
+    	<div class="logo">
+            <img alt="" th:src="@{/images/logo.png}">
+	    </div>
+	    <div class="menu">
+	        <a th:href="@{/dashboard}">Dashboard</a>
+	        <a th:href="@{/topic/all}">Topic - List</a>
+	        <a th:href="@{/topic/new}">Topic - Addnew</a>
+	        <a th:href="@{/student/all}">Student - List</a>
+	        <a th:href="@{/student/new}">Student - Addnew</a>
+	    </div>
+    </div>
+    <div th:fragment="chanTrang" class="footer">
+        <p>© 2025 by Student Name – FIT.NTU</p>
+    </div>
+</body>
+</html>

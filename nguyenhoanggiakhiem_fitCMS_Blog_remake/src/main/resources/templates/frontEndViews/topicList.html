@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Topic List</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <div class="content">
+        <div th:replace="frontEndViews/FrontEndModel::sideBar"></div>
+        <div class="col-right">
+            <div th:replace="frontEndViews/FrontEndModel::dauTrang"></div>
+            <h2>Danh sách Topic</h2>
+            <div th:if="${message}" class="alert">
+                <p th:text="${message}"></p>
+            </div>
+            <table class="danhsach">
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>topicName</th>
+                        <th>supervisorId</th>
+                        <th>topicType</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="topic : ${topicList}">
+                        <td th:text="${topic.id}"></td>
+                        <td th:text="${topic.topicName}"></td>
+                        <td th:text="${topic.supervisorId}"></td>
+                        <td th:text="${topic.topicType}"></td>
+                        <td>
+                            <a th:href="@{/topic/view/{id}(id=${topic.id})}">[view]</a>
+                            <a th:href="@{/topic/edit/{id}(id=${topic.id})}">[edit]</a>
+                            <form th:action="@{/topic/delete/{id}(id=${topic.id})}" method="post" style="display:inline;">
+                                <button type="submit" onclick="return confirm('Bạn có chắc muốn xóa Topic này?')">[delete]</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr th:if="${topicList.isEmpty()}">
+                        <td colspan="5">Không có Topic nào.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div th:replace="frontEndViews/FrontEndModel::chanTrang"></div>
+</body>
+</html>

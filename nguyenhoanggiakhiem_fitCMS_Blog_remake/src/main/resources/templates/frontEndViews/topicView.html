@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Xem Topic</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <div th:replace="frontEndViews/FrontEndModel::dauTrang"></div>
+    <div class="content">
+        <div th:replace="frontEndViews/FrontEndModel::sideBar"></div>
+        <div class="col-right">
+            <h2>Xem chi tiết Topic</h2>
+            <p><strong>ID:</strong> <span th:text="${topic.id}"></span></p>
+            <p><strong>Tên Topic:</strong> <span th:text="${topic.topicName}"></span></p>
+            <p><strong>Mô tả:</strong> <span th:text="${topic.topicDescription}"></span></p>
+            <p><strong>ID Người hướng dẫn:</strong> <span th:text="${topic.supervisorId}"></span></p>
+            <p><strong>Loại Topic:</strong> <span th:text="${topic.topicType}"></span></p>
+            <a th:href="@{/topic/all}">Quay lại danh sách</a>
+        </div>
+    </div>
+    <div th:replace="frontEndViews/FrontEndModel::chanTrang"></div>
+</body>
+</html>

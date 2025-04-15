@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Danh sách Student</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <div class="content">
+        <div th:replace="frontEndViews/FrontEndModel::sideBar"></div>
+        <div class="col-right">
+            <div th:replace="frontEndViews/FrontEndModel::dauTrang"></div>
+            <h2>Danh sách Student</h2>
+            <div th:if="${message}" class="alert">
+                <p th:text="${message}"></p>
+            </div>
+            <table class="danhsach">
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>Name</th>
+                        <th>groupId</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="student : ${studentList}">
+                        <td th:text="${student.id}"></td>
+                        <td th:text="${student.name}"></td>
+                        <td th:text="${student.groupId}"></td>
+                        <td>
+                            <a th:href="@{/student/view/{id}(id=${student.id})}">[view]</a>
+                            <a th:href="@{/student/edit/{id}(id=${student.id})}">[edit]</a>
+                            <form th:action="@{/student/delete/{id}(id=${student.id})}" method="post" style="display:inline;">
+                                <button type="submit" onclick="return confirm('Bạn có chắc muốn xóa Student này?')">[delete]</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr th:if="${studentList.isEmpty()}">
+                        <td colspan="4">Không có Student nào.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div th:replace="frontEndViews/FrontEndModel::chanTrang"></div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Thêm mới Student</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <div class="content">
+        <div th:replace="frontEndViews/FrontEndModel::sideBar"></div>
+        <div class="col-right">
+            <div th:replace="frontEndViews/FrontEndModel::dauTrang"></div>
+            <h2>Thêm mới Student</h2>
+            <form th:action="@{/student/new}" th:object="${student}" method="post">
+                <div>
+                    <label for="name">Tên Student:</label>
+                    <input type="text" id="name" th:field="*{name}" required>
+                </div>
+                <div>
+                    <label for="groupId">ID Nhóm:</label>
+                    <input type="number" id="groupId" th:field="*{groupId}">
+                </div>
+                <button type="submit">Lưu</button>
+            </form>
+        </div>
+    </div>
+    <div th:replace="frontEndViews/FrontEndModel::chanTrang"></div>
+</body>
+</html>
