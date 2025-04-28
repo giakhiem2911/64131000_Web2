@@ -6177,3 +6177,14 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact javax.servlet
 2025-04-28 23:10:39,697 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
 2025-04-28 23:10:39,716 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 13 resources from src\main\resources to target\classes
 2025-04-28 23:10:39,756 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\nguyenhoanggiakhiem_fitCMS_Blog_remake\src\test\resources
+2025-04-28 23:18:09,659 [Worker-28: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2025-04-28 23:18:10,271 [Worker-28: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: khiem.nhg:demoJPA:0.0.1-SNAPSHOT @ C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\demoJPA\pom.xml.
+2025-04-28 23:18:11,372 [Worker-28: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /demoJPA/src/main/java
+2025-04-28 23:18:11,374 [Worker-28: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /demoJPA/src/main/resources
+2025-04-28 23:18:11,375 [Worker-28: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /demoJPA/src/main/resources
+2025-04-28 23:18:11,376 [Worker-28: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /demoJPA/src/test/java
+2025-04-28 23:18:11,378 [Worker-28: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /demoJPA/src/test/resources
+2025-04-28 23:18:12,048 [Worker-28: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0,00 sec, refresh facades takes 1,00 sec, update config takes 0,00 sec 
+2025-04-28 23:18:12,391 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-04-28 23:18:12,406 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-04-28 23:18:12,412 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NhaTrang_University\HKII_2024_2025\Phat_Trien_UD_Web2\code\demoJPA\src\test\resources
