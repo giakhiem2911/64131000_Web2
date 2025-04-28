@@ -19,9 +19,7 @@ public class HomeController {
     private Long topicIdCounter = 1L;
     private Long studentIdCounter = 1L;
 
-    // Hard-code dữ liệu ban đầu
     public HomeController() {
-        // Hard-code Topics
         topicList.add(new Topic("Topic 1", "Description 1", 101L, "Type A"));
         topicList.get(0).setId(topicIdCounter++);
         topicList.add(new Topic("Topic 2", "Description 2", 102L, "Type B"));
@@ -29,7 +27,6 @@ public class HomeController {
         topicList.add(new Topic("Topic 3", "Description 3", 103L, "Type A"));
         topicList.get(2).setId(topicIdCounter++);
 
-        // Hard-code Students
         studentList.add(new Student("Student 1", 201L));
         studentList.get(0).setId(studentIdCounter++);
         studentList.add(new Student("Student 2", 202L));
@@ -48,7 +45,6 @@ public class HomeController {
         return "frontEndViews/index";
     }
 
-    // Topic Operations
     @GetMapping("/topic/all")
     public String topicList(ModelMap model) {
         model.addAttribute("topicList", topicList);
@@ -112,7 +108,6 @@ public class HomeController {
         return "redirect:/topic/all";
     }
 
-    // Student Operations
     @GetMapping("/student/all")
     public String studentList(ModelMap model) {
         model.addAttribute("studentList", studentList);
