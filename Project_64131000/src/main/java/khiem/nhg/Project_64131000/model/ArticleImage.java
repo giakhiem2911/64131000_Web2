@@ -7,25 +7,21 @@ import jakarta.persistence.*;
 public class ArticleImage {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "imageId")
     private Long imageId;
 
-    private String imageUrl;
-
     @ManyToOne
-    @JoinColumn(name = "articleId")
+    @JoinColumn(name = "articleId", nullable = false)
     private Article article;
 
-    // Getters & Setters
-    public Long getImageId() {
-		return imageId;
-	}
-    public void setImageId(Long imageId) {
-		this.imageId = imageId;
-	}
-    public String getImageUrl() {
-		return imageUrl;
-	}
-    public void setImageUrl(String imageUrl) {
-		this.imageUrl = imageUrl;
-	}
+    @Column(name = "imageUrl", nullable = false)
+    private String imageUrl;
+
+    // Getters and Setters
+    public Long getImageId() { return imageId; }
+    public void setImageId(Long imageId) { this.imageId = imageId; }
+    public Article getArticle() { return article; }
+    public void setArticle(Article article) { this.article = article; }
+    public String getImageUrl() { return imageUrl; }
+    public void setImageUrl(String imageUrl) { this.imageUrl = imageUrl; }
 }

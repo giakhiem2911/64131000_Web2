@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tin Tức Công Nghệ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 font-sans">
+
+<!-- ================= Header Fragment ================= -->
+<div th:fragment="header">
+    <nav class="bg-blue-800 text-white p-4 sticky top-0 z-10">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">TechNews</h1>
+            <ul class="flex space-x-6">
+                <li><a href="/" class="hover:underline">Trang Chủ</a></li>
+                <li><a href="/category/ai" class="hover:underline">AI</a></li>
+                <li><a href="/category/mobile" class="hover:underline">Mobile</a></li>
+                <li><a href="/category/software" class="hover:underline">Software</a></li>
+                <li><a href="/contact" class="hover:underline">Liên Hệ</a></li>
+            </ul> 	
+        </div>
+    </nav>
+</div>
+
+<!-- ================= Hero Section ================= -->
+<section class="bg-blue-200 py-20 text-center">
+    <div class="container mx-auto">
+        <h2 class="text-4xl font-bold mb-4">Cập Nhật Tin Tức Công Nghệ Mới Nhất</h2>
+        <p class="text-lg mb-6">Khám phá các xu hướng công nghệ, đánh giá sản phẩm, và hơn thế nữa.</p>
+        <a href="/articles" class="bg-blue-800 text-white px-6 py-3 rounded-lg hover:bg-blue-900">Đọc Ngay</a>
+    </div>
+</section>
+
+<!-- ================= Featured Articles ================= -->
+<section class="py-16">
+    <div class="container mx-auto">
+        <h3 class="text-3xl font-bold text-center mb-8">Tin Nổi Bật</h3>
+        <div th:if="${articles.isEmpty()}" class="text-center text-gray-600">
+            <p>Hiện tại chưa có bài viết nào.</p>
+        </div>
+        <div th:unless="${articles.isEmpty()}" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div th:each="article : ${articles}" class="bg-white p-6 rounded-lg shadow-md">
+                <img th:src="${article.images.size() > 0 ? article.images[0].imageUrl : 'https://via.placeholder.com/300x200'}" alt="Hình bài viết" class="mb-4 rounded">
+                <h4 class="text-xl font-semibold mb-2" th:text="${article.title}"></h4>
+                <p class="text-gray-600 mb-2" th:text="${#strings.abbreviate(article.content, 100)}"></p>
+                <div class="flex flex-wrap gap-2 mb-2">
+                    <span th:each="tag : ${article.tags}" class="bg-blue-100 text-blue-800 text-sm px-2 py-1 rounded" th:text="${tag.tags}"></span>
+                </div>
+                <p class="text-sm text-gray-500">Lượt xem: <span th:text="${article.views}"></span></p>
+                <p class="text-sm text-gray-500">Lượt thích: <span th:text="${article.likeCount}"></span></p>
+                <a th:href="@{'/articles/' + ${article.articleId}}" class="text-blue-600 hover:underline">Đọc thêm</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= Footer Fragment ================= -->
+<div th:fragment="footer">
+    <footer class="bg-blue-800 text-white py-6">
+        <div class="container mx-auto text-center">
+            <p>© 2025 TechNews. Mọi quyền được bảo lưu.</p>
+            <div class="mt-4">
+                <a href="#" class="text-white hover:underline mx-2">Facebook</a>
+                <a href="#" class="text-white hover:underline mx-2">Twitter</a>
+                <a href="#" class="text-white hover:underline mx-2">Instagram</a>
+            </div>
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>
