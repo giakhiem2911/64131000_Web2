@@ -40,7 +40,7 @@ public class Article {
     @Column(name = "publishedAt")
     private LocalDateTime publishedAt;
 
-    @OneToMany(mappedBy = "article", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "article", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<ArticleImage> images;
 
     @OneToMany(mappedBy = "article", fetch = FetchType.LAZY)

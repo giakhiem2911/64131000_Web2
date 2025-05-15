@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.List;
+import java.util.Comparator;
 
 @Controller
 public class HomeController {
@@ -17,16 +18,19 @@ public class HomeController {
 
     @GetMapping("/")
     public String index(Model model) {
-        List<Article> articles = articleRepository.findAll();
+        List<Article> articles = articleRepository.findFeaturedArticles();
 
-        for (Article article : articles) {
-            long likeCount = article.getInteractions()
-                    .stream()
-                    .filter(i -> "like".equalsIgnoreCase(i.getType()))
-                    .count();
-            article.setLikeCount(likeCount);
+        // Tìm bài viết mới nhất dựa trên publishedAt
+        Article latestArticle = articles.stream()
+                .filter(article -> article.getPublishedAt() != null)
+                .max(Comparator.comparing(Article::getPublishedAt))
+                .orElse(null);
+
+        if (latestArticle != null) {
+            articles.remove(latestArticle);
         }
 
+        model.addAttribute("latestArticle", latestArticle);
         model.addAttribute("articles", articles);
         return "frontEndModel/index";
     }
