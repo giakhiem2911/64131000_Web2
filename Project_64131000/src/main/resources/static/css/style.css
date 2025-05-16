@@ -1,0 +1,23 @@
+/* Giao diện nút và hiệu ứng */
+a:hover, button:hover {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover cho card lớn */
+.card-hover {
+    transition: box-shadow 0.3s ease;
+}
+.card-hover:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Hover cho các item danh sách */
+.article-list-item:hover {
+    background-color: #eff6ff; /* blue-50 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Bo góc ảnh */
+img {
+    border-radius: 0.5rem;
+}
