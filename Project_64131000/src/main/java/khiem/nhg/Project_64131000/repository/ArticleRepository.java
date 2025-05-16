@@ -15,5 +15,11 @@ public interface ArticleRepository extends JpaRepository<Article, Long> {
     @Query("SELECT a FROM Article a WHERE LOWER(a.title) LIKE LOWER(CONCAT('%', :keyword, '%')) " +
     	       "OR LOWER(a.content) LIKE LOWER(CONCAT('%', :keyword, '%'))")
     List<Article> searchByKeyword(@Param("keyword") String keyword);
+    @Query("SELECT a FROM Article a WHERE a.category = :category AND a.status = 'PUBLISHED' ORDER BY a.publishedAt DESC")
+    List<Article> findByCategory(@Param("category") String category);
+
+    @Query("SELECT a FROM Article a WHERE a.status = 'PUBLISHED' ORDER BY a.publishedAt DESC")
+    List<Article> findTop5ByOrderByPublishedAtDesc();
+
 
 }

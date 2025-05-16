@@ -19,18 +19,31 @@ public class HomeController {
 
     @GetMapping("/")
     public String index(Model model) {
-        List<Article> articles = articleRepository.findFeaturedArticles();
-        Article latestArticle = articles.stream()
+        List<Article> featuredArticles = articleRepository.findFeaturedArticles();
+        Article latestArticle = featuredArticles.stream()
                 .filter(article -> article.getPublishedAt() != null)
                 .max(Comparator.comparing(Article::getPublishedAt))
                 .orElse(null);
         if (latestArticle != null) {
-            articles.remove(latestArticle);
+            featuredArticles.remove(latestArticle);
         }
-        model.addAttribute("latestArticle", latestArticle);
+
+        List<Article> exploreArticles = articleRepository.findByCategory("Khám phá");
+        List<Article> productArticles = articleRepository.findByCategory("Sản phẩm công nghệ");
+        List<Article> latestArticles = articleRepository.findTop5ByOrderByPublishedAtDesc();
+        List<Article> articles = articleRepository.findAll(); 
+        
         model.addAttribute("articles", articles);
+        model.addAttribute("latestArticle", latestArticle);
+        model.addAttribute("exploreArticles", exploreArticles);
+        model.addAttribute("productArticles", productArticles);
+        model.addAttribute("latestArticles", latestArticles);
+
         return "frontEndModel/index";
     }
+
+
+
     @GetMapping("/search")
     public String searchArticles(@RequestParam("keyword") String keyword, Model model) {
         List<Article> results = articleRepository.searchByKeyword(keyword); // Bạn cần triển khai hàm này
