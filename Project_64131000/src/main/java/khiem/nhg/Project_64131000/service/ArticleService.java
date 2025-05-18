@@ -16,4 +16,16 @@ public class ArticleService {
     public List<Article> getFeaturedArticles() {
         return articleRepository.findFeaturedArticles();
     }
+    public List<Article> searchByKeyword(String keyword) {
+        return articleRepository.searchByKeyword(keyword);
+    }
+    public Article findById(Long articleId) {
+        return articleRepository.findById(articleId).orElse(null);
+    }
+
+    public List<Article> findTop5Latest() {
+        return articleRepository.findTop5ByOrderByPublishedAtDesc();
+    }
+
+
 }

@@ -10,8 +10,8 @@
 </head>
 <body class="bg-gray-100 font-sans">
 
-<!-- ======= Header ======= -->
-<nav class="bg-blue-800 text-white p-4 sticky top-0 z-10">
+<!-- Fragment Header -->
+<nav th:fragment="header" class="bg-blue-800 text-white p-4 sticky top-0 z-10">
     <div class="container mx-auto flex justify-between items-center">
         <a href="/"><img alt="Logo" th:src="@{/images/logo.png}" class="h-10"></a>
         <ul class="flex space-x-6 text-sm md:text-base">
@@ -114,13 +114,13 @@
             </div>
         </div>
 
-        <!-- Sidebar bài viết mới -->
-        <div class="w-full col-right" th:replace="frontEndModel/latestArticles :: latestArticlesSidebar"></div>
+		<!-- Fragment Sidebar bài viết mới -->
+		<div class="w-full col-right" th:replace="frontEndModel/latestArticles :: latestArticlesSidebar"></div>
     </div>
 </section>
 
-<!-- ======= Footer ======= -->
-<footer class="bg-blue-800 text-white py-6">
+<!-- Fragment Footer -->
+<footer th:fragment="footer" class="bg-blue-800 text-white py-6">
     <div class="container mx-auto text-center px-4">
         <p>© 2025 TechNews. Mọi quyền được bảo lưu.</p>
         <div class="mt-4">
@@ -130,6 +130,5 @@
         </div>
     </div>
 </footer>
-
 </body>
 </html>

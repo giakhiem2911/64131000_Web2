@@ -42,14 +42,4 @@ public class HomeController {
         return "frontEndModel/index";
     }
 
-
-
-    @GetMapping("/search")
-    public String searchArticles(@RequestParam("keyword") String keyword, Model model) {
-        List<Article> results = articleRepository.searchByKeyword(keyword); // Bạn cần triển khai hàm này
-        model.addAttribute("articles", results);
-        model.addAttribute("keyword", keyword);
-        return "frontEndModel/searchResults";
-    }
-
 }
