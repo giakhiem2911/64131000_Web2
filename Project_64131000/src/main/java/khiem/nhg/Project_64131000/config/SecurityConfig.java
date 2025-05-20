@@ -17,33 +17,31 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/admin/**").hasRole("ADMIN")
-                .requestMatchers("/**").permitAll()
-                .anyRequest().authenticated()
+                .requestMatchers("/admin/**").hasRole("ADMIN") // Chỉ cho phép ADMIN truy cập vào các URL bắt đầu bằng /admin
+                .requestMatchers("/login", "/register", "/css/**", "/images/**", "/js/**").permitAll() // Cho phép tất cả truy cập vào các trang này
+                .anyRequest().authenticated() // Tất cả các yêu cầu khác cần xác thực
             )
             .formLogin(form -> form
-                .loginPage("/login")
-                .loginProcessingUrl("/login")
-                .defaultSuccessUrl("/", true)
-                .permitAll()
-                .successHandler(customAuthenticationSuccessHandler())
+                .loginPage("/login") // Đường dẫn đến trang đăng nhập
+                .loginProcessingUrl("/login") // Đường dẫn xử lý đăng nhập
+                .successHandler(customAuthenticationSuccessHandler()) // Xử lý khi đăng nhập thành công
+                .permitAll() // Cho phép tất cả truy cập vào trang đăng nhập
             )
             .logout(logout -> logout
-                .logoutSuccessUrl("/")
-                .permitAll()
+                .logoutSuccessUrl("/") // Chuyển hướng đến trang chủ sau khi đăng xuất
+                .permitAll() // Cho phép tất cả truy cập vào chức năng đăng xuất
             );
 
         return http.build();
-        
     }
+
     @Bean
     public PasswordEncoder passwordEncoder() {
-        return NoOpPasswordEncoder.getInstance();
+        return NoOpPasswordEncoder.getInstance(); // Sử dụng NoOpPasswordEncoder cho mật khẩu không mã hóa
     }
 
     @Bean
     public AuthenticationSuccessHandler customAuthenticationSuccessHandler() {
-        return new CustomAuthenticationSuccessHandler();
+        return new CustomAuthenticationSuccessHandler(); // Xử lý tùy chỉnh khi đăng nhập thành công
     }
-
 }

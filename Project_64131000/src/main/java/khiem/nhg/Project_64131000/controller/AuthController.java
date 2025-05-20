@@ -3,7 +3,6 @@ package khiem.nhg.Project_64131000.controller;
 import java.time.LocalDateTime;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,11 +19,8 @@ public class AuthController {
     @Autowired
     private UserRepository userRepository;
 
-    @Autowired
-    private PasswordEncoder passwordEncoder;
-
     @GetMapping("/login")
-    public String showLoginForm() {
+    public String showLoginForm(Model model) {
         return "frontEndModel/auth/login";
     }
 
@@ -41,7 +37,7 @@ public class AuthController {
             return "redirect:/register";
         }
 
-        user.setPasswordHash(passwordEncoder.encode(user.getPasswordHash()));
+        user.setPasswordHash(user.getPasswordHash());
         user.setRole("USER");
         user.setCreatedAt(LocalDateTime.now());
         user.setUpdatedAt(LocalDateTime.now());
@@ -50,5 +46,10 @@ public class AuthController {
 
         redirectAttributes.addFlashAttribute("success", "Đăng ký thành công. Mời đăng nhập.");
         return "redirect:/login";
+    }
+    @GetMapping("/logout")
+    public String logout() {
+        // Phương thức này có thể để trống, vì Spring Security sẽ xử lý đăng xuất
+        return "redirect:/login?logout"; // Chuyển hướng đến trang đăng nhập với thông báo
     }
 }

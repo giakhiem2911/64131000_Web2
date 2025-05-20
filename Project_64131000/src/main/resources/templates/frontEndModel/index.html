@@ -25,20 +25,20 @@
                 <i class="bi bi-search text-lg"></i>
             </button>
         </form>
-		<ul class="flex space-x-6 text-sm md:text-base">
-		    <li th:if="${currentUser != null}">
-		        <span class="text-white">Xin chào, <span th:text="${currentUser.fullName}"></span></span>
-		    </li>
-		    <li th:if="${currentUser != null}">
-		        <a href="/logout" class="hover:underline">Đăng xuất</a>
-		    </li>
-		    <li th:unless="${currentUser != null}">
-		        <a href="/login" class="hover:underline">Đăng nhập</a>
-		    </li>
-		    <li th:unless="${currentUser != null}">
-		        <a href="/register" class="hover:underline">Đăng ký</a>
-		    </li>
-		</ul>
+        <ul class="flex space-x-6 text-sm md:text-base">
+            <li th:if="${currentUser != null}">
+                <span class="text-white">Xin chào, <span th:text="${currentUser.fullName}"></span></span>
+            </li>
+            <li th:if="${currentUser != null}">
+                <a href="/login" class="hover:underline">Đăng xuất</a>
+            </li>
+            <li th:unless="${currentUser != null}">
+                <a href="/login" class="hover:underline">Đăng nhập</a>
+            </li>
+            <li th:unless="${currentUser != null}">
+                <a href="/register" class="hover:underline">Đăng ký</a>
+            </li>
+        </ul>
     </div>
 </nav>
 

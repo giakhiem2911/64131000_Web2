@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Admin Dashboard</title>
-    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <div th:replace="~{frontEndModel/index :: header}"></div>
-    <h1>Admin Dashboard</h1>
-    <p>Xin chào, <span th:text="${currentUser.fullName}"></span></p>
+    <div th:fragment="content">
+		<div class="bg-white p-8 rounded-xl shadow-lg">
+		    <h2 class="text-2xl font-bold text-blue-800 mb-6 text-center">Admin Dashboard</h2>
+		    <p class="text-gray-700">Chào mừng bạn đến với bảng điều khiển quản trị!</p>
+		    <p class="text-gray-700">Bạn có thể quản lý bài viết, người dùng, và các nội dung khác tại đây.</p>
+		</div>
+    </div>
 </body>
 </html>
