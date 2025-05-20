@@ -10,14 +10,11 @@
 </head>
 <body class="bg-gray-100 font-sans">
 
-<!-- Sử dụng fragment header từ index.html -->
 <div th:replace="/frontEndModel/index :: header"></div>
 
-<!-- ======= Kết quả tìm kiếm ======= -->
 <section class="py-16">
     <div class="container mx-auto flex flex-col md:flex-row gap-8 px-4">
 
-        <!-- Cột trái: Kết quả tìm kiếm -->
         <div class="w-full col-left">
             <h2 class="text-2xl font-bold text-blue-900 mb-6" th:text="'Kết quả tìm kiếm cho: ' + ${keyword}">Từ khóa</h2>
 
@@ -53,7 +50,6 @@
     </div>
 </section>
 
-<!-- Sử dụng fragment footer từ index.html -->
 <div th:replace="/frontEndModel/index :: footer"></div>
 
 </body>

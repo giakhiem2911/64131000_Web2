@@ -30,7 +30,7 @@ public class CustomAuthenticationSuccessHandler implements AuthenticationSuccess
             }
         }
 
-        response.sendRedirect("/"); // fallback
+        response.sendRedirect("/");
     }
 
 }

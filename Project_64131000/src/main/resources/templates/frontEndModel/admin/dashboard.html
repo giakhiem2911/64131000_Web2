@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div th:replace="~{frontEndModel/index :: header}"></div>
+    <h1>Admin Dashboard</h1>
+    <p>Xin chào, <span th:text="${currentUser.fullName}"></span></p>
+</body>
+</html>

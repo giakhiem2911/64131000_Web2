@@ -33,7 +33,6 @@ public class User {
     @Column(nullable = false)
     private LocalDateTime updatedAt;
 
-    // Getters và setters
     public Long getUserId() {
         return userId;
     }

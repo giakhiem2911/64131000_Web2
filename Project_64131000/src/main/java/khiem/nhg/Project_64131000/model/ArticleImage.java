@@ -17,7 +17,6 @@ public class ArticleImage {
     @Column(name = "imageUrl", nullable = false)
     private String imageUrl;
 
-    // Getters and Setters
     public Long getImageId() { return imageId; }
     public void setImageId(Long imageId) { this.imageId = imageId; }
     public Article getArticle() { return article; }

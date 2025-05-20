@@ -24,10 +24,8 @@ public class ArticleController {
 
     @GetMapping("/search")
     public String searchArticles(@RequestParam(name = "keyword", required = false) String keyword, Model model) {
-        // Lấy 5 bài viết mới nhất
         List<Article> latestArticles = articleRepository.findTop5ByOrderByPublishedAtDesc();
 
-        // Nếu có từ khóa thì tìm, không thì trả về danh sách rỗng
         if (keyword != null && !keyword.trim().isEmpty()) {
             model.addAttribute("results", articleService.searchByKeyword(keyword));
         } else {

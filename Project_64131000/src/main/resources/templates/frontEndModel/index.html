@@ -10,7 +10,6 @@
 </head>
 <body class="bg-gray-100 font-sans">
 
-<!-- Fragment Header -->
 <nav th:fragment="header" class="bg-blue-800 text-white p-4 sticky top-0 z-10">
     <div class="container mx-auto flex justify-between items-center">
         <a href="/"><img alt="Logo" th:src="@{/images/logo.png}" class="h-10"></a>
@@ -26,14 +25,23 @@
                 <i class="bi bi-search text-lg"></i>
             </button>
         </form>
-        <ul class="flex space-x-6 text-em md:text-base">
-            <li><a href="/login" class="hover:underline">Đăng nhập</a></li>
-            <li><a href="/register" class="hover:underline">Đăng ký</a></li>
-        </ul>
+		<ul class="flex space-x-6 text-sm md:text-base">
+		    <li th:if="${currentUser != null}">
+		        <span class="text-white">Xin chào, <span th:text="${currentUser.fullName}"></span></span>
+		    </li>
+		    <li th:if="${currentUser != null}">
+		        <a href="/logout" class="hover:underline">Đăng xuất</a>
+		    </li>
+		    <li th:unless="${currentUser != null}">
+		        <a href="/login" class="hover:underline">Đăng nhập</a>
+		    </li>
+		    <li th:unless="${currentUser != null}">
+		        <a href="/register" class="hover:underline">Đăng ký</a>
+		    </li>
+		</ul>
     </div>
 </nav>
 
-<!-- ======= Hero Section ======= -->
 <a th:href="@{'/articles/' + ${latestArticle.articleId}}"
    th:with="bgImage=${latestArticle.images[0].imageUrl}"
    th:style="'background-image: url(' + @{${bgImage}} + ');'"
@@ -45,45 +53,32 @@
     </div>
 </a>
 
-<!-- ======= Main Section ======= -->
 <section class="py-16">
     <div class="container mx-auto flex flex-col md:flex-row gap-8 px-4">
-
-        <!-- Cột trái -->
         <div class="w-full col-left">
-			<!-- Bài viết nổi bật nhất -->
-			<div th:if="${articles.size() > 0}" th:with="firstArticle=${articles[0]}"
-			     class="bg-yellow-50 mb-6 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-l-4 border-yellow-400">
-			
-			    <div class="mb-3">
-			        <span class="bg-yellow-400 text-white text-xs font-semibold px-3 py-1 rounded-full">Nổi bật nhất</span>
-			    </div>
-			
-			    <img th:if="${firstArticle.images.size() > 0}"
-			         th:src="@{${firstArticle.images[0].imageUrl}}"
-			         alt="Hình bài viết"
-			         class="mb-4 rounded-xl w-full h-56 object-cover">
-			
-			    <h4 class="text-2xl font-bold mb-2 text-blue-900" th:text="${firstArticle.title}"></h4>
-			
-			    <p class="text-gray-700 mb-3 text-base" th:text="${#strings.abbreviate(firstArticle.content, 120)}"></p>
-			
-			    <div class="flex flex-wrap gap-2 mb-3">
-			        <span th:each="tag : ${firstArticle.tags}"
-			              class="bg-blue-100 text-blue-800 text-sm px-2 py-1 rounded"
-			              th:text="${tag.tags}"></span>
-			    </div>
-			
-			    <p class="text-sm text-gray-500">
-			        Lượt xem: <span th:text="${firstArticle.views}"></span> |
-			        Lượt thích: <span th:text="${firstArticle.likeCount}"></span>
-			    </p>
-			
-			    <a th:href="@{'/articles/' + ${firstArticle.articleId}}"
-			       class="text-blue-700 font-medium hover:underline mt-2 inline-block">Đọc thêm</a>
-			</div>
-
-            <!-- Khám Phá -->
+            <div th:if="${articles.size() > 0}" th:with="firstArticle=${articles[0]}"
+                 class="bg-yellow-50 mb-6 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-l-4 border-yellow-400">
+                <div class="mb-3">
+                    <span class="bg-yellow-400 text-white text-xs font-semibold px-3 py-1 rounded-full">Nổi bật nhất</span>
+                </div>
+                <img th:if="${firstArticle.images.size() > 0}"
+                     th:src="@{${firstArticle.images[0].imageUrl}}"
+                     alt="Hình bài viết"
+                     class="mb-4 rounded-xl w-full h-56 object-cover">
+                <h4 class="text-2xl font-bold mb-2 text-blue-900" th:text="${firstArticle.title}"></h4>
+                <p class="text-gray-700 mb-3 text-base" th:text="${#strings.abbreviate(firstArticle.content, 120)}"></p>
+                <div class="flex flex-wrap gap-2 mb-3">
+                    <span th:each="tag : ${firstArticle.tags}"
+                          class="bg-blue-100 text-blue-800 text-sm px-2 py-1 rounded"
+                          th:text="${tag.tags}"></span>
+                </div>
+                <p class="text-sm text-gray-500">
+                    Lượt xem: <span th:text="${firstArticle.views}"></span> |
+                    Lượt thích: <span th:text="${firstArticle.likeCount}"></span>
+                </p>
+                <a th:href="@{'/articles/' + ${firstArticle.articleId}}"
+                   class="text-blue-700 font-medium hover:underline mt-2 inline-block">Đọc thêm</a>
+            </div>
             <div class="mb-8">
                 <h4 class="text-xl font-semibold text-blue-800 mb-4">Khám Phá</h4>
                 <ul class="space-y-4">
@@ -97,8 +92,6 @@
                     </li>
                 </ul>
             </div>
-
-            <!-- Sản phẩm công nghệ -->
             <div>
                 <h4 class="text-xl font-semibold text-blue-800 mb-4">Sản Phẩm Công Nghệ</h4>
                 <ul class="space-y-4">
@@ -113,13 +106,9 @@
                 </ul>
             </div>
         </div>
-
-		<!-- Fragment Sidebar bài viết mới -->
-		<div class="w-full col-right" th:replace="frontEndModel/latestArticles :: latestArticlesSidebar"></div>
+        <div class="w-full col-right" th:replace="frontEndModel/latestArticles :: latestArticlesSidebar"></div>
     </div>
 </section>
-
-<!-- Fragment Footer -->
 <footer th:fragment="footer" class="bg-blue-800 text-white py-6">
     <div class="container mx-auto text-center px-4">
         <p>© 2025 TechNews. Mọi quyền được bảo lưu.</p>

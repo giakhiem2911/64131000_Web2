@@ -25,7 +25,6 @@ public class Interaction {
     @Column(name = "createdAt", nullable = false)
     private LocalDateTime createdAt;
 
-    // Getters and Setters
     public Long getInteractionId() { return interactionId; }
     public void setInteractionId(Long interactionId) { this.interactionId = interactionId; }
     public Article getArticle() { return article; }

@@ -21,14 +21,12 @@ public class ArticleTagId implements Serializable {
         this.tags = tags;
     }
 
-    // Getters, Setters
     public Long getArticleId() { return articleId; }
     public void setArticleId(Long articleId) { this.articleId = articleId; }
 
     public String getTags() { return tags; }
     public void setTags(String tags) { this.tags = tags; }
 
-    // hashCode & equals (BẮT BUỘC)
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

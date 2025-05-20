@@ -24,9 +24,9 @@ public class SecurityConfig {
             .formLogin(form -> form
                 .loginPage("/login")
                 .loginProcessingUrl("/login")
-                .defaultSuccessUrl("/", true) // fallback
+                .defaultSuccessUrl("/", true)
                 .permitAll()
-                .successHandler(customAuthenticationSuccessHandler()) // <-- đây là handler tùy chỉnh
+                .successHandler(customAuthenticationSuccessHandler())
             )
             .logout(logout -> logout
                 .logoutSuccessUrl("/")
@@ -38,7 +38,6 @@ public class SecurityConfig {
     }
     @Bean
     public PasswordEncoder passwordEncoder() {
-        // Sử dụng NoOpPasswordEncoder để so sánh mật khẩu plain text
         return NoOpPasswordEncoder.getInstance();
     }
 

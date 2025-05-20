@@ -83,6 +83,6 @@ public class Article {
     public void setLikeCount(long likeCount) { this.likeCount = likeCount; }
 
     public Long getId() {
-        return null; // Chưa sử dụng
+        return null;
     }
 }

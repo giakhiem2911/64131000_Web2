@@ -15,18 +15,16 @@ public class ArticleTag {
     private ArticleTagId id;
 
     @ManyToOne
-    @MapsId("articleId") // Map với field trong @Embeddable
+    @MapsId("articleId")
     @JoinColumn(name = "articleId", insertable = false, updatable = false)
     private Article article;
 
-    // Constructors
     public ArticleTag() {}
     public ArticleTag(Article article, String tags) {
         this.article = article;
         this.id = new ArticleTagId(article.getId(), tags);
     }
 
-    // Getters & Setters
     public ArticleTagId getId() { return id; }
     public void setId(ArticleTagId id) { this.id = id; }
 

@@ -24,7 +24,6 @@ public class Comment {
     @JoinColumn(name = "articleId")
     private Article article;
 
-    // Getters & Setters
     public Long getCommentId() {
 		return commentId;
 	}
