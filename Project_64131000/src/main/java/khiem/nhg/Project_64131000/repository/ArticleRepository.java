@@ -23,4 +23,5 @@ public interface ArticleRepository extends JpaRepository<Article, Long> {
     List<Article> findTop5ByOrderByPublishedAtDesc();
 
     Optional<Article> findById(Long id);
+    List<Article> findByCategoryIgnoreCase(String category);
 }

@@ -13,7 +13,7 @@ public class ArticleTag {
 
     @EmbeddedId
     private ArticleTagId id;
-
+    
     @ManyToOne
     @MapsId("articleId")
     @JoinColumn(name = "articleId", insertable = false, updatable = false)

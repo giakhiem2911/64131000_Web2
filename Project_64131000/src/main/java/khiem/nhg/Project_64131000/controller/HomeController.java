@@ -55,4 +55,44 @@ public class HomeController {
 
         return "frontEndModel/index";
     }
+    @GetMapping("/category/kham-pha")
+    public String khamPhaCategory(Model model) {
+        // Article-related logic
+        List<Article> featuredArticles = articleRepository.findFeaturedArticles();
+        Article latestArticle = featuredArticles.stream()
+                .filter(article -> article.getPublishedAt() != null)
+                .max(Comparator.comparing(Article::getPublishedAt))
+                .orElse(null);
+        if (latestArticle != null) {
+            featuredArticles.remove(latestArticle);
+        }
+        List<Article> exploreArticles = articleRepository.findByCategory("Khám phá");
+        List<Article> latestArticles = articleRepository.findTop5ByOrderByPublishedAtDesc();
+        List<Article> articles = articleRepository.findAll();
+        model.addAttribute("articles", articles);
+        model.addAttribute("latestArticle", latestArticle);
+        model.addAttribute("exploreArticles", exploreArticles);
+        model.addAttribute("latestArticles", latestArticles);
+        return "frontEndModel/category/khamPha"; 
+    }
+    @GetMapping("/category/san-pham-cong-nghe")
+    public String sanPhamCongNgheCategory(Model model) {
+        // Article-related logic
+        List<Article> featuredArticles = articleRepository.findFeaturedArticles();
+        Article latestArticle = featuredArticles.stream()
+                .filter(article -> article.getPublishedAt() != null)
+                .max(Comparator.comparing(Article::getPublishedAt))
+                .orElse(null);
+        if (latestArticle != null) {
+            featuredArticles.remove(latestArticle);
+        }
+        List<Article> productArticles = articleRepository.findByCategory("Sản phẩm công nghệ");
+        List<Article> latestArticles = articleRepository.findTop5ByOrderByPublishedAtDesc();
+        List<Article> articles = articleRepository.findAll();
+        model.addAttribute("articles", articles);
+        model.addAttribute("latestArticle", latestArticle);
+        model.addAttribute("productArticles", productArticles);
+        model.addAttribute("latestArticles", latestArticles);
+        return "frontEndModel/category/sanPhamCongNghe";
+    }
 }

@@ -12,7 +12,9 @@ import java.util.Optional;
 public class ArticleService {
     @Autowired
     private ArticleRepository articleRepository;
-
+    public List<Article> getArticlesByCategory(String category) {
+        return articleRepository.findByCategoryIgnoreCase(category);
+    }
     public List<Article> getFeaturedArticles() {
         return articleRepository.findFeaturedArticles();
     }
