@@ -28,6 +28,16 @@ public class ArticleService {
     public List<Article> findTop5Latest() {
         return articleRepository.findTop5ByOrderByPublishedAtDesc();
     }
+    public Article save(Article article) {
+        return articleRepository.save(article);
+    }
 
+    public void deleteById(Long id) {
+        articleRepository.deleteById(id);
+    }
+
+    public List<Article> findAll() {
+        return articleRepository.findAll();
+    }
 
 }

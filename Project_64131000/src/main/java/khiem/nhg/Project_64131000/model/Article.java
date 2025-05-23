@@ -31,9 +31,6 @@ public class Article {
     @Column(name = "views", columnDefinition = "BIGINT DEFAULT 0")
     private Long views;
 
-    @Column(name = "createdAt", nullable = false)
-    private LocalDateTime createdAt;
-
     @Column(name = "updatedAt", nullable = false)
     private LocalDateTime updatedAt;
 
@@ -66,8 +63,6 @@ public class Article {
     public void setStatus(String status) { this.status = status; }
     public Long getViews() { return views; }
     public void setViews(Long views) { this.views = views; }
-    public LocalDateTime getCreatedAt() { return createdAt; }
-    public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
     public LocalDateTime getUpdatedAt() { return updatedAt; }
     public void setUpdatedAt(LocalDateTime updatedAt) { this.updatedAt = updatedAt; }
     public LocalDateTime getPublishedAt() { return publishedAt; }

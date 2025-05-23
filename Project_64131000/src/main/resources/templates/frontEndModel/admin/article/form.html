@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title th:text="${article.id} != null ? 'Chỉnh sửa bài viết' : 'Thêm bài viết mới'">Quản lý bài viết</title>
+    <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <!-- Gọi lại thanh nav từ layout -->
+    <nav th:replace="~{frontEndModel/admin_layout :: content}"></nav>
+
+    <main class="container mx-auto mt-8 px-4">
+        <h1 class="text-2xl font-bold text-gray-800 mb-6" th:text="${article.id} != null ? 'Chỉnh sửa bài viết' : 'Thêm bài viết mới'">Thêm bài viết mới</h1>
+
+		<form th:action="@{${article.id} != null ? '/admin/articles/edit/' + ${article.id} : '/admin/articles/new'}" method="post" class="bg-white p-6 rounded shadow max-w-3xl mx-auto mb-10">
+		
+		  <!-- Tiêu đề -->
+		  <div class="mb-4">
+		    <label for="title" class="block text-gray-700 font-semibold mb-2">Tiêu đề</label>
+		    <input type="text" id="title" name="title" th:value="${article.title}" required
+		      class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600" />
+		  </div>
+		
+		  <!-- Nội dung -->
+		  <div class="mb-4">
+		    <label for="content" class="block text-gray-700 font-semibold mb-2">Nội dung</label>
+		    <textarea id="content" name="content" rows="8" required
+		      class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600"
+		      th:text="${article.content}"></textarea>
+		  </div>
+		
+		  <!-- Tác giả -->
+		  <div class="mb-4">
+		    <label for="authorId" class="block text-gray-700 font-semibold mb-2">Tác giả</label>
+		    <select id="authorId" name="authorId" required
+		      class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600">
+		      <option value="">-- Chọn tác giả --</option>
+		      <option th:each="user : ${users}" th:value="${user.id}" th:text="${user.fullName}"
+		        th:selected="${article.author != null} ? ${article.author.id} == ${user.id} : false"></option>
+		    </select>
+		  </div>
+		
+		  <!-- Trạng thái -->
+		  <div class="mb-4">
+		    <label for="status" class="block text-gray-700 font-semibold mb-2">Trạng thái</label>
+		    <select id="status" name="status" required
+		      class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600">
+		      <option value="DRAFT" th:selected="${article.status} == 'DRAFT'">Bản nháp</option>
+		      <option value="PUBLISHED" th:selected="${article.status} == 'PUBLISHED'">Đã đăng</option>
+		      <option value="ARCHIVED" th:selected="${article.status} == 'ARCHIVED'">Lưu trữ</option>
+		    </select>
+		  </div>
+		
+		  <!-- Tags (ví dụ nhập thô, tách bằng dấu phẩy) -->
+		  <div class="mb-4">
+		    <label for="tags" class="block text-gray-700 font-semibold mb-2">Tags</label>
+		    <input type="text" id="tags" name="tags" placeholder="nhập tags, cách nhau dấu phẩy"
+		      th:value="${article.tags != null} ? ${#strings.join(article.tags, ',')} : ''"
+		      class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600" />
+		  </div>
+		
+		  <!-- Ngày đăng -->
+		  <div class="mb-6">
+		    <label for="publishedAt" class="block text-gray-700 font-semibold mb-2">Ngày đăng</label>
+		    <input type="date" id="publishedAt" name="publishedAt" 
+		      th:value="${article.publishedAt != null} ? ${#temporals.format(article.publishedAt, 'yyyy-MM-dd')} : ''"
+		      required
+		      class="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600" />
+		  </div>
+		
+		  <!-- Nút lưu và hủy -->
+		  <div class="flex space-x-4">
+		    <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">Lưu</button>
+		    <a href="#" th:href="@{/admin/articles}" class="inline-block px-6 py-2 border border-gray-300 rounded text-gray-700 hover:bg-gray-100 transition">Hủy</a>
+		  </div>
+		
+		</form>
+
+    </main>
+
+    <footer th:replace="~{frontEndModel/index :: footer}"></footer>
+
+</body>
+<script>
+  ClassicEditor
+    .create(document.querySelector('#content'))
+    .then(editor => {
+      editor.ui.view.editable.element.style.height = '400px';
+    })
+    .catch(error => {
+      console.error(error);
+    });
+</script>
+</html>
