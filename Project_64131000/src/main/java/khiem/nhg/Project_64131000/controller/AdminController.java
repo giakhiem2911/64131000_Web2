@@ -1,8 +1,10 @@
 package khiem.nhg.Project_64131000.controller;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,7 +17,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import khiem.nhg.Project_64131000.model.Article;
+import khiem.nhg.Project_64131000.model.User;
 import khiem.nhg.Project_64131000.service.ArticleService;
+import khiem.nhg.Project_64131000.service.UserService;
 
 @Controller
 @RequestMapping("/admin")
@@ -72,5 +76,44 @@ public class AdminController {
     public String deleteArticle(@PathVariable Long id) {
         articleService.deleteById(id);
         return "redirect:/admin/articles";
+    }
+    @Autowired
+    private UserService userService;
+
+    @GetMapping("/users")
+    public String listUsers(Model model) {
+        model.addAttribute("users", userService.getAllUsers());
+        return "frontEndModel/admin/user/list";
+    }
+
+    @GetMapping("/users/new")
+    public String newUserForm(Model model) {
+        model.addAttribute("user", new User());
+        return "frontEndModel/admin/user/form";
+    }
+
+    @PostMapping("/users/save")
+    public String saveUser(@ModelAttribute("user") User user, Model model) {
+    	 if (user.getUserId() == null) {
+    	        user.setCreatedAt(LocalDateTime.now());
+    	    }
+    	user.setUpdatedAt(LocalDateTime.now());
+    	userService.save(user);
+        return "redirect:/admin/users";
+    }
+
+    @GetMapping("/users/edit/{id}")
+    public String editUser(@PathVariable Long id, Model model) {
+    	Optional<User> optionalUser = userService.getUserById(id);
+    	User user = optionalUser.orElse(null);
+        if (user == null) return "redirect:/admin/users";
+        model.addAttribute("user", user);
+        return "frontEndModel/admin/user/form";
+    }
+
+    @GetMapping("/users/delete/{id}")
+    public String deleteUser(@PathVariable Long id) {
+    	userService.deleteUser(id);
+        return "redirect:/admin/users";
     }
 }

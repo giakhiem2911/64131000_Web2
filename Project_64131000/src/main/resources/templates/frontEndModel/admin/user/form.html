@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title th:text="${user.userId} != null ? 'Chỉnh sửa người dùng' : 'Thêm người dùng mới'"></title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+<nav th:replace="~{frontEndModel/admin_layout :: content}"></nav>
+
+<main class="container mx-auto mt-8 px-4">
+    <h1 class="text-2xl font-bold text-gray-800 mb-6" th:text="${user.userId} != null ? 'Chỉnh sửa người dùng' : 'Thêm người dùng mới'"></h1>
+
+    <form th:action="@{/admin/users/save}" method="post" class="bg-white p-6 rounded shadow max-w-3xl mx-auto mb-10">
+        
+        <!-- Email -->
+        <div class="mb-4">
+            <label class="block text-gray-700 font-semibold mb-2">Email</label>
+            <input type="email" name="email" th:value="${user.email}" required
+                   class="w-full border border-gray-300 rounded px-3 py-2" />
+        </div>
+
+        <!-- Mật khẩu -->
+        <div class="mb-4" th:if="${user.userId != null}">
+            <label class="block text-gray-700 font-semibold mb-2">Mật khẩu</label>
+            <input type="text" name="passwordHash" th:value="${user.passwordHash}" required
+                   class="w-full border border-gray-300 rounded px-3 py-2" />
+        </div>
+
+        <!-- Họ tên -->
+        <div class="mb-4">
+            <label class="block text-gray-700 font-semibold mb-2">Họ tên</label>
+            <input type="text" name="fullName" th:value="${user.fullName}" required
+                   class="w-full border border-gray-300 rounded px-3 py-2" />
+        </div>
+
+        <!-- Vai trò -->
+        <div class="mb-4">
+            <label class="block text-gray-700 font-semibold mb-2">Vai trò</label>
+            <select name="role" required
+                    class="w-full border border-gray-300 rounded px-3 py-2">
+                <option value="">-- Chọn vai trò --</option>
+                <option value="USER" th:selected="${user.role} == 'USER'">USER</option>
+                <option value="ADMIN" th:selected="${user.role} == 'ADMIN'">ADMIN</option>
+            </select>
+        </div>
+
+        <!-- Tiểu sử -->
+        <div class="mb-4">
+            <label class="block text-gray-700 font-semibold mb-2">Tiểu sử</label>
+            <textarea name="bio" rows="3" th:text="${user.bio}"
+                      class="w-full border border-gray-300 rounded px-3 py-2"></textarea>
+        </div>
+
+        <!-- Avatar -->
+        <div class="mb-6">
+            <label class="block text-gray-700 font-semibold mb-2">Avatar URL</label>
+            <input type="text" name="avatar" th:value="${user.avatar}"
+                   class="w-full border border-gray-300 rounded px-3 py-2" />
+        </div>
+
+        <!-- Nút hành động -->
+        <div class="flex space-x-4">
+            <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">Lưu</button>
+            <a th:href="@{/admin/users}" class="px-6 py-2 border border-gray-300 rounded text-gray-700 hover:bg-gray-100">Hủy</a>
+        </div>
+    </form>
+</main>
+
+<footer th:replace="~{frontEndModel/index :: footer}"></footer>
+</body>
+</html>

@@ -9,7 +9,7 @@
                 <img th:if="${article.images.size() > 0}" th:src="@{${article.images[0].imageUrl}}" class="w-20 h-16 object-cover rounded-lg">
                 <div>
                     <a th:href="@{'/articles/' + ${article.articleId}}" class="text-blue-800 font-medium text-base hover:underline" th:text="${article.title}"></a>
-                    <p class="text-xs text-gray-600" th:text="${#temporals.format(article.createdAt, 'dd/MM/yyyy')}"></p>
+                    <p class="text-xs text-gray-600" th:text="${#temporals.format(article.publishedAt, 'dd/MM/yyyy')}"></p>
                 </div>
             </li>
         </ul>

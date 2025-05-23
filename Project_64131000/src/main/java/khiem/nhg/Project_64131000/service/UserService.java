@@ -3,6 +3,7 @@ package khiem.nhg.Project_64131000.service;
 import khiem.nhg.Project_64131000.model.User;
 import khiem.nhg.Project_64131000.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,7 +13,7 @@ import java.util.Optional;
 public class UserService {
     @Autowired
     private UserRepository userRepository;
-
+    private final BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
     public List<User> getAllUsers() {
         return userRepository.findAll();
     }
@@ -29,6 +30,13 @@ public class UserService {
         return userRepository.save(user);
     }
 
+    public User save(User user) {
+        if (user.getPasswordHash() != null && !user.getPasswordHash().startsWith("$2a$")) {
+            user.setPasswordHash(passwordEncoder.encode(user.getPasswordHash()));
+        }
+        return userRepository.save(user);
+    }
+    
     public User updateUser(Long id, User userDetails) {
         Optional<User> optionalUser = userRepository.findById(id);
         if (optionalUser.isPresent()) {
