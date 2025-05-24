@@ -68,6 +68,7 @@ public class AdminController {
                               @RequestParam("authorId") Long authorId,
                               @RequestParam(name="tags", required = false) List<String> tagNames,
                               Model model) {
+    	article.setUpdatedAt(LocalDateTime.now());
         try {
             if (publishedAtStr != null && !publishedAtStr.isEmpty()) {
             	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm");

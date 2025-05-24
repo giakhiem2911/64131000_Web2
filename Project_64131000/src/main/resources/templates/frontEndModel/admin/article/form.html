@@ -31,16 +31,15 @@
 		      class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600"
 		      th:text="${article.content}"></textarea>
 		  </div>
-		  <!-- Nội dung -->
-			<div class="mb-4">
-				<label for="categoryId">Danh mục:</label>
-				<select name="categoryId" id="categoryId" required>
-				    <option value="">-- Chọn danh mục --</option>
-				    <th:block th:each="c : ${categories}">
-				        <option th:value="${c.id}" th:text="${c.name}"></option>
-				    </th:block>
-				</select>
-			</div>
+		  <!-- Danh mục -->
+		  <div class="mb-4">
+			<select name="category" class="form-control" required>
+			    <option value="">--Chọn chuyên mục--</option>
+			    <option value="Khám phá">Khám phá</option>
+			    <option value="Sản phẩm công nghệ">Sản phẩm công nghệ</option>
+			    <!-- Thêm các chuyên mục khác -->
+		  	</select>
+		  </div>
 		  <!-- Tác giả -->
 		  <div class="mb-4">
 		    <label for="authorId" class="block text-gray-700 font-semibold mb-2">Tác giả</label>
