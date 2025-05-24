@@ -7,6 +7,7 @@ import java.time.format.DateTimeParseException;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -91,17 +92,41 @@ public class AdminController {
         model.addAttribute("user", new User());
         return "frontEndModel/admin/user/form";
     }
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
+    @GetMapping("/admin/user/form")
+    public String showUserForm(Model model) {
+        User user = new User();
+        model.addAttribute("user", user);
+        return "frontEndModel/admin/user/form";
+    }
+    
     @PostMapping("/users/save")
     public String saveUser(@ModelAttribute("user") User user, Model model) {
-    	 if (user.getUserId() == null) {
-    	        user.setCreatedAt(LocalDateTime.now());
-    	    }
-    	user.setUpdatedAt(LocalDateTime.now());
-    	userService.save(user);
+        if (user.getUserId() == null) {
+            user.setCreatedAt(LocalDateTime.now());
+            user.setPasswordHash(passwordEncoder.encode(user.getPasswordHash())); // ✅ Mã hóa mật khẩu mới
+        } else {
+            Optional<User> existingUserOpt = userService.getUserById(user.getUserId());
+            if (existingUserOpt.isPresent()) {
+                User existingUser = existingUserOpt.get();
+                if (user.getPasswordHash() == null || user.getPasswordHash().isEmpty()) {
+                    user.setPasswordHash(existingUser.getPasswordHash()); // giữ mật khẩu cũ
+                } else {
+                    user.setPasswordHash(passwordEncoder.encode(user.getPasswordHash())); // ✅ Mã hóa mật khẩu cập nhật
+                }
+            }
+        }
+
+        if (user.getCreatedAt() == null) {
+            user.setCreatedAt(LocalDateTime.now());
+        }
+        user.setUpdatedAt(LocalDateTime.now());
+        userService.save(user);
         return "redirect:/admin/users";
     }
-
+    
     @GetMapping("/users/edit/{id}")
     public String editUser(@PathVariable Long id, Model model) {
     	Optional<User> optionalUser = userService.getUserById(id);

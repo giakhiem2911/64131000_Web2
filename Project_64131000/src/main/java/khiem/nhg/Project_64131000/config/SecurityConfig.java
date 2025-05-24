@@ -37,7 +37,7 @@ public class SecurityConfig {
 
     @Bean
     public PasswordEncoder passwordEncoder() {
-        return NoOpPasswordEncoder.getInstance(); // Sử dụng NoOpPasswordEncoder cho mật khẩu không mã hóa
+        return new BCryptPasswordEncoder();
     }
 
     @Bean
