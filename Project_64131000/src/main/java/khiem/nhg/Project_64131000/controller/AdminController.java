@@ -5,6 +5,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -53,12 +54,13 @@ public class AdminController {
     }
     
     @Autowired
-    private ArticleTagService articleTagService; // hoặc ArticleTagRepository nếu bạn dùng trực tiếp
+    private ArticleTagService articleTagService;
+
     @PostMapping("/articles/save")
     public String saveArticle(@ModelAttribute Article article, 
                               @RequestParam("publishedAt") String publishedAtStr,
                               @RequestParam("authorId") Long authorId,
-                              @RequestParam("tags") String tagsStr,
+                              @RequestParam(name="tags", required = false) String tagsStr,
                               Model model) {
         try {
             if (publishedAtStr != null && !publishedAtStr.isEmpty()) {
@@ -78,22 +80,18 @@ public class AdminController {
             return "frontEndModel/admin/article/form";
         }
         article.setAuthor(author);
-        // ✅ Lưu article trước để có ID
         article = articleService.save(article);
+        List<ArticleTag> tags = new ArrayList<>();
 
-        // ✅ Sau đó xử lý tags
         if (tagsStr != null && !tagsStr.isEmpty()) {
             String[] tagNames = tagsStr.split(",");
-            List<ArticleTag> tags = new ArrayList<>();
             for (String rawTagName : tagNames) {
                 String tagName = rawTagName.trim();
                 ArticleTag tag = articleTagService.createTagIfNotExists(article, tagName);
                 tags.add(tag);
             }
-            article.setTags(tags);
         }
-
-        // ✅ Cập nhật lại lần nữa sau khi đã có tags
+        article.setTags(tags);
         articleService.save(article);
 
         return "redirect:/admin/articles";
@@ -105,7 +103,6 @@ public class AdminController {
         Article article = articleService.findById(id);
         if (article == null) return "redirect:/admin/articles";
         model.addAttribute("article", article);
-     // Trong controller trước khi trả về form
         String tagsString = "";
         if (article.getTags() != null && !article.getTags().isEmpty()) {
             tagsString = article.getTags().stream()
@@ -137,39 +134,12 @@ public class AdminController {
         model.addAttribute("user", new User());
         return "frontEndModel/admin/user/form";
     }
-    @Autowired
-    private PasswordEncoder passwordEncoder;
 
     @GetMapping("/admin/user/form")
     public String showUserForm(Model model) {
         User user = new User();
         model.addAttribute("user", user);
         return "frontEndModel/admin/user/form";
-    }
-    
-    @PostMapping("/users/save")
-    public String saveUser(@ModelAttribute("user") User user, Model model) {
-        if (user.getUserId() == null) {
-            user.setCreatedAt(LocalDateTime.now());
-            user.setPasswordHash(passwordEncoder.encode(user.getPasswordHash())); // ✅ Mã hóa mật khẩu mới
-        } else {
-            Optional<User> existingUserOpt = userService.getUserById(user.getUserId());
-            if (existingUserOpt.isPresent()) {
-                User existingUser = existingUserOpt.get();
-                if (user.getPasswordHash() == null || user.getPasswordHash().isEmpty()) {
-                    user.setPasswordHash(existingUser.getPasswordHash()); // giữ mật khẩu cũ
-                } else {
-                    user.setPasswordHash(passwordEncoder.encode(user.getPasswordHash())); // ✅ Mã hóa mật khẩu cập nhật
-                }
-            }
-        }
-
-        if (user.getCreatedAt() == null) {
-            user.setCreatedAt(LocalDateTime.now());
-        }
-        user.setUpdatedAt(LocalDateTime.now());
-        userService.save(user);
-        return "redirect:/admin/users";
     }
     
     @GetMapping("/users/edit/{id}")

@@ -30,4 +30,8 @@ public class ArticleTagService {
         return articleTagRepository.findById(id)
                 .orElseGet(() -> articleTagRepository.save(new ArticleTag(article, tag)));
     }
+    public void deleteTagsByArticle(Article article) {
+        articleTagRepository.deleteAllByArticle(article);
+    }
+
 }
