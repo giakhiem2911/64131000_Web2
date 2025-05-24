@@ -13,7 +13,7 @@
     <nav th:replace="~{frontEndModel/admin_layout :: content}"></nav>
 
     <main class="container mx-auto mt-8 px-4">
-        <h1 class="text-2xl font-bold text-gray-800 mb-6" th:text="${article.id} != null ? 'Chỉnh sửa bài viết' : 'Thêm bài viết mới'">Thêm bài viết mới</h1>
+        <h1 class="text-2xl font-bold text-gray-800 mb-6" th:text="${article.articleId} != null ? 'Chỉnh sửa bài viết' : 'Thêm bài viết mới'">Thêm bài viết mới</h1>
 
 		<form th:object="${article}" th:action="@{/admin/articles/save}" method="post" class="bg-white p-6 rounded shadow max-w-3xl mx-auto mb-10">
 		  <input type="hidden" th:field="*{articleId}" />
