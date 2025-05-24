@@ -1,117 +1,101 @@
 <!DOCTYPE html>
 <html lang="vi" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title th:text="${article.articleId} != null ? 'Chỉnh sửa bài viết' : 'Thêm bài viết mới'">Quản lý bài viết</title>
-    <script src="https://cdn.ckeditor.com/ckeditor5/43.1.0/classic/ckeditor.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title th:text="${article.id} != null ? 'Chỉnh sửa bài viết' : 'Thêm bài viết mới'">Quản lý bài viết</title>
+    <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body class="bg-gray-100 font-sans">
-    <div th:replace="~{frontEndModel/admin_layout :: content}">
-        <main class="container mx-auto mt-8 px-4">
-            <h1 class="text-2xl font-bold text-gray-800 mb-6" th:text="${article.articleId} != null ? 'Chỉnh sửa bài viết' : 'Thêm bài viết mới'">Thêm bài viết mới</h1>
 
-            <!-- Hiển thị thông báo lỗi -->
-            <div th:if="${error}" class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
-                <span th:text="${error}"></span>
-            </div>
+    <!-- Gọi lại thanh nav từ layout -->
+    <nav th:replace="~{frontEndModel/admin_layout :: content}"></nav>
 
-            <!-- Debug: Kiểm tra article -->
-            <div th:if="${article == null}" class="bg-yellow-100 border border-yellow-400 text-yellow-700 px-4 py-3 rounded mb-4">
-                Cảnh báo: Đối tượng article là null.
-            </div>
+    <main class="container mx-auto mt-8 px-4">
+        <h1 class="text-2xl font-bold text-gray-800 mb-6" th:text="${article.id} != null ? 'Chỉnh sửa bài viết' : 'Thêm bài viết mới'">Thêm bài viết mới</h1>
 
-            <form th:object="${article}" th:action="@{/admin/articles/save}" method="post" class="bg-white p-6 rounded shadow max-w-3xl mx-auto mb-10">
-                <!-- Mã bài viết -->
-                <div class="mb-4">
-                    <label for="articleId" class="block text-gray-700 font-semibold mb-2">Mã bài viết</label>
-                    <input type="hidden" th:field="*{articleId}"/>
-                </div>
+		<form th:object="${article}" th:action="@{/admin/articles/save}" method="post" class="bg-white p-6 rounded shadow max-w-3xl mx-auto mb-10">
+		  <input type="hidden" th:field="*{articleId}" />
+		  <!-- Tiêu đề -->
+		  <div class="mb-4">
+		    <label for="title" class="block text-gray-700 font-semibold mb-2">Tiêu đề</label>
+		    <input type="text" id="title" name="title" th:value="${article.title}" required
+		      class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600" />
+		  </div>
+		
+		  <!-- Nội dung -->
+		  <div class="mb-4">
+		    <label for="content" class="block text-gray-700 font-semibold mb-2">Nội dung</label>
+		    <textarea id="content" name="content" rows="8" required
+		      class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600"
+		      th:text="${article.content}"></textarea>
+		  </div>
+		  <!-- Nội dung -->
+			<div class="mb-4">
+				<label for="categoryId">Danh mục:</label>
+				<select name="categoryId" id="categoryId" required>
+				    <option value="">-- Chọn danh mục --</option>
+				    <th:block th:each="c : ${categories}">
+				        <option th:value="${c.id}" th:text="${c.name}"></option>
+				    </th:block>
+				</select>
+			</div>
+		  <!-- Tác giả -->
+		  <div class="mb-4">
+		    <label for="authorId" class="block text-gray-700 font-semibold mb-2">Tác giả</label>
+		    <select id="authorId" name="authorId" required
+		      class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600">
+		      <option value="">-- Chọn tác giả --</option>
+		      <option th:each="user : ${users}" th:value="${user.userId}" th:text="${user.fullName}"
+		        th:selected="${article.author != null} ? ${article.author.userId} == ${user.userId} : false"></option>
+		    </select>
+		  </div>
+		
+		  <!-- Trạng thái -->
+		  <div class="mb-4">
+		    <label for="status" class="block text-gray-700 font-semibold mb-2">Trạng thái</label>
+		    <select id="status" name="status" required
+		      class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600">
+		      <option value="DRAFT" th:selected="${article.status} == 'DRAFT'">Bản nháp</option>
+		      <option value="PUBLISHED" th:selected="${article.status} == 'PUBLISHED'">Đã đăng</option>
+		      <option value="ARCHIVED" th:selected="${article.status} == 'ARCHIVED'">Lưu trữ</option>
+		    </select>
+		  </div>
+		
+		  <!-- Tags (ví dụ nhập thô, tách bằng dấu phẩy) -->
+		  <div class="mb-4">
+			<select multiple name="tags" th:field="*{tags}"
+			  class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600">
+			  <option th:each="tag : ${tags}" th:value="${tag.id}" th:text="${tag.name}"></option>
+			</select>
+		  </div>
+		  <!-- Ngày đăng -->
+		  <div class="mb-4">
+		  	<label for="publishedAt" class="block text-gray-700 font-semibold mb-2">Ngày đăng</label>
+			<input type="datetime-local" name="publishedAt" class="form-control" required>
+		  </div>
+		  <!-- Nút lưu và hủy -->
+		  <div class="flex space-x-4">
+		    <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">Lưu</button>
+		    <a href="#" th:href="@{/admin/articles}" class="inline-block px-6 py-2 border border-gray-300 rounded text-gray-700 hover:bg-gray-100 transition">Hủy</a>
+		  </div>
+		
+		</form>
 
-                <!-- Tiêu đề -->
-                <div class="mb-4">
-                    <label for="title" class="block text-gray-700 font-semibold mb-2">Tiêu đề</label>
-                    <input type="text" id="title" th:field="*{title}" required
-                           class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600"/>
-                </div>
+    </main>
 
-                <!-- Nội dung -->
-                <div class="mb-4">
-                    <label for="content" class="block text-gray-700 font-semibold mb-2">Nội dung</label>
-                    <textarea id="content" name="content" rows="8" required
-                              class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600"
-                              th:text="${article.content != null} ? ${article.content} : ''"></textarea>
-                </div>
+    <footer th:replace="~{frontEndModel/index :: footer}"></footer>
 
-                <!-- Tác giả -->
-                <div class="mb-4">
-                    <label for="authorId" class="block text-gray-700 font-semibold mb-2">Tác giả</label>
-                    <select id="authorId" name="authorId" required
-                            class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600">
-                        <option value="">-- Chọn tác giả --</option>
-                        <option th:each="user : ${users}" th:value="${user.userId}" th:text="${user.fullName}"
-                                th:selected="${article.author != null} ? ${article.author.userId} == ${user.userId} : false"></option>
-                    </select>
-                </div>
-
-                <!-- Trạng thái -->
-                <div class="mb-4">
-                    <label for="status" class="block text-gray-700 font-semibold mb-2">Trạng thái</label>
-                    <select id="status" th:field="*{status}" required
-                            class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600">
-                        <option value="DRAFT">Bản nháp</option>
-                        <option value="PUBLISHED">Đã đăng</option>
-                        <option value="ARCHIVED">Lưu trữ</option>
-                    </select>
-                </div>
-
-                <!-- Tags -->
-                <div class="mb-4">
-                    <label for="tags" class="block text-gray-700 font-semibold mb-2">Tags</label>
-                    <input type="text" id="tags" name="tags" th:value="${tagsString}"
-                           class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600"/>
-                </div>
-
-                <!-- Ngày đăng -->
-                <div class="mb-4">
-                    <label for="publishedAt" class="block text-gray-700 font-semibold mb-2">Ngày đăng</label>
-                    <input type="date" id="publishedAt" name="publishedAt"
-                           th:value="${article.publishedAt != null} ? ${#temporals.format(article.publishedAt, 'yyyy-MM-dd')} : ''"
-                           class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600"/>
-                </div>
-
-                <!-- Nút lưu và hủy -->
-                <div class="flex space-x-4">
-                    <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">Lưu</button>
-                    <a th:href="@{/admin/articles}" class="inline-block px-6 py-2 border border-gray-300 rounded text-gray-700 hover:bg-gray-100 transition">Hủy</a>
-                </div>
-            </form>
-        </main>
-    </div>
 </body>
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        console.log('DOM loaded, searching for #content');
-        const contentElement = document.querySelector('#content');
-        if (contentElement) {
-            console.log('Found #content, initializing CKEditor');
-            ClassicEditor
-                .create(contentElement, {
-                    toolbar: ['heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', '|', 'undo', 'redo']
-                })
-                .then(editor => {
-                    console.log('CKEditor initialized');
-                    editor.ui.view.editable.element.style.height = '400px';
-                })
-                .catch(error => {
-                    console.error('CKEditor initialization error:', error);
-                });
-        } else {
-            console.error('Element with id "content" not found');
-        }
+  ClassicEditor
+    .create(document.querySelector('#content'))
+    .then(editor => {
+      editor.ui.view.editable.element.style.height = '400px';
+    })
+    .catch(error => {
+      console.error(error);
     });
 </script>
 </html>
