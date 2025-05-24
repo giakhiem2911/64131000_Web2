@@ -9,26 +9,47 @@
     <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body class="bg-gray-100 font-sans">
-    <!-- Thanh điều hướng -->
-    <nav class="bg-blue-800 text-white p-4" th:fragment="content">
-        <div class="container mx-auto flex justify-between items-center">
-            <h3 class="text-xl font-bold">Quản trị</h3>
-            <ul class="flex space-x-4">
+    <!-- Header từ index.html -->
+    <header th:replace="~{frontEndModel/index :: header}"></header>
+
+    <!-- Thanh điều hướng admin và nội dung -->
+    <div class="container mx-auto flex flex-col md:flex-row gap-8 py-8 px-4">
+        <!-- Sidebar -->
+        <aside class="w-full md:w-1/4 bg-blue-800 text-white rounded-lg p-6 shadow-lg">
+            <h3 class="text-xl font-bold mb-4">Quản trị</h3>
+            <ul class="space-y-2">
                 <li>
-                    <a href="/admin/articles" class="hover:bg-blue-700 p-2 rounded">Quản lý bài viết</a>
+                    <a href="/admin/dashboard" class="flex items-center space-x-2 hover:bg-blue-700 p-2 rounded">
+                        <i class="bi bi-house-door"></i>
+                        <span>Dashboard</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="/admin/users" class="hover:bg-blue-700 p-2 rounded">Quản lý người dùng</a>
+                    <a href="/admin/articles" class="flex items-center space-x-2 hover:bg-blue-700 p-2 rounded">
+                        <i class="bi bi-file-text"></i>
+                        <span>Quản lý bài viết</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="/logout" class="hover:bg-blue-700 p-2 rounded">Đăng xuất</a>
+                    <a href="/admin/users" class="flex items-center space-x-2 hover:bg-blue-700 p-2 rounded">
+                        <i class="bi bi-people"></i>
+                        <span>Quản lý người dùng</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/logout" class="flex items-center space-x-2 hover:bg-blue-700 p-2 rounded">
+                        <i class="bi bi-box-arrow-right"></i>
+                        <span>Đăng xuất</span>
+                    </a>
                 </li>
             </ul>
-        </div>
-    </nav>
-    <main>
-        <div th:replace="~{frontEndModel/admin/dashboard :: content}"></div>
-    </main>
+        </aside>
+
+        <!-- Nội dung chính -->
+        <main class="w-full md:w-3/4" th:fragment="content"></main>
+    </div>
+
+    <!-- Footer từ index.html -->
     <footer th:replace="~{frontEndModel/index :: footer}"></footer>
 </body>
 </html>

@@ -10,7 +10,8 @@ import khiem.nhg.Project_64131000.model.ArticleTagId;
 
 public interface ArticleTagRepository extends JpaRepository<ArticleTag, ArticleTagId> {
     List<ArticleTag> findByArticleArticleId(Long articleId);
-    List<ArticleTag> findAllByIdTags(String tags);   
+    List<ArticleTag> findAllByIdTags(String tag);   
     Optional<ArticleTag> findByIdTags(String tags);
     void deleteAllByArticle(Article article);
+    List<ArticleTag> findAllByIdIn(List<Long> ids);
 }

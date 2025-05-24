@@ -5,12 +5,13 @@
     <title>Admin Dashboard</title>
 </head>
 <body>
-    <div th:fragment="content">
-		<div class="bg-white p-8 rounded-xl shadow-lg">
-		    <h2 class="text-2xl font-bold text-blue-800 mb-6 text-center">Admin Dashboard</h2>
-		    <p class="text-gray-700">Chào mừng bạn đến với bảng điều khiển quản trị!</p>
-		    <p class="text-gray-700">Bạn có thể quản lý bài viết, người dùng, và các nội dung khác tại đây.</p>
-		</div>
+    <div th:replace="~{frontEndModel/admin_layout :: content}">
+        <div class="bg-white p-8 rounded-xl shadow-lg">
+            <h2 class="text-2xl font-bold text-blue-800 mb-6 text-center">Admin Dashboard</h2>
+            <p class="text-gray-700">Chào mừng bạn đến với bảng điều khiển quản trị!</p>
+            <p class="text-gray-700">Bạn có thể quản lý bài viết, người dùng, và các nội dung khác tại đây.</p>
+            <a href="/" class="text-blue-600 hover:underline mt-4 inline-block">Quay về trang chủ</a>
+        </div>
     </div>
 </body>
 </html>
