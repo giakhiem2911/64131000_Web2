@@ -18,7 +18,7 @@ public class ArticleTag {
     @MapsId("articleId")
     @JoinColumn(name = "articleId", insertable = false, updatable = false)
     private Article article;
-
+    
     public ArticleTag() {}
     public ArticleTag(Article article, String tags) {
         this.article = article;

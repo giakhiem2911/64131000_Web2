@@ -39,8 +39,8 @@
 				    <td class="px-6 py-4 whitespace-nowrap" th:text="${#temporals.format(article.publishedAt, 'dd/MM/yyyy')}">01/01/2025</td>
 				    <td class="px-6 py-4 whitespace-nowrap" th:text="${#temporals.format(article.updatedAt, 'dd/MM/yyyy')}">01/01/2025</td>
 				    <td class="px-6 py-4 whitespace-nowrap text-center text-sm font-medium">
-				      <a th:href="@{'/admin/articles/edit/' + ${article.id}}" class="text-indigo-600 hover:text-indigo-900 mr-3">Sửa</a>
-				      <a th:href="@{'/admin/articles/delete/' + ${article.id}}"
+				      <a th:href="@{'/admin/articles/edit/' + ${article.articleId}}" class="text-indigo-600 hover:text-indigo-900 mr-3">Sửa</a>
+				      <a th:href="@{'/admin/articles/delete/' + ${article.articleId}}"
 				         onclick="return confirm('Bạn có chắc muốn xóa?');"
 				         class="text-red-600 hover:text-red-900">Xóa</a>
 				    </td>

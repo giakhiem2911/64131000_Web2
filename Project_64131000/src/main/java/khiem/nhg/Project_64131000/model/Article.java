@@ -70,7 +70,7 @@ public class Article {
     public List<ArticleImage> getImages() { return images; }
     public void setImages(List<ArticleImage> images) { this.images = images; }
     public List<ArticleTag> getTags() { return tags; }
-    public void setTags(List<ArticleTag> tags) { this.tags = tags; }
+    public void setTags(List<ArticleTag> list) { this.tags = list; }
     public List<Interaction> getInteractions() { return interactions; }
     public void setInteractions(List<Interaction> interactions) { this.interactions = interactions; }
 
