@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 @Entity
 @Table(name = "Articles")
 public class Article {
@@ -35,6 +37,7 @@ public class Article {
     private LocalDateTime updatedAt;
 
     @Column(name = "publishedAt")
+    @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
     private LocalDateTime publishedAt;
 
     @OneToMany(mappedBy = "article", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
@@ -78,6 +81,6 @@ public class Article {
     public void setLikeCount(long likeCount) { this.likeCount = likeCount; }
 
     public Long getId() {
-        return null;
+        return articleId;
     }
 }

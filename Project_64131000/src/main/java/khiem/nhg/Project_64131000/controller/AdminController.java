@@ -1,5 +1,7 @@
 package khiem.nhg.Project_64131000.controller;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -8,6 +10,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,14 +18,18 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import khiem.nhg.Project_64131000.model.Article;
+import khiem.nhg.Project_64131000.model.ArticleImage;
 import khiem.nhg.Project_64131000.model.ArticleTag;
 import khiem.nhg.Project_64131000.model.User;
 import khiem.nhg.Project_64131000.service.ArticleService;
@@ -51,11 +58,7 @@ public class AdminController {
     public String newArticleForm(Model model) {
         model.addAttribute("article", new Article());
         model.addAttribute("users", userService.getAllUsers());
-        return "frontEndModel/admin/article/form";
-    }
-    @GetMapping("/admin/articles/new")
-    public String showArticleForm(Model model) {
-        model.addAttribute("article", new Article());
+        model.addAttribute("tags", articleTagService.getAllTags()); 
         return "frontEndModel/admin/article/form";
     }
 
@@ -63,46 +66,61 @@ public class AdminController {
     private ArticleTagService articleTagService;
 
     @PostMapping("/articles/save")
-    public String saveArticle(@ModelAttribute Article article, 
-                              @RequestParam("publishedAt") String publishedAtStr,
-                              @RequestParam("authorId") Long authorId,
-                              @RequestParam(name="tags", required = false) List<String> tagNames,
+    public String saveArticle(@Validated @ModelAttribute("article") Article article, BindingResult result,
+                              @RequestParam(name = "tags", required = false) List<String> tagNames,
+                              @RequestParam(name = "images", required = false) MultipartFile[] images,
                               Model model) {
-    	article.setUpdatedAt(LocalDateTime.now());
-        try {
-            if (publishedAtStr != null && !publishedAtStr.isEmpty()) {
-            	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm");
-            	LocalDateTime publishedAt = LocalDateTime.parse(publishedAtStr, formatter);
-            	article.setPublishedAt(publishedAt);
-            }
-        } catch (DateTimeParseException e) {
-            model.addAttribute("error", "Ngày đăng không hợp lệ.");
-            model.addAttribute("article", article);
-            return "frontEndModel/admin/article/form";
-        }
-        User author = userService.getUserById(authorId).orElse(null);
-        if (author == null) {
-            model.addAttribute("error", "Tác giả không hợp lệ.");
-            model.addAttribute("article", article);
+    	
+        if (article.getAuthor() == null || article.getAuthor().getUserId() == null) {
+            model.addAttribute("error", "Vui lòng chọn tác giả.");
             model.addAttribute("users", userService.getAllUsers());
+            model.addAttribute("tags", articleTagService.getAllTags());
             return "frontEndModel/admin/article/form";
         }
-        article.setAuthor(author);
-        article = articleService.save(article);
-        List<ArticleTag> tags = new ArrayList<>();
 
-        if (tagNames != null && !tagNames.isEmpty()) {
-            for (String rawTagName : tagNames) {
-                String tagName = rawTagName.trim();
-                ArticleTag tag = articleTagService.createTagIfNotExists(article, tagName);
+        List<ArticleTag> tags = new ArrayList<>();
+        if (tagNames != null) {
+            for (String tagName : tagNames) {
+                ArticleTag tag = articleTagService.createTagIfNotExists(article, tagName.trim());
                 tags.add(tag);
             }
         }
         article.setTags(tags);
+
+        article.setUpdatedAt(LocalDateTime.now());
         articleService.save(article);
+        
+     // Xử lý ảnh
+        if (images != null) {
+            List<ArticleImage> imageList = new ArrayList<>();
+            for (MultipartFile file : images) {
+                if (!file.isEmpty()) {
+                    try {
+                        String uploadDir = "src/main/resources/static/images/";
+                        String fileName = UUID.randomUUID() + "_" + file.getOriginalFilename();
+                        File dest = new File(uploadDir + fileName);
+                        file.transferTo(dest);
+
+                        // Tạo đối tượng ArticleImage
+                        ArticleImage articleImage = new ArticleImage();
+                        articleImage.setArticle(article);
+                        articleImage.setImageUrl("/images/" + fileName);
+                        imageList.add(articleImage);
+
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+
+            // Gán vào article và lưu lại
+            article.setImages(imageList);
+            articleService.save(article);
+        }
 
         return "redirect:/admin/articles";
     }
+    						
 
 
     @GetMapping("/articles/edit/{id}")
@@ -117,7 +135,7 @@ public class AdminController {
                               .collect(Collectors.joining(", "));
         }
         model.addAttribute("tagsString", tagsString);
-
+        model.addAttribute("tags", articleTagService.getAllTags());
         model.addAttribute("users", userService.getAllUsers());
         return "frontEndModel/admin/article/form";
     }

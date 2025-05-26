@@ -14,7 +14,9 @@ public class ArticleTagService {
 
     @Autowired
     private ArticleTagRepository articleTagRepository;
-
+    public List<ArticleTag> getAllTags() {
+        return articleTagRepository.findAll();
+    }
     public List<ArticleTag> findByTag(String tag) {
         return articleTagRepository.findAllByIdTags(tag);
     }
