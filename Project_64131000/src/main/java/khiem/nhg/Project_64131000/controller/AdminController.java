@@ -88,8 +88,8 @@ public class AdminController {
         article.setTags(tags);
 
         article.setUpdatedAt(LocalDateTime.now());
-        articleService.save(article);
-        
+        article = articleService.save(article);
+        List<ArticleImage> existingImages = article.getImages() != null ? article.getImages() : new ArrayList<>();
      // Xử lý ảnh
         if (images != null) {
             List<ArticleImage> imageList = new ArrayList<>();
@@ -106,18 +106,18 @@ public class AdminController {
                         articleImage.setArticle(article);
                         articleImage.setImageUrl("/images/" + fileName);
                         imageList.add(articleImage);
-
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
                 }
             }
-
+            if (article.getImages() == null) {
+                article.setImages(new ArrayList<>());
+            }
             // Gán vào article và lưu lại
-            article.setImages(imageList);
+            article.getImages().addAll(imageList); 
             articleService.save(article);
         }
-
         return "redirect:/admin/articles";
     }
     						

@@ -29,9 +29,20 @@
                 <label for="content">Nội dung</label>
                 <textarea id="content" th:field="*{content}" class="w-full border border-gray-300 p-2 rounded" style="min-height: 400px;"></textarea>
             </div>
+            <div class="mb-4">
+			  <label class="font-semibold">Ảnh đã tải lên:</label>
+			  <div class="flex flex-wrap gap-2 mt-2">
+			    <th:block th:each="img : ${article.images}">
+			      <div class="relative">
+			        <img th:src="@{${img.imageUrl}}" alt="Ảnh bài viết" class="w-32 h-20 object-cover rounded shadow">
+			      </div>
+			    </th:block>
+			  </div>
+			</div>
+            
 			<div class="mb-4">
 			    <label for="images">Ảnh bài viết</label>
-			    <input type="file" name="images" id="images" multiple accept="image/*"
+			    <input type="file" th:field="*{images}" id="images" multiple accept="image/*"
 			           class="w-full border border-gray-300 p-2 rounded" />
 			</div>
 			
@@ -51,7 +62,11 @@
                     <option th:each="user : ${users}" th:value="${user.userId}" th:text="${user.fullName}"></option>
                 </select>
             </div>
-            
+            <div class="mb-4">
+			  <label for="tags">Tags</label>
+			  <input type="text" id="tags" name="tags" class="w-full border p-2 rounded"
+			         th:value="${tagsString}" />
+			</div>            
             <div class="mb-4">
                 <label for="status">Trạng thái</label>
                 <select th:field="*{status}" id="status" class="w-full border border-gray-300 p-2 rounded">
