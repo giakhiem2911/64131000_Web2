@@ -1,52 +1,45 @@
 package khiem.nhg.Project_64131000.controller;
 
-import java.io.File;
+import java.beans.PropertyEditorSupport;
 import java.io.IOException;
-import java.time.LocalDate;
+import java.nio.file.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeParseException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
-import java.util.UUID;
+import java.util.*;
 import java.util.stream.Collectors;
 
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
+import org.springframework.validation.*;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import khiem.nhg.Project_64131000.model.Article;
-import khiem.nhg.Project_64131000.model.ArticleImage;
 import khiem.nhg.Project_64131000.model.ArticleTag;
 import khiem.nhg.Project_64131000.model.User;
-import khiem.nhg.Project_64131000.service.ArticleService;
-import khiem.nhg.Project_64131000.service.ArticleTagService;
-import khiem.nhg.Project_64131000.service.UserService;
+import khiem.nhg.Project_64131000.service.*;
 
 @Controller
 @RequestMapping("/admin")
 public class AdminController {
-	@GetMapping("/dashboard")
-	public String adminDashboard(Model model) {
-	    model.addAttribute("title", "Admin Dashboard");
-	    model.addAttribute("content", "frontEndModel/admin/dashboard :: content");
-	    return "frontEndModel/admin_layout";
-	}
-    @Autowired
-    private ArticleService articleService;
+
+    private static final org.slf4j.Logger logger = LoggerFactory.getLogger(AdminController.class);
+
+    @Autowired private ArticleService articleService;
+    @Autowired private ArticleTagService articleTagService;
+    @Autowired private UserService userService;
+
+    @GetMapping("/dashboard")
+    public String adminDashboard(Model model) {
+        model.addAttribute("title", "Admin Dashboard");
+        model.addAttribute("content", "frontEndModel/admin/dashboard :: content");
+        return "frontEndModel/admin_layout";
+    }
 
     @GetMapping("/articles")
     public String listArticles(Model model) {
@@ -56,87 +49,128 @@ public class AdminController {
 
     @GetMapping("/articles/new")
     public String newArticleForm(Model model) {
-        model.addAttribute("article", new Article());
+        Article article = new Article();
+        article.setAuthor(new User());
+        model.addAttribute("article", article);
         model.addAttribute("users", userService.getAllUsers());
-        model.addAttribute("tags", articleTagService.getAllTags()); 
+        model.addAttribute("tags", articleTagService.getAllTags());
         return "frontEndModel/admin/article/form";
     }
 
-    @Autowired
-    private ArticleTagService articleTagService;
+    @InitBinder
+    public void initBinder(WebDataBinder binder) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm");
+        binder.registerCustomEditor(LocalDateTime.class, new PropertyEditorSupport() {
+            @Override
+            public void setAsText(String text) {
+                setValue(LocalDateTime.parse(text, formatter));
+            }
+        });
+    }
 
     @PostMapping("/articles/save")
-    public String saveArticle(@Validated @ModelAttribute("article") Article article, BindingResult result,
-                              @RequestParam(name = "tags", required = false) List<String> tagNames,
-                              @RequestParam(name = "images", required = false) MultipartFile[] images,
-                              Model model) {
-    	
+    public String saveArticle(
+        @ModelAttribute("article") @Validated Article article,
+        BindingResult result,
+        @RequestParam(name = "tags", required = false) List<String> tagNames,
+        @RequestParam(name = "image", required = false) MultipartFile imageFile,
+        Model model) {
+
+        if (article.getUpdatedAt() == null) {
+            article.setUpdatedAt(LocalDateTime.now());
+        }
+
+        if (result.hasErrors()) {
+            logger.error("Validation errors: {}", result.getFieldErrors());
+            model.addAttribute("users", userService.getAllUsers());
+            model.addAttribute("tags", articleTagService.getAllTags());
+            model.addAttribute("tagsString", tagNames != null ? String.join(",", tagNames) : "");
+            return "frontEndModel/admin/article/form";
+        }
+
         if (article.getAuthor() == null || article.getAuthor().getUserId() == null) {
-            model.addAttribute("error", "Vui lòng chọn tác giả.");
+            result.rejectValue("author.userId", "NotNull", "Vui lòng chọn tác giả.");
             model.addAttribute("users", userService.getAllUsers());
             model.addAttribute("tags", articleTagService.getAllTags());
             return "frontEndModel/admin/article/form";
         }
 
+        Optional<User> authorOpt = userService.getUserById(article.getAuthor().getUserId());
+        if (authorOpt.isEmpty()) {
+            result.rejectValue("author.userId", "NotFound", "Tác giả không tồn tại.");
+            model.addAttribute("users", userService.getAllUsers());
+            model.addAttribute("tags", articleTagService.getAllTags());
+            return "frontEndModel/admin/article/form";
+        }
+        article.setAuthor(authorOpt.get());
+
         List<ArticleTag> tags = new ArrayList<>();
         if (tagNames != null) {
             for (String tagName : tagNames) {
-                ArticleTag tag = articleTagService.createTagIfNotExists(article, tagName.trim());
-                tags.add(tag);
+                if (!tagName.trim().isEmpty()) {
+                    tags.add(articleTagService.createTagIfNotExists(article, tagName.trim()));
+                }
             }
         }
         article.setTags(tags);
 
-        article.setUpdatedAt(LocalDateTime.now());
-        article = articleService.save(article);
-        List<ArticleImage> existingImages = article.getImages() != null ? article.getImages() : new ArrayList<>();
-     // Xử lý ảnh
-        if (images != null) {
-            List<ArticleImage> imageList = new ArrayList<>();
-            for (MultipartFile file : images) {
-                if (!file.isEmpty()) {
-                    try {
-                        String uploadDir = "src/main/resources/static/images/";
-                        String fileName = UUID.randomUUID() + "_" + file.getOriginalFilename();
-                        File dest = new File(uploadDir + fileName);
-                        file.transferTo(dest);
-
-                        // Tạo đối tượng ArticleImage
-                        ArticleImage articleImage = new ArticleImage();
-                        articleImage.setArticle(article);
-                        articleImage.setImageUrl("/images/" + fileName);
-                        imageList.add(articleImage);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
-            if (article.getImages() == null) {
-                article.setImages(new ArrayList<>());
-            }
-            // Gán vào article và lưu lại
-            article.getImages().addAll(imageList); 
-            articleService.save(article);
+        if ("published".equals(article.getStatus()) && article.getPublishedAt() == null) {
+            article.setPublishedAt(LocalDateTime.now());
         }
+
+        // ✅ Xử lý ảnh
+        if (imageFile != null && !imageFile.isEmpty()) {
+            String originalName = imageFile.getOriginalFilename();
+            String extension = originalName != null && originalName.contains(".")
+                    ? originalName.substring(originalName.lastIndexOf('.'))
+                    : "";
+
+            String filename = UUID.randomUUID() + extension;
+
+         // Đường dẫn lưu ảnh - ngoài thư mục src
+            String uploadDir = System.getProperty("user.dir") + "/uploads/images";
+            Path uploadPath = Paths.get(uploadDir);
+
+            try {
+                if (!Files.exists(uploadPath)) {
+                    Files.createDirectories(uploadPath);
+                }
+
+                Path filePath = uploadPath.resolve(filename);
+                imageFile.transferTo(filePath.toFile());
+
+                article.setImageUrl("/uploads/images/" + filename);
+            } catch (IOException e) {
+                logger.error("Lỗi khi lưu ảnh: {}", e.getMessage());
+            }
+
+        }
+
+        try {
+            articleService.save(article);
+        } catch (DataIntegrityViolationException e) {
+            logger.error("Lỗi lưu Article: {}", e.getMessage());
+            model.addAttribute("users", userService.getAllUsers());
+            model.addAttribute("tags", articleTagService.getAllTags());
+            return "frontEndModel/admin/article/form";
+        }
+
         return "redirect:/admin/articles";
     }
-    						
 
 
     @GetMapping("/articles/edit/{id}")
     public String editArticle(@PathVariable Long id, Model model) {
         Article article = articleService.findById(id);
         if (article == null) return "redirect:/admin/articles";
+
         model.addAttribute("article", article);
-        String tagsString = "";
-        if (article.getTags() != null && !article.getTags().isEmpty()) {
-            tagsString = article.getTags().stream()
-                              .map(ArticleTag::getTags)
-                              .collect(Collectors.joining(", "));
-        }
-        model.addAttribute("tagsString", tagsString);
         model.addAttribute("tags", articleTagService.getAllTags());
         model.addAttribute("users", userService.getAllUsers());
+        String tagsString = article.getTags() != null ? article.getTags().stream()
+            .map(ArticleTag::getTags)
+            .collect(Collectors.joining(", ")) : "";
+        model.addAttribute("tagsString", tagsString);
         return "frontEndModel/admin/article/form";
     }
 
@@ -144,68 +178,5 @@ public class AdminController {
     public String deleteArticle(@PathVariable Long id) {
         articleService.deleteById(id);
         return "redirect:/admin/articles";
-    }
-    @Autowired
-    private UserService userService;
-    @Autowired
-    private PasswordEncoder passwordEncoder;
-    @GetMapping("/users")
-    public String listUsers(Model model) {
-        model.addAttribute("users", userService.getAllUsers());
-        return "frontEndModel/admin/user/list";
-    }
-
-    @GetMapping("/users/new")
-    public String newUserForm(Model model) {
-        model.addAttribute("user", new User());
-        return "frontEndModel/admin/user/form";
-    }
-
-    @GetMapping("/admin/user/form")
-    public String showUserForm(Model model) {
-        User user = new User();
-        model.addAttribute("user", user);
-        return "frontEndModel/admin/user/form";
-    }
-    @PostMapping("/users/save")
-    public String saveUser(@ModelAttribute("user") User user, BindingResult result,Model model) {
-        if (result.hasErrors()) {
-            return "frontEndModel/admin/user/form";
-        }
-        if (user.getUserId() == null) {
-            user.setCreatedAt(LocalDateTime.now());
-            user.setPasswordHash(passwordEncoder.encode(user.getPasswordHash()));
-        } else {
-            Optional<User> existingUserOpt = userService.getUserById(user.getUserId());
-            if (existingUserOpt.isPresent()) {
-                User existingUser = existingUserOpt.get();
-                if (user.getPasswordHash() == null || user.getPasswordHash().isEmpty()) {
-                    user.setPasswordHash(existingUser.getPasswordHash());
-                } else {
-                    user.setPasswordHash(passwordEncoder.encode(user.getPasswordHash()));
-                }
-            }
-        }
-
-        if (user.getCreatedAt() == null) {
-            user.setCreatedAt(LocalDateTime.now());
-        }
-        user.setUpdatedAt(LocalDateTime.now());
-        userService.save(user);
-        return "redirect:/admin/users";
-    }
-    @GetMapping("/users/edit/{id}")
-    public String editUser(@PathVariable Long id, Model model) {
-    	Optional<User> optionalUser = userService.getUserById(id);
-    	User user = optionalUser.orElse(null);
-        if (user == null) return "redirect:/admin/users";
-        model.addAttribute("user", user);
-        return "frontEndModel/admin/user/form";
-    }
-
-    @GetMapping("/users/delete/{id}")
-    public String deleteUser(@PathVariable Long id) {
-    	userService.deleteUser(id);
-        return "redirect:/admin/users";
     }
 }

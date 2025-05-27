@@ -102,6 +102,11 @@ public class HomeController {
     @GetMapping("/category/kham-pha")
     public String khamPhaCategory(Model model) {
         // Article-related logic
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        if (auth != null && auth.isAuthenticated() && !"anonymousUser".equals(auth.getPrincipal())) {
+            User currentUser = userRepository.findByEmail(auth.getName()).orElse(null);
+            model.addAttribute("currentUser", currentUser);
+        }
         List<Article> featuredArticles = articleRepository.findFeaturedArticles();
         Article latestArticle = featuredArticles.stream()
                 .filter(article -> article.getPublishedAt() != null)
@@ -131,6 +136,11 @@ public class HomeController {
     }
     @GetMapping("/category/san-pham-cong-nghe")
     public String sanPhamCongNgheCategory(Model model) {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        if (auth != null && auth.isAuthenticated() && !"anonymousUser".equals(auth.getPrincipal())) {
+            User currentUser = userRepository.findByEmail(auth.getName()).orElse(null);
+            model.addAttribute("currentUser", currentUser);
+        }
         // Article-related logic
         List<Article> featuredArticles = articleRepository.findFeaturedArticles();
         Article latestArticle = featuredArticles.stream()

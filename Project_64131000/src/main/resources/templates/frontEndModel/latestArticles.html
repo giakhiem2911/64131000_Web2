@@ -6,7 +6,8 @@
         <ul class="space-y-4">
             <li th:each="article : ${latestArticles}"
                 class="flex gap-4 bg-white rounded-xl shadow p-4 hover:bg-blue-50">
-                <img th:if="${article.images.size() > 0}" th:src="@{${article.images[0].imageUrl}}" class="w-20 h-16 object-cover rounded-lg">
+                <img th:if="${article.imageUrl != null and #strings.isNotEmpty(article.imageUrl)}" 
+                     th:src="@{${article.imageUrl}}" class="w-20 h-16 object-cover rounded-lg">
                 <div>
                     <a th:href="@{'/articles/' + ${article.articleId}}" class="text-blue-800 font-medium text-base hover:underline" th:text="${article.title}"></a>
                     <p class="text-xs text-gray-600" th:text="${#temporals.format(article.publishedAt, 'dd/MM/yyyy')}"></p>

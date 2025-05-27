@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import java.time.LocalDateTime;
 import java.util.List;
-
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
@@ -28,29 +27,29 @@ public class Article {
     @Column(name = "category", nullable = false)
     private String category;
 
-    @NotNull(message = "Tác giả không được để trống")
     @ManyToOne
     @JoinColumn(name = "authorId", nullable = false)
+    @NotNull(message = "Tác giả không được để trống")
     private User author;
 
     @NotBlank(message = "Trạng thái không được để trống")
     @Column(name = "status", nullable = false)
     private String status;
 
-    @Min(value = 0, message = "Lượt xem không thể nhỏ hơn 0")
     @Column(name = "views", columnDefinition = "BIGINT DEFAULT 0")
     private Long views;
 
     @NotNull(message = "Ngày cập nhật không được để trống")
+    @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss.SSS")
     @Column(name = "updatedAt", nullable = false)
     private LocalDateTime updatedAt;
 
-    @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
+    @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss.SSS")
     @Column(name = "publishedAt")
     private LocalDateTime publishedAt;
 
-    @OneToMany(mappedBy = "article", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<ArticleImage> images;
+    @Column(name = "imageUrl")
+    private String imageUrl;
 
     @OneToMany(mappedBy = "article", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     private List<ArticleTag> tags;
@@ -61,6 +60,7 @@ public class Article {
     @Transient
     private long likeCount;
 
+    // Getters và Setters
     public Long getArticleId() { return articleId; }
     public void setArticleId(Long articleId) { this.articleId = articleId; }
 
@@ -88,8 +88,8 @@ public class Article {
     public LocalDateTime getPublishedAt() { return publishedAt; }
     public void setPublishedAt(LocalDateTime publishedAt) { this.publishedAt = publishedAt; }
 
-    public List<ArticleImage> getImages() { return images; }
-    public void setImages(List<ArticleImage> images) { this.images = images; }
+    public String getImageUrl() { return imageUrl; }
+    public void setImageUrl(String image) { this.imageUrl = image; }
 
     public List<ArticleTag> getTags() { return tags; }
     public void setTags(List<ArticleTag> tags) { this.tags = tags; }
@@ -100,7 +100,5 @@ public class Article {
     public long getLikeCount() { return likeCount; }
     public void setLikeCount(long likeCount) { this.likeCount = likeCount; }
 
-    public Long getId() {
-        return articleId;
-    }
+    public Long getId() { return articleId; }
 }

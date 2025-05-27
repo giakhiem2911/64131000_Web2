@@ -37,8 +37,8 @@
 				    <td class="px-6 py-4 whitespace-nowrap" th:text="${article.title}">Tiêu đề</td>
 				    <td class="px-6 py-4 whitespace-nowrap" th:text="${article.author.fullName}">Nguyễn Văn A</td>
 				    <td>
-					    <img th:if="${article.images != null and !article.images.isEmpty()}"
-					         th:src="@{${article.images[0].imageUrl}}"
+					    <img th:if="${article.imageUrl != null and !article.imageUrl.isEmpty()}"
+					         th:src="@{${article.imageUrl}}"
 					         alt="Ảnh bài viết" class="px-6 py-4 whitespace-nowrap" />
 					</td>
 				    <td class="px-6 py-4 whitespace-nowrap" th:text="${article.status}">PUBLISHED</td>
