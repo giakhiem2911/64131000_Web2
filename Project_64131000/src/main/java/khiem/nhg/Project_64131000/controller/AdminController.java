@@ -56,17 +56,35 @@ public class AdminController {
         model.addAttribute("tags", articleTagService.getAllTags());
         return "frontEndModel/admin/article/form";
     }
-
     @InitBinder
     public void initBinder(WebDataBinder binder) {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm");
         binder.registerCustomEditor(LocalDateTime.class, new PropertyEditorSupport() {
             @Override
             public void setAsText(String text) {
-                setValue(LocalDateTime.parse(text, formatter));
+                if (text == null || text.trim().isEmpty()) {
+                    setValue(null);
+                    return;
+                }
+                // Định nghĩa 2 formatter
+                DateTimeFormatter formatterWithSeconds = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSS");
+                DateTimeFormatter formatterWithoutSeconds = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm");
+                LocalDateTime dateTime = null;
+                try {
+                    // Thử parse với kiểu có giây và mili giây
+                    dateTime = LocalDateTime.parse(text, formatterWithSeconds);
+                } catch (Exception e1) {
+                    try {
+                        // Nếu fail, thử parse với kiểu chỉ có phút
+                        dateTime = LocalDateTime.parse(text, formatterWithoutSeconds);
+                    } catch (Exception e2) {
+                        throw new IllegalArgumentException("Không thể parse ngày giờ: " + text);
+                    }
+                }
+                setValue(dateTime);
             }
         });
     }
+
 
     @PostMapping("/articles/save")
     public String saveArticle(
