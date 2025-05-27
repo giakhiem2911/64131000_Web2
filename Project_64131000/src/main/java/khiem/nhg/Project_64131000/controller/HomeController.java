@@ -18,6 +18,8 @@ import jakarta.annotation.PostConstruct;
 
 import java.util.Comparator;
 import java.util.List;
+import org.jsoup.Jsoup;
+
 
 @Controller
 public class HomeController {
@@ -65,13 +67,25 @@ public class HomeController {
                 .orElse(null);
         if (latestArticle != null) {
             featuredArticles.remove(latestArticle);
+            latestArticle.setContent(stripHtml(latestArticle.getContent()));
         }
 
         List<Article> exploreArticles = articleRepository.findByCategory("Khám phá");
         List<Article> productArticles = articleRepository.findByCategory("Sản phẩm công nghệ");
         List<Article> latestArticles = articleRepository.findTop5ByOrderByPublishedAtDesc();
         List<Article> articles = articleRepository.findAll();
-
+        for (Article a : articles) {
+            a.setContent(stripHtml(a.getContent()));
+        }
+        for (Article a : exploreArticles) {
+            a.setContent(stripHtml(a.getContent()));
+        }
+        for (Article a : productArticles) {
+            a.setContent(stripHtml(a.getContent()));
+        }
+        for (Article a : latestArticles) {
+            a.setContent(stripHtml(a.getContent()));
+        }
         model.addAttribute("articles", articles);
         model.addAttribute("latestArticle", latestArticle);
         model.addAttribute("exploreArticles", exploreArticles);
@@ -80,6 +94,11 @@ public class HomeController {
 
         return "frontEndModel/index";
     }
+    private String stripHtml(String html) {
+        if (html == null) return "";
+        return Jsoup.parse(html).text();
+    }
+    
     @GetMapping("/category/kham-pha")
     public String khamPhaCategory(Model model) {
         // Article-related logic
@@ -90,10 +109,20 @@ public class HomeController {
                 .orElse(null);
         if (latestArticle != null) {
             featuredArticles.remove(latestArticle);
+            latestArticle.setContent(stripHtml(latestArticle.getContent()));
         }
         List<Article> exploreArticles = articleRepository.findByCategory("Khám phá");
         List<Article> latestArticles = articleRepository.findTop5ByOrderByPublishedAtDesc();
         List<Article> articles = articleRepository.findAll();
+        for (Article a : articles) {
+            a.setContent(stripHtml(a.getContent()));
+        }
+        for (Article a : exploreArticles) {
+            a.setContent(stripHtml(a.getContent()));
+        }
+        for (Article a : latestArticles) {
+            a.setContent(stripHtml(a.getContent()));
+        }
         model.addAttribute("articles", articles);
         model.addAttribute("latestArticle", latestArticle);
         model.addAttribute("exploreArticles", exploreArticles);
@@ -110,10 +139,20 @@ public class HomeController {
                 .orElse(null);
         if (latestArticle != null) {
             featuredArticles.remove(latestArticle);
+            latestArticle.setContent(stripHtml(latestArticle.getContent()));
         }
         List<Article> productArticles = articleRepository.findByCategory("Sản phẩm công nghệ");
         List<Article> latestArticles = articleRepository.findTop5ByOrderByPublishedAtDesc();
         List<Article> articles = articleRepository.findAll();
+        for (Article a : articles) {
+            a.setContent(stripHtml(a.getContent()));
+        }
+        for (Article a : productArticles) {
+            a.setContent(stripHtml(a.getContent()));
+        }
+        for (Article a : latestArticles) {
+            a.setContent(stripHtml(a.getContent()));
+        }
         model.addAttribute("articles", articles);
         model.addAttribute("latestArticle", latestArticle);
         model.addAttribute("productArticles", productArticles);

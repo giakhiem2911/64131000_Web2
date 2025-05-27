@@ -7,4 +7,4 @@ import khiem.nhg.Project_64131000.model.ArticleImage;
 
 public interface ArticleImageRepository extends JpaRepository<ArticleImage, Long> {
     List<ArticleImage> findByArticleArticleId(Long articleId);
-}
+}	

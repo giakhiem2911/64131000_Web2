@@ -4,8 +4,10 @@ import khiem.nhg.Project_64131000.model.User;
 import khiem.nhg.Project_64131000.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -27,10 +29,17 @@ public class UserController {
                    .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
     @PostMapping
     public User createUser(@RequestBody User user) {
+        user.setPasswordHash(passwordEncoder.encode(user.getPasswordHash()));
+        user.setCreatedAt(LocalDateTime.now());
+        user.setUpdatedAt(LocalDateTime.now());
         return userService.createUser(user);
     }
+
 
     @PutMapping("/{id}")
     public ResponseEntity<User> updateUser(@PathVariable Long id, @RequestBody User userDetails) {
