@@ -33,6 +33,7 @@ public class SecurityConfig {
             	    .invalidateHttpSession(true) // Xoá session hiện tại
             	    .clearAuthentication(true) // Xoá thông tin xác thực
             	    .deleteCookies("JSESSIONID") // Xoá cookie JSESSIONID
+            	    .permitAll()
             	);
 
         return http.build();

@@ -62,6 +62,7 @@ public class AuthController {
     }
     @GetMapping("/logout")
     public String logout(HttpServletRequest request) {
+    	request.getSession().invalidate();
         return "redirect:/login?logout"; // Chuyển hướng đến trang đăng nhập với thông báo
     }
 }
