@@ -11,6 +11,7 @@ import java.util.stream.Collectors;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.*;
@@ -196,5 +197,66 @@ public class AdminController {
     public String deleteArticle(@PathVariable Long id) {
         articleService.deleteById(id);
         return "redirect:/admin/articles";
+    }
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+    @GetMapping("/users")
+    public String listUsers(Model model) {
+        model.addAttribute("users", userService.getAllUsers());
+        return "frontEndModel/admin/user/list";
+    }
+
+    @GetMapping("/users/new")
+    public String newUserForm(Model model) {
+        model.addAttribute("user", new User());
+        return "frontEndModel/admin/user/form";
+    }
+
+    @GetMapping("/admin/user/form")
+    public String showUserForm(Model model) {
+        User user = new User();
+        model.addAttribute("user", user);
+        return "frontEndModel/admin/user/form";
+    }
+    @PostMapping("/users/save")
+    public String saveUser(@ModelAttribute("user") User user, BindingResult result,Model model) {
+        if (result.hasErrors()) {
+            return "frontEndModel/admin/user/form";
+        }
+        if (user.getUserId() == null) {
+            user.setCreatedAt(LocalDateTime.now());
+            user.setPasswordHash(passwordEncoder.encode(user.getPasswordHash()));
+        } else {
+            Optional<User> existingUserOpt = userService.getUserById(user.getUserId());
+            if (existingUserOpt.isPresent()) {
+                User existingUser = existingUserOpt.get();
+                if (user.getPasswordHash() == null || user.getPasswordHash().isEmpty()) {
+                    user.setPasswordHash(existingUser.getPasswordHash());
+                } else {
+                    user.setPasswordHash(passwordEncoder.encode(user.getPasswordHash()));
+                }
+            }
+        }
+
+        if (user.getCreatedAt() == null) {
+            user.setCreatedAt(LocalDateTime.now());
+        }
+        user.setUpdatedAt(LocalDateTime.now());
+        userService.save(user);
+        return "redirect:/admin/users";
+    }
+    @GetMapping("/users/edit/{id}")
+    public String editUser(@PathVariable Long id, Model model) {
+    	Optional<User> optionalUser = userService.getUserById(id);
+    	User user = optionalUser.orElse(null);
+        if (user == null) return "redirect:/admin/users";
+        model.addAttribute("user", user);
+        return "frontEndModel/admin/user/form";
+    }
+
+    @GetMapping("/users/delete/{id}")
+    public String deleteUser(@PathVariable Long id) {
+    	userService.deleteUser(id);
+        return "redirect:/admin/users";
     }
 }

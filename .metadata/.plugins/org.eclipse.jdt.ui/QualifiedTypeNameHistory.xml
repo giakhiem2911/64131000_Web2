@@ -44,4 +44,6 @@
     <fullyQualifiedTypeName name="khiem.nhg.Project_64131000.repository.ArticleTagRepository"/>
     <fullyQualifiedTypeName name="java.util.Locale.Category"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="org.springframework.web.multipart.MultipartFile"/>
+    <fullyQualifiedTypeName name="khiem.nhg.Project_64131000.model.ArticleImage"/>
 </qualifiedTypeNameHistroy>
