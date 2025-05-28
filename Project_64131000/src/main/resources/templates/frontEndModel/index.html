@@ -35,12 +35,12 @@
                 <span class="text-white">Xin chào, <span th:text="${currentUser.fullName}"></span></span>
             </li>
             <li th:if="${currentUser != null}">
-                <a href="/login" class="hover:underline">Đăng xuất</a>
+                <a href="/logout" class="hover:underline">Đăng xuất</a>
             </li>
-            <li th:unless="${currentUser != null}">
+            <li th:if="${currentUser == null}">
                 <a href="/login" class="hover:underline">Đăng nhập</a>
             </li>
-            <li th:unless="${currentUser != null}">
+            <li th:if="${currentUser == null}">
                 <a href="/register" class="hover:underline">Đăng ký</a>
             </li>
         </ul>
@@ -142,7 +142,7 @@
                 </ul>
             </div>
         </div>
-        <div class="w-full col-right" th:replace="frontEndModel/latestArticles :: latestArticlesSidebar"></div>
+        <div class="w-full col-right" th:replace="~{frontEndModel/latestArticles :: latestArticlesSidebar}"></div>
     </div>
 </section>
 <footer th:fragment="footer" class="bg-blue-800 text-white py-6">

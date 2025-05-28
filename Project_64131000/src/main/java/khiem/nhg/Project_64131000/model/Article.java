@@ -40,11 +40,11 @@ public class Article {
     private Long views;
 
     @NotNull(message = "Ngày cập nhật không được để trống")
-    @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss.SSS")
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
     @Column(name = "updatedAt", nullable = false)
     private LocalDateTime updatedAt;
 
-    @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss.SSS")
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
     @Column(name = "publishedAt")
     private LocalDateTime publishedAt;
 

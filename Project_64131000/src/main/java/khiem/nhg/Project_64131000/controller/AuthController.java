@@ -9,8 +9,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import jakarta.servlet.http.HttpServletRequest;
 import khiem.nhg.Project_64131000.model.User;
 import khiem.nhg.Project_64131000.repository.UserRepository;
 
@@ -24,7 +26,14 @@ public class AuthController {
     private PasswordEncoder passwordEncoder; 
     
     @GetMapping("/login")
-    public String showLoginForm(Model model) {
+    public String showLoginForm(Model model, @RequestParam(value = "error", required = false) String error,
+            @RequestParam(value = "logout", required = false) String logout) {
+        if (error != null) {
+            model.addAttribute("error", "Sai thông tin đăng nhập.");
+        }
+        if (logout != null) {
+            model.addAttribute("message", "Bạn đã đăng xuất thành công.");
+        }
         return "frontEndModel/auth/login";
     }
 
@@ -52,8 +61,7 @@ public class AuthController {
         return "redirect:/login";
     }
     @GetMapping("/logout")
-    public String logout() {
-        // Phương thức này có thể để trống, vì Spring Security sẽ xử lý đăng xuất
+    public String logout(HttpServletRequest request) {
         return "redirect:/login?logout"; // Chuyển hướng đến trang đăng nhập với thông báo
     }
 }

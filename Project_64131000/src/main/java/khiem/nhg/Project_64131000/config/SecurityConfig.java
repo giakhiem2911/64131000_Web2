@@ -18,7 +18,7 @@ public class SecurityConfig {
         http
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers("/admin/**").hasRole("ADMIN") // Chỉ cho phép ADMIN truy cập vào các URL bắt đầu bằng /admin
-                .requestMatchers("/login", "/register", "/css/**", "/images/**", "/js/**").permitAll() // Cho phép tất cả truy cập vào các trang này
+                .requestMatchers("/", "/login", "/register", "/css/**", "/images/**", "/uploads/images/**", "/js/**").permitAll() // Cho phép tất cả truy cập vào các trang này
                 .anyRequest().authenticated() // Tất cả các yêu cầu khác cần xác thực
             )
             .formLogin(form -> form
@@ -28,9 +28,12 @@ public class SecurityConfig {
                 .permitAll() // Cho phép tất cả truy cập vào trang đăng nhập
             )
             .logout(logout -> logout
-                .logoutSuccessUrl("/") // Chuyển hướng đến trang chủ sau khi đăng xuất
-                .permitAll() // Cho phép tất cả truy cập vào chức năng đăng xuất
-            );
+            	    .logoutUrl("/logout") // URL thực hiện logout (mặc định là POST)
+            	    .logoutSuccessUrl("/login?logout") // Chuyển hướng đến trang đăng nhập với thông báo
+            	    .invalidateHttpSession(true) // Xoá session hiện tại
+            	    .clearAuthentication(true) // Xoá thông tin xác thực
+            	    .deleteCookies("JSESSIONID") // Xoá cookie JSESSIONID
+            	);
 
         return http.build();
     }

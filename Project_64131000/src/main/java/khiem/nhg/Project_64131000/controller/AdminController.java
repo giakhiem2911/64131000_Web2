@@ -25,6 +25,9 @@ import khiem.nhg.Project_64131000.model.ArticleTag;
 import khiem.nhg.Project_64131000.model.User;
 import khiem.nhg.Project_64131000.service.*;
 
+import java.time.format.DateTimeFormatterBuilder;
+import java.time.temporal.ChronoField;
+
 @Controller
 @RequestMapping("/admin")
 public class AdminController {
@@ -57,6 +60,7 @@ public class AdminController {
         model.addAttribute("tags", articleTagService.getAllTags());
         return "frontEndModel/admin/article/form";
     }
+
     @InitBinder
     public void initBinder(WebDataBinder binder) {
         binder.registerCustomEditor(LocalDateTime.class, new PropertyEditorSupport() {
@@ -66,16 +70,20 @@ public class AdminController {
                     setValue(null);
                     return;
                 }
-                // Định nghĩa 2 formatter
-                DateTimeFormatter formatterWithSeconds = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSS");
+                DateTimeFormatter formatterWithFraction = new DateTimeFormatterBuilder()
+                    .appendPattern("yyyy-MM-dd'T'HH:mm:ss")
+                    .optionalStart()
+                    .appendFraction(ChronoField.MILLI_OF_SECOND, 0, 3, true)
+                    .optionalEnd()
+                    .toFormatter();
+
                 DateTimeFormatter formatterWithoutSeconds = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm");
+
                 LocalDateTime dateTime = null;
                 try {
-                    // Thử parse với kiểu có giây và mili giây
-                    dateTime = LocalDateTime.parse(text, formatterWithSeconds);
+                    dateTime = LocalDateTime.parse(text, formatterWithFraction);
                 } catch (Exception e1) {
                     try {
-                        // Nếu fail, thử parse với kiểu chỉ có phút
                         dateTime = LocalDateTime.parse(text, formatterWithoutSeconds);
                     } catch (Exception e2) {
                         throw new IllegalArgumentException("Không thể parse ngày giờ: " + text);
@@ -85,6 +93,7 @@ public class AdminController {
             }
         });
     }
+
 
 
     @PostMapping("/articles/save")
