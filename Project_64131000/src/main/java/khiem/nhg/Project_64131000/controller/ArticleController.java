@@ -1,7 +1,9 @@
 package khiem.nhg.Project_64131000.controller;
 
+import java.util.Comparator;
 import java.util.List;
 
+import org.jsoup.Jsoup;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -68,19 +70,32 @@ public class ArticleController {
 
         return "redirect:/articles/" + article.getId();
     }
-
+    private String stripHtml(String html) {
+        if (html == null) return "";
+        return Jsoup.parse(html).text();
+    }
     @GetMapping("/search")
     public String searchArticles(@RequestParam(name = "keyword", required = false) String keyword, Model model) {
-        List<Article> latestArticles = articleRepository.findTop5ByOrderByPublishedAtDesc();
-
+        List<Article> featuredArticles = articleRepository.findFeaturedArticles();
         if (keyword != null && !keyword.trim().isEmpty()) {
             model.addAttribute("results", articleService.searchByKeyword(keyword));
         } else {
             model.addAttribute("results", List.of());
         }
-
+        Article latestArticle = featuredArticles.stream()
+                .filter(article -> article.getPublishedAt() != null)
+                .max(Comparator.comparing(Article::getPublishedAt))
+                .orElse(null);
+        if (latestArticle != null) {
+            featuredArticles.remove(latestArticle);
+            latestArticle.setContent(stripHtml(latestArticle.getContent()));
+        }
+        List<Article> latestArticles = articleRepository.findTop5ByOrderByPublishedAtDesc();
+        for (Article a : latestArticles) {
+            a.setContent(stripHtml(a.getContent()));
+        }
         model.addAttribute("keyword", keyword);
-        model.addAttribute("latestArticles", latestArticles);
+        model.addAttribute("latestArticles", latestArticle);
 
         return "/frontEndModel/search";
     }

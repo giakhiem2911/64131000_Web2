@@ -28,7 +28,7 @@
                 <li th:each="article : ${results}"
                     class="bg-white rounded-xl shadow p-4 hover:bg-blue-50 transition">
                     <div class="flex gap-4">
-                        <img th:if="${article.imageUrl.size() > 0}" th:src="@{${article.images[0].imageUrl}}"
+                        <img th:src="@{${article.imageUrl}}"
                              class="w-28 h-20 object-cover rounded-lg" />
                         <div class="flex-1">
                             <a th:href="@{'/articles/' + ${article.articleId}}"
