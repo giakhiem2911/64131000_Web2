@@ -14,7 +14,7 @@
 <section class="container mx-auto p-8 bg-white rounded-lg shadow-lg my-10">
     <h1 class="text-3xl font-bold mb-4" th:text="${article.title}">Tiêu đề bài viết</h1>
     <p class="text-gray-500 mb-6">
-        Đăng ngày: <span th:text="${#temporals.format(article.publishedAt, 'dd/MM/yyyy')}"></span> | 
+        Đăng ngày: <span th:text="${#temporals.format(article.publishedAt, 'dd/MM/yyyy')}"></span> bởi <span th:text="${article.author.fullName}"></span> | 
         Lượt xem: <span th:text="${article.views}"></span> | 
         Lượt thích: <span th:text="${article.likeCount}"></span>
     </p>
