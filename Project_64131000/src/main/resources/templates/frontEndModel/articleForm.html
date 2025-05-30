@@ -4,119 +4,97 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Thêm / Sửa Bài Viết</title>
-
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
     <link rel="stylesheet" th:href="@{/css/style.css}" />
     <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
 </head>
 <body class="bg-gray-100 font-sans">
+    <nav th:replace="frontEndModel/index :: header"></nav>
+    <section class="container mx-auto py-12 px-4 max-w-4xl bg-white rounded-lg shadow-lg mt-8 mb-16">
+        <h2 class="text-3xl font-bold text-blue-900 mb-8"
+            th:text="${article.articleId == null} ? 'Thêm bài viết mới' : 'Chỉnh sửa bài viết'">
+            Thêm / Sửa bài viết
+        </h2>
+        <form th:action="@{/articles}" th:object="${article}" method="post" enctype="multipart/form-data" class="space-y-6">
+            <div th:if="${error != null}" class="mb-4 text-red-500" th:text="${error}"></div>
+            <div th:if="${#fields.hasErrors('*')}" class="mb-4 text-red-500">
+                <ul>
+                    <li th:each="err : ${#fields.errors('*')}" th:text="${err}"></li>
+                </ul>
+            </div>
+            <input type="hidden" th:field="*{articleId}" />
+            <input type="hidden" th:field="*{author.userId}" />
+            <div class="mb-4">
+                <label class="block text-gray-700">Tiêu đề</label>
+                <input type="text" th:field="*{title}" class="w-full border rounded p-2"/>
+                <span th:if="${#fields.hasErrors('title')}" th:errors="*{title}" class="text-red-500"></span>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700">Nội dung</label>
+                <textarea th:field="*{content}" class="w-full border rounded p-2" id="content"></textarea>
+                <span th:if="${#fields.hasErrors('content')}" th:errors="*{content}" class="text-red-500"></span>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700">Chuyên mục</label>
+                <input type="text" th:field="*{category}" class="w-full border rounded p-2"/>
+                <span th:if="${#fields.hasErrors('category')}" th:errors="*{category}" class="text-red-500"></span>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700">Trạng thái</label>
+                <select th:field="*{status}" class="w-full border rounded p-2">
+                    <option value="">Chọn trạng thái</option>
+                    <option value="draft">Nháp</option>
+                    <option value="published">Đã xuất bản</option>
+                </select>
+                <span th:if="${#fields.hasErrors('status')}" th:errors="*{status}" class="text-red-500"></span>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700">Ngày xuất bản</label>
+                <input type="datetime-local" th:field="*{publishedAt}" class="w-full border rounded p-2"/>
+                <span th:if="${#fields.hasErrors('publishedAt')}" th:errors="*{publishedAt}" class="text-red-500"></span>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700">Ảnh</label>
+                <input type="file" name="image" class="w-full border rounded p-2"/>
+                <span th:if="${#fields.hasErrors('imageUrl')}" th:errors="*{imageUrl}" class="text-red-500"></span>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700">Tags</label>
+                <input type="text" name="tags" th:value="${tagsString}" class="w-full border rounded p-2" placeholder="Nhập các tag, cách nhau bằng dấu phẩy"/>
+            </div>
+            <div class="flex justify-end">
+                <button type="submit" id="submitButton" class="bg-blue-700 hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded shadow">
+                    <i class="bi bi-save me-2"></i> <span id="buttonText">Đăng bài viết</span>
+                    <span id="loadingSpinner" class="hidden">Đang xử lý...</span>
+                </button>
+            </div>
+        </form>
+    </section>
+    <footer th:replace="frontEndModel/index :: footer"></footer>
+    <script>
+        let editorInstance;
+        ClassicEditor
+            .create(document.querySelector('#content'))
+            .then(editor => {
+                editorInstance = editor;
+                editor.model.document.on('change:data', () => {
+                    document.querySelector('#content').value = editor.getData();
+                });
+            })
+            .catch(error => console.error('Lỗi khởi tạo CKEditor:', error));
 
-<!-- Header -->
-<nav th:replace="frontEndModel/index :: header"></nav>
-
-<!-- Form Section -->
-<section class="container mx-auto py-12 px-4 max-w-4xl bg-white rounded-lg shadow-lg mt-8 mb-16">
-    <h2 class="text-3xl font-bold text-blue-900 mb-8"
-        th:text="${article.articleId == null} ? 'Thêm bài viết mới' : 'Chỉnh sửa bài viết'">
-        Thêm / Sửa bài viết
-    </h2>
-
-    <form th:action="@{/articles}" th:object="${article}" method="post" enctype="multipart/form-data" class="space-y-6">
-        <div th:if="${error != null}" class="mb-4 text-red-500" th:text="${error}"></div>
-		<input type="hidden" th:field="*{articleId}" />
-        <!-- Tiêu đề -->
-        <div class="mb-4">
-            <label class="block text-gray-700">Tiêu đề</label>
-            <input type="text" th:field="*{title}" class="w-full border rounded p-2"/>
-            <span th:if="${#fields.hasErrors('title')}" th:errors="*{title}" class="text-red-500"></span>
-        </div>
-
-        <!-- Nội dung -->
-        <div class="mb-4">
-            <label class="block text-gray-700">Nội dung</label>
-            <textarea th:field="*{content}" class="w-full border rounded p-2" id="content"></textarea>
-            <span th:if="${#fields.hasErrors('content')}" th:errors="*{content}" class="text-red-500"></span>
-        </div>
-
-        <!-- Chuyên mục -->
-        <div class="mb-4">
-            <label class="block text-gray-700">Chuyên mục</label>
-            <input type="text" th:field="*{category}" class="w-full border rounded p-2"/>
-            <span th:if="${#fields.hasErrors('category')}" th:errors="*{category}" class="text-red-500"></span>
-        </div>
-
-        <!-- Trạng thái -->
-        <div class="mb-4">
-            <label class="block text-gray-700">Trạng thái</label>
-            <select th:field="*{status}" class="w-full border rounded p-2">
-                <option value="">Chọn trạng thái</option>
-                <option value="draft">Nháp</option>
-                <option value="published">Đã xuất bản</option>
-            </select>
-            <span th:if="${#fields.hasErrors('status')}" th:errors="*{status}" class="text-red-500"></span>
-        </div>
-
-        <!-- Ngày xuất bản -->
-        <div class="mb-4">
-            <label class="block text-gray-700">Ngày xuất bản</label>
-            <input type="datetime-local" th:field="*{publishedAt}" class="w-full border rounded p-2"/>
-            <span th:if="${#fields.hasErrors('publishedAt')}" th:errors="*{publishedAt}" class="text-red-500"></span>
-        </div>
-        <div class="mb-4">
-            <label class="block text-gray-700">Ngày cập nhật</label>
-            <input type="datetime-local" th:field="*{updatedAt}" class="w-full border rounded p-2"/>
-            <span th:if="${#fields.hasErrors('updatedAt')}" th:errors="*{updatedAt}" class="text-red-500"></span>
-        </div>
-        <!-- Ảnh đại diện -->
-        <div class="mb-4">
-            <label class="block text-gray-700">Ảnh</label>
-            <input type="file" name="image" multiple class="w-full border rounded p-2"/>
-        </div>
-		<div th:if="${article.imageUrl != null}" class="mb-4">
-		    <label class="block text-gray-700">Ảnh hiện tại</label>
-		    <img th:src="@{${article.imageUrl}}" alt="Ảnh hiện tại" class="h-32 object-contain border mb-2" />
-		</div>
-        <!-- Tags -->
-        <div class="mb-4">
-            <label class="block text-gray-700">Tags</label>
-            <input type="text" name="tags" th:value="${tagsString}" class="w-full border rounded p-2"/>
-        </div>
-
-        <!-- Nút lưu -->
-        <div class="flex justify-end">
-            <button type="submit"
-                    class="bg-blue-700 hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded shadow">
-                <i class="bi bi-save me-2"></i> Đăng bài viết
-            </button>
-        </div>
-    </form>
-</section>
-
-<!-- Footer -->
-<footer th:replace="frontEndModel/index :: footer"></footer>
-
-<!-- CKEditor -->
-<script>
-	let editorInstance;
-	ClassicEditor
-	    .create(document.querySelector('#content'))
-	    .then(editor => {
-	        editorInstance = editor;
-	        editor.model.document.on('change:data', () => {
-	            document.querySelector('#content').value = editor.getData();
-	        });
-	    })
-	    .catch(error => console.error(error));
-	
-	document.querySelector('form').addEventListener('submit', () => {
-	    if (editorInstance) {
-	    	const content = editorInstance.getData();
-	        console.log('CKEditor content:', content);
-	        document.querySelector('#content').value = content;
-	    }
-	});
-</script>
-
+        document.querySelector('form').addEventListener('submit', (event) => {
+            if (editorInstance) {
+                const content = editorInstance.getData();
+                if (!content) {
+                    alert('Vui lòng nhập nội dung bài viết.');
+                    event.preventDefault();
+                    return;
+                }
+                document.querySelector('#content').value = content;
+            }
+        });
+    </script>
 </body>
 </html>

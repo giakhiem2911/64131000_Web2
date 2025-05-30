@@ -3,6 +3,7 @@ package khiem.nhg.Project_64131000.model;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -39,7 +40,6 @@ public class Article {
     @Column(name = "views", columnDefinition = "BIGINT DEFAULT 0")
     private Long views;
 
-    @NotNull(message = "Ngày cập nhật không được để trống")
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
     @Column(name = "updatedAt", nullable = false)
     private LocalDateTime updatedAt;
@@ -64,7 +64,7 @@ public class Article {
     private String imageUrl;
 
     @OneToMany(mappedBy = "article", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
-    private List<ArticleTag> tags;
+    private List<ArticleTag> tags = new ArrayList<>();
 
     @OneToMany(mappedBy = "article", fetch = FetchType.LAZY)
     private List<Interaction> interactions;

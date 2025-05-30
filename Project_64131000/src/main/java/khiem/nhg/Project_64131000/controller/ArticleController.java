@@ -44,12 +44,6 @@ public class ArticleController {
     @Autowired private UserService userService;
     @Autowired private ArticleTagService articleTagService;
 
-    @GetMapping("/articles/new")
-    public String showCreateForm(Model model) {
-        model.addAttribute("article", new Article());
-        model.addAttribute("tags", articleTagService.getAllTags());
-        return "frontEndModel/articleForm";
-    }
     @InitBinder
     public void initBinder(WebDataBinder binder) {
         binder.registerCustomEditor(LocalDateTime.class, new PropertyEditorSupport() {
@@ -81,50 +75,64 @@ public class ArticleController {
                 setValue(dateTime);
             }
         });
+        // Ngăn binding tự động cho tags
+        binder.setDisallowedFields("tags");
     }
+
+    @GetMapping("/articles/new")
+    public String showCreateForm(Model model) {
+        model.addAttribute("article", new Article());
+        model.addAttribute("tags", "");
+        return "frontEndModel/articleForm";
+    }
+
     @PostMapping("/articles")
-    public String createArticle(
+    public String saveArticle(
             @Valid @ModelAttribute("article") Article article,
             BindingResult result,
             @RequestParam(value = "tags", required = false) String tagsString,
             @RequestParam(value = "image", required = false) MultipartFile imageFile,
             Model model,
-            Principal principal
-    ) {
+            Principal principal)
+    {
+        logger.info("Bắt đầu xử lý POST /articles, principal: {}", principal != null ? principal.getName() : "null");
+
+        // Kiểm tra người dùng đăng nhập
         if (principal == null) {
-            return "redirect:/login";
+            logger.warn("Principal is null, redirecting to login");
+            return "redirect:/login?error=true";
         }
 
         User currentUser = userRepository.findByEmail(principal.getName()).orElse(null);
         if (currentUser == null) {
-            return "redirect:/login";
-        }
-
-        article.setAuthor(currentUser);
-
-        // Nếu có lỗi validate, trả về lại form với dữ liệu đã nhập
-        if (result.hasErrors()) {
-            logger.error("Validation errors: {}", result.getFieldErrors());
-            model.addAttribute("tagsString", tagsString); // giữ lại dữ liệu tag đã nhập
-            model.addAttribute("tags", articleTagService.getAllTags()); // cần thiết để hiển thị select/multiselect tag
+            logger.error("User not found for email: {}", principal.getName());
+            model.addAttribute("error", "Không tìm thấy người dùng. Vui lòng đăng nhập lại.");
+            model.addAttribute("tagsString", tagsString);
             return "frontEndModel/articleForm";
         }
+        article.setAuthor(currentUser);
 
-        // Nếu article đã chọn "published" nhưng chưa chọn ngày, thì gán mặc định
+        // Gán updatedAt tự động
+        article.setUpdatedAt(LocalDateTime.now());
+
+        // Gán publishedAt nếu trạng thái là published
         if ("published".equals(article.getStatus()) && article.getPublishedAt() == null) {
             article.setPublishedAt(LocalDateTime.now());
         }
 
-     // ✅ Xử lý ảnh
+        // Xử lý ảnh
         if (imageFile != null && !imageFile.isEmpty()) {
             String originalName = imageFile.getOriginalFilename();
+            if (originalName != null && !originalName.matches(".*\\.(jpg|jpeg|png|gif)$")) {
+                model.addAttribute("error", "Chỉ hỗ trợ các định dạng ảnh: jpg, jpeg, png, gif");
+                model.addAttribute("tagsString", tagsString);
+                return "frontEndModel/articleForm";
+            }
+
             String extension = originalName != null && originalName.contains(".")
                     ? originalName.substring(originalName.lastIndexOf('.'))
                     : "";
-
             String filename = UUID.randomUUID() + extension;
-
-         // Đường dẫn lưu ảnh - ngoài thư mục src
             String uploadDir = System.getProperty("user.dir") + "/uploads/images";
             Path uploadPath = Paths.get(uploadDir);
 
@@ -132,50 +140,63 @@ public class ArticleController {
                 if (!Files.exists(uploadPath)) {
                     Files.createDirectories(uploadPath);
                 }
-
                 Path filePath = uploadPath.resolve(filename);
                 imageFile.transferTo(filePath.toFile());
-
                 article.setImageUrl("/uploads/images/" + filename);
             } catch (IOException e) {
-                logger.error("Lỗi khi lưu ảnh: {}", e.getMessage());
+                logger.error("Lỗi khi lưu ảnh: {}", e.getMessage(), e);
+                model.addAttribute("error", "Không thể tải ảnh lên: " + e.getMessage());
+                model.addAttribute("tagsString", tagsString);
+                return "frontEndModel/articleForm";
             }
-
         }
 
-        article.setUpdatedAt(LocalDateTime.now());
+        // Kiểm tra lỗi validation
+        if (result.hasErrors()) {
+            logger.error("Validation errors: {}", result.getFieldErrors());
+            model.addAttribute("tagsString", tagsString);
+            return "frontEndModel/articleForm";
+        }
 
         try {
-            // Lưu article trước để lấy ID
+        	article.getTags().clear();
+            logger.info("Saving article: title={}, content={}, category={}, status={}, author={}",
+                        article.getTitle(), article.getContent(), article.getCategory(),
+                        article.getStatus(), article.getAuthor().getUserId());
             articleService.save(article);
 
-            // Xử lý tags
-            List<ArticleTag> tags = new ArrayList<>();
+            List<ArticleTag> tags = article.getTags();
             if (tagsString != null && !tagsString.trim().isEmpty()) {
                 String[] tagNames = tagsString.split(",");
                 for (String tagName : tagNames) {
-                    tags.add(articleTagService.createTagIfNotExists(article, tagName.trim()));
+                    String trimmedTag = tagName.trim();
+                    if (!trimmedTag.isEmpty()) {
+                        ArticleTag tag = articleTagService.createTagIfNotExists(article, trimmedTag);
+                        if (tag != null) {
+                            tags.add(tag);
+                        } else {
+                            logger.warn("Không thể tạo tag: {}", trimmedTag);
+                        }
+                    }
                 }
-                article.setTags(tags);
-                articleService.save(article); // Cập nhật lại với tags
+                articleService.save(article);
             }
 
+            logger.info("Article saved successfully, redirecting to /articles/{}", article.getArticleId());
             return "redirect:/articles/" + article.getArticleId();
 
         } catch (DataIntegrityViolationException e) {
-            logger.error("Lỗi khi lưu article: {}", e.getMessage());
-            model.addAttribute("error", "Dữ liệu không hợp lệ hoặc bị trùng lặp. Vui lòng kiểm tra lại.");
+            logger.error("Lỗi khi lưu article: {}", e.getMessage(), e);
+            model.addAttribute("error", "Dữ liệu không hợp lệ hoặc bị trùng lặp: " + e.getMessage());
+            model.addAttribute("tagsString", tagsString);
+            return "frontEndModel/articleForm";
         } catch (Exception e) {
-            logger.error("Lỗi không xác định khi lưu article: {}", e.getMessage());
-            model.addAttribute("error", "Có lỗi xảy ra khi lưu bài viết. Vui lòng thử lại.");
+            logger.error("Lỗi không xác định khi lưu article: {}", e.getMessage(), e);
+            model.addAttribute("error", "Có lỗi xảy ra khi lưu bài viết: " + e.getMessage());
+            model.addAttribute("tagsString", tagsString);
+            return "frontEndModel/articleForm";
         }
-
-        // Nếu có exception, trả lại form với dữ liệu đã nhập
-        model.addAttribute("tagsString", tagsString);
-        model.addAttribute("tags", articleTagService.getAllTags());
-        return "frontEndModel/articleForm";
     }
-
 
     @GetMapping("/articles/{articleId}")
     public String getArticleDetail(@PathVariable Long articleId, Model model) {
@@ -190,10 +211,8 @@ public class ArticleController {
             model.addAttribute("currentUser", currentUser);
         }
         model.addAttribute("article", article);
-
         model.addAttribute("latestArticles", articleService.findTop5Latest());
-        
-        return "/frontEndModel/articleDetail"; 
+        return "/frontEndModel/articleDetail";
     }
 
     private String stripHtml(String html) {
@@ -223,7 +242,6 @@ public class ArticleController {
         }
         model.addAttribute("keyword", keyword);
         model.addAttribute("latestArticles", latestArticle);
-
         return "/frontEndModel/search";
     }
 }
