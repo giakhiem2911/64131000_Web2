@@ -49,6 +49,8 @@
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ModelAttribute"/>
     <fullyQualifiedTypeName name="java.nio.file.attribute.UserDefinedFileAttributeView"/>
     <fullyQualifiedTypeName name="java.net.Authenticator"/>
-    <fullyQualifiedTypeName name="khiem.nhg.Project_64131000.model.User"/>
     <fullyQualifiedTypeName name="khiem.nhg.Project_64131000.config.GlobalControllerAdvice"/>
+    <fullyQualifiedTypeName name="khiem.nhg.Project_64131000.model.User"/>
+    <fullyQualifiedTypeName name="khiem.nhg.Project_64131000.model.InteractionType"/>
+    <fullyQualifiedTypeName name="khiem.nhg.Project_64131000.repository.InteractionRepository"/>
 </qualifiedTypeNameHistroy>

@@ -14,6 +14,7 @@ import org.jsoup.Jsoup;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
@@ -26,11 +27,13 @@ import org.springframework.web.multipart.MultipartFile;
 import jakarta.validation.Valid;
 import khiem.nhg.Project_64131000.model.Article;
 import khiem.nhg.Project_64131000.model.ArticleTag;
+import khiem.nhg.Project_64131000.model.Interaction;
 import khiem.nhg.Project_64131000.model.User;
 import khiem.nhg.Project_64131000.repository.ArticleRepository;
 import khiem.nhg.Project_64131000.repository.UserRepository;
 import khiem.nhg.Project_64131000.service.ArticleService;
 import khiem.nhg.Project_64131000.service.ArticleTagService;
+import khiem.nhg.Project_64131000.service.InteractionService;
 import khiem.nhg.Project_64131000.service.UserService;
 
 @Controller
@@ -44,6 +47,8 @@ public class ArticleController {
     @Autowired private UserService userService;
     @Autowired private ArticleTagService articleTagService;
 
+    @Autowired
+    private InteractionService interactionService;
     @InitBinder
     public void initBinder(WebDataBinder binder) {
         binder.registerCustomEditor(LocalDateTime.class, new PropertyEditorSupport() {
@@ -77,6 +82,21 @@ public class ArticleController {
         });
         // Ngăn binding tự động cho tags
         binder.setDisallowedFields("tags");
+    }
+    @PostMapping("/articles/{id}/like")
+    public ResponseEntity<String> likeArticle(@PathVariable("id") Long articleId, Principal principal) {
+        // principal là user đăng nhập
+        String userEmail = principal.getName();
+
+        interactionService.likeArticle(articleId, userEmail);
+
+        return ResponseEntity.ok("Liked");
+    }
+    
+    @PostMapping("/articles/{id}/unlike")
+    public ResponseEntity<String> unlikeArticle(@PathVariable("id") Long articleId, Principal principal) {
+        interactionService.unlikeArticle(articleId, principal.getName());
+        return ResponseEntity.ok("Unliked");
     }
 
     @GetMapping("/articles/new")
@@ -210,8 +230,11 @@ public class ArticleController {
             User currentUser = userRepository.findByEmail(auth.getName()).orElse(null);
             model.addAttribute("currentUser", currentUser);
         }
+        List<Interaction> interactions = interactionService.findAllByArticle(article);
+        article.setInteractions(interactions);
         model.addAttribute("article", article);
         model.addAttribute("latestArticles", articleService.findTop5Latest());
+        
         return "/frontEndModel/articleDetail";
     }
 

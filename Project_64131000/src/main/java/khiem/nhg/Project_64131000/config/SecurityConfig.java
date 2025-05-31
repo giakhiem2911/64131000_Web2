@@ -18,7 +18,7 @@ public class SecurityConfig {
         http
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers("/admin/**").hasRole("ADMIN") // Chỉ cho phép ADMIN truy cập vào các URL bắt đầu bằng /admin
-                .requestMatchers("/", "/login", "/register", "/css/**", "/images/**", "/uploads/images/**", "/articles/**", "/category/**", "/js/**").permitAll() // Cho phép tất cả truy cập vào các trang này
+                .requestMatchers("/", "/login", "/register", "/css/**", "/images/**", "/uploads/images/**", "/articles/**", "/category/**", "/js/**", "/api/interactions/like").permitAll() // Cho phép tất cả truy cập vào các trang này
                 .anyRequest().authenticated() // Tất cả các yêu cầu khác cần xác thực
             )
             .formLogin(form -> form

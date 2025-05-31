@@ -1,6 +1,8 @@
 package khiem.nhg.Project_64131000.controller;
 
+import khiem.nhg.Project_64131000.model.Article;
 import khiem.nhg.Project_64131000.model.Interaction;
+import khiem.nhg.Project_64131000.model.User;
 import khiem.nhg.Project_64131000.service.InteractionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -31,6 +33,24 @@ public class InteractionController {
     public List<Interaction> getInteractionsByUserAndArticle(@PathVariable Long userId, @PathVariable Long articleId) {
         return interactionService.getInteractionsByUserAndArticle(userId, articleId);
     }
+//    @PostMapping("/like")
+//    public ResponseEntity<?> toggleLike(@RequestParam Long userId, @RequestParam Long articleId) {
+//        Interaction existingLike = interactionService.findByUserAndArticleAndType(userId, articleId, "like");
+//
+//        if (existingLike != null) {
+//            interactionService.deleteInteraction(existingLike.getInteractionId());
+//            return ResponseEntity.ok("Unliked");
+//        } else {
+//            Interaction newLike = new Interaction();
+//            newLike.setUser(new User(userId)); // cần constructor User(Long id)
+//            newLike.setArticle(new Article(articleId)); // tương tự Article(Long id)
+//            newLike.setType("like");
+//            newLike.setCreatedAt(java.time.LocalDateTime.now());
+//
+//            interactionService.createInteraction(newLike);
+//            return ResponseEntity.ok("Liked");
+//        }
+//    }
 
     @PostMapping
     public Interaction createInteraction(@RequestBody Interaction interaction) {

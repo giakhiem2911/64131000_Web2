@@ -6,6 +6,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <meta name="_csrf" th:content="${_csrf.token}" />
+	<meta name="_csrf_header" th:content="${_csrf.headerName}" />
+    
 </head>
 <body class="bg-gray-100 font-sans">
 
@@ -18,13 +21,20 @@
         Lượt xem: <span th:text="${article.views}"></span> | 
         Lượt thích: <span th:text="${article.likeCount}"></span>
     </p>
-
     <div class="mb-6">
         <img th:src="@{${article.imageUrl}}" alt="Ảnh bài viết" class="w-full rounded-lg" />
     </div>
-
     <article class="prose max-w-none" th:utext="${article.content}">
     </article>
+<!-- Nút Like -->
+<button type="button"
+        class="like-btn px-4 py-2 rounded text-white"
+        th:classappend="${#lists.contains(article.interactions.?[user.email == #authentication.name].![type.name() == 'LIKE'], true)} ? 'bg-gray-400 text-black' : 'bg-blue-600 text-white'"
+        th:data-article-id="${article.id}"
+        th:data-liked="${#lists.contains(article.interactions.?[user.email == #authentication.name].![type.name() == 'LIKE'], true)}"
+        th:text="${#lists.contains(article.interactions.?[user.email == #authentication.name].![type.name() == 'LIKE'], true)} ? 'Unlike' : 'Like'">
+    Like
+</button>
 </section>
 
 <div class="p-8 bg-white">
@@ -34,4 +44,47 @@
 <footer th:replace="~{/frontEndModel/index :: footer}"></footer>
 
 </body>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const csrfToken = document.querySelector('meta[name="_csrf"]').getAttribute('content');
+        const csrfHeader = document.querySelector('meta[name="_csrf_header"]').getAttribute('content');
+
+        document.querySelectorAll('.like-btn').forEach(button => {
+            button.addEventListener('click', async function (event) {
+                event.preventDefault();
+                const articleId = this.dataset.articleId;
+                const isLiked = this.dataset.liked === 'true';
+
+                try {
+                    const url = `/articles/${articleId}/${isLiked ? 'unlike' : 'like'}`;
+                    const response = await fetch(url, {
+                        method: "POST",
+                        headers: {
+                            'Content-Type': 'application/json',
+                            [csrfHeader]: csrfToken
+                        }
+                    });
+                    if (response.ok) {
+                        this.textContent = isLiked ? "Like" : "Unlike";
+                        this.dataset.liked = (!isLiked).toString();
+
+                        if (!isLiked) {
+                            // Đang chuyển thành Unlike → màu xám
+                            this.classList.remove('bg-blue-600', 'text-white');
+                            this.classList.add('bg-gray-400', 'text-black');
+                        } else {
+                            // Đang chuyển thành Like → màu xanh
+                            this.classList.remove('bg-gray-400', 'text-black');
+                            this.classList.add('bg-blue-600', 'text-white');
+                        }
+                    }
+                } catch (e) {
+                    console.error("Lỗi khi gửi yêu cầu like/unlike:", e);
+                }
+            });
+        });
+    });
+</script>
+
+
 </html>

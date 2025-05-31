@@ -19,8 +19,9 @@ public class Interaction {
     @JoinColumn(name = "userId", nullable = false)
     private User user;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "type", nullable = false)
-    private String type;
+    private InteractionType type;
 
     @Column(name = "createdAt", nullable = false)
     private LocalDateTime createdAt;
@@ -31,8 +32,8 @@ public class Interaction {
     public void setArticle(Article article) { this.article = article; }
     public User getUser() { return user; }
     public void setUser(User user) { this.user = user; }
-    public String getType() { return type; }
-    public void setType(String type) { this.type = type; }
+    public InteractionType getType() { return type; }
+    public void setType(InteractionType type) { this.type = type; }
     public LocalDateTime getCreatedAt() { return createdAt; }
     public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
 }
