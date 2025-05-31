@@ -26,39 +26,38 @@
     </div>
     <article class="prose max-w-none" th:utext="${article.content}">
     </article>
-<!-- Nút Like -->
-<button type="button"
-        class="like-btn px-4 py-2 rounded text-white mt-5"
-        th:classappend="${#lists.contains(article.interactions.?[user.email == #authentication.name].![type.name() == 'LIKE'], true)} ? 'bg-gray-400 text-black' : 'bg-blue-600 text-white'"
-        th:data-article-id="${article.id}"
-        th:data-liked="${#lists.contains(article.interactions.?[user.email == #authentication.name].![type.name() == 'LIKE'], true)}"
-        th:text="${#lists.contains(article.interactions.?[user.email == #authentication.name].![type.name() == 'LIKE'], true)} ? 'Unlike' : 'Like'">
-    Like
-</button>
-<!-- Bình luận -->
-<div class="mt-10">
-    <h2 class="text-xl font-bold mb-4">Bình luận</h2>
-
-    <!-- Hiển thị bình luận -->
-    <div th:each="comment : ${comments}" class="border-b border-gray-200 py-4">
-        <p class="font-semibold" th:text="${comment.user.fullName}">Tên người dùng</p>
-        <p class="text-sm text-gray-500" th:text="${#temporals.format(comment.createdAt, 'dd/MM/yyyy HH:mm')}"></p>
-        <p th:text="${comment.content}"></p>
-    </div>
-
-    <!-- Form bình luận -->
-    <div th:if="${currentUser != null}" class="mt-6">
-        <form th:action="@{/articles/{id}/comment(id=${article.id})}" method="post" th:attr="data-article-id=${article.id}">
-            <textarea name="content" rows="3" class="w-full border rounded p-2 mb-2" placeholder="Nhập bình luận..."></textarea>
-            <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">Gửi bình luận</button>
-        </form>
-    </div>
-
-    <div th:if="${currentUser == null}" class="text-gray-500">
-        <i>Vui lòng đăng nhập để bình luận.</i>
-    </div>
-</div>
-
+	<!-- Nút Like -->
+	<button type="button"
+	        class="like-btn px-4 py-2 rounded text-white mt-5"
+	        th:classappend="${#lists.contains(article.interactions.?[user.email == #authentication.name].![type.name() == 'LIKE'], true)} ? 'bg-gray-400 text-black' : 'bg-blue-600 text-white'"
+	        th:data-article-id="${article.id}"
+	        th:data-liked="${#lists.contains(article.interactions.?[user.email == #authentication.name].![type.name() == 'LIKE'], true)}"
+	        th:text="${#lists.contains(article.interactions.?[user.email == #authentication.name].![type.name() == 'LIKE'], true)} ? 'Unlike' : 'Like'">
+	    Like
+	</button>
+	<!-- Bình luận -->
+	<div class="mt-10">
+	    <h2 class="text-xl font-bold mb-4">Bình luận</h2>
+	
+	    <!-- Hiển thị bình luận -->
+	    <div th:each="comment : ${comments}" class="border-b border-gray-200 py-4">
+	        <p class="font-semibold" th:text="${comment.user.fullName}">Tên người dùng</p>
+	        <p class="text-sm text-gray-500" th:text="${#temporals.format(comment.createdAt, 'dd/MM/yyyy HH:mm')}"></p>
+	        <p th:text="${comment.content}"></p>
+	    </div>
+	
+	    <!-- Form bình luận -->
+	    <div th:if="${currentUser != null}" class="mt-6">
+	        <form th:action="@{/articles/{id}/comment(id=${article.id})}" method="post" th:attr="data-article-id=${article.id}">
+	            <textarea name="content" rows="3" class="w-full border rounded p-2 mb-2" placeholder="Nhập bình luận..."></textarea>
+	            <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">Gửi bình luận</button>
+	        </form>
+	    </div>
+	
+	    <div th:if="${currentUser == null}" class="text-gray-500">
+	        <i>Vui lòng đăng nhập để bình luận.</i>
+	    </div>
+	</div>
 </section>
 
 <div class="p-8 bg-white">

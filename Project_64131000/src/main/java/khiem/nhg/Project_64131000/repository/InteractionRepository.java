@@ -16,5 +16,5 @@ public interface InteractionRepository extends JpaRepository<Interaction, Long> 
     Interaction findByUserUserIdAndArticleArticleIdAndType(Long userId, Long articleId, String type);
     boolean existsByArticleAndUserAndType(Article article, User user, InteractionType like);
     void deleteByUserAndArticleAndType(User user, Article article, InteractionType type);
-
+    List<Interaction> findTop5ByUserAndTypeOrderByCreatedAtDesc(User user, InteractionType type);
 }

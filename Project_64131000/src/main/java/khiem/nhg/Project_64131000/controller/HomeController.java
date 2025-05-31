@@ -2,6 +2,7 @@ package khiem.nhg.Project_64131000.controller;
 
 import khiem.nhg.Project_64131000.model.Article;
 import khiem.nhg.Project_64131000.model.User;
+import khiem.nhg.Project_64131000.model.UserActivityDTO;
 import khiem.nhg.Project_64131000.repository.ArticleRepository;
 import khiem.nhg.Project_64131000.repository.UserRepository;
 import khiem.nhg.Project_64131000.service.UserService;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import jakarta.annotation.PostConstruct;
 
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import org.jsoup.Jsoup;
@@ -56,6 +58,8 @@ public class HomeController {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         if (auth != null && auth.isAuthenticated() && !"anonymousUser".equals(auth.getPrincipal())) {
             User currentUser = userRepository.findByEmail(auth.getName()).orElse(null);
+            List<UserActivityDTO> activities = userService.getRecentActivities(currentUser);
+            model.addAttribute("userActivities", activities);
             model.addAttribute("currentUser", currentUser);
         }
 
