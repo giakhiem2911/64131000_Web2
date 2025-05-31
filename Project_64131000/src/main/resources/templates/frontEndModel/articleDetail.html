@@ -28,7 +28,7 @@
     </article>
 <!-- Nút Like -->
 <button type="button"
-        class="like-btn px-4 py-2 rounded text-white"
+        class="like-btn px-4 py-2 rounded text-white mt-5"
         th:classappend="${#lists.contains(article.interactions.?[user.email == #authentication.name].![type.name() == 'LIKE'], true)} ? 'bg-gray-400 text-black' : 'bg-blue-600 text-white'"
         th:data-article-id="${article.id}"
         th:data-liked="${#lists.contains(article.interactions.?[user.email == #authentication.name].![type.name() == 'LIKE'], true)}"
@@ -48,7 +48,7 @@
 
     <!-- Form bình luận -->
     <div th:if="${currentUser != null}" class="mt-6">
-        <form th:action="@{/articles/{id}/comment(id=${article.id})}" method="post">
+        <form th:action="@{/articles/{id}/comment(id=${article.id})}" method="post" th:attr="data-article-id=${article.id}">
             <textarea name="content" rows="3" class="w-full border rounded p-2 mb-2" placeholder="Nhập bình luận..."></textarea>
             <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">Gửi bình luận</button>
         </form>
@@ -105,6 +105,49 @@
                 } catch (e) {
                     console.error("Lỗi khi gửi yêu cầu like/unlike:", e);
                 }
+            });
+        });
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector("form[method='post']");
+        if (!form) return;
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault(); // Không reload
+
+            const content = form.querySelector("textarea[name='content']").value.trim();
+            if (!content) return;
+
+            const articleId = form.getAttribute("data-article-id");
+            const token = document.querySelector('meta[name="_csrf"]').getAttribute('content');
+            const header = document.querySelector('meta[name="_csrf_header"]').getAttribute('content');
+            fetch(`/articles/${articleId}/comment/ajax`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                   	[header]: token  
+                },
+                body: `content=${encodeURIComponent(content)}`
+            })
+            .then(response => {
+                if (!response.ok) throw new Error("Lỗi gửi bình luận");
+                return response.json();
+            })
+            .then(data => {
+                const commentsList = document.querySelector(".mt-10"); // vùng chứa bình luận
+                const newComment = document.createElement("div");
+                newComment.className = "border-b border-gray-200 py-4";
+                newComment.innerHTML = `
+                    <p class="font-semibold">${data.fullName}</p>
+                    <p class="text-sm text-gray-500">${data.createdAt}</p>
+                    <p>${data.content}</p>
+                `;
+                form.insertAdjacentElement("beforebegin", newComment);
+                form.querySelector("textarea[name='content']").value = ""; // Xóa textarea
+            })
+            .catch(error => {
+                alert("Gửi bình luận thất bại. Vui lòng thử lại.");
+                console.error(error);
             });
         });
     });

@@ -14,6 +14,7 @@ import org.jsoup.Jsoup;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -102,10 +103,11 @@ public class ArticleController {
         return ResponseEntity.ok("Unliked");
     }
 
-    @PostMapping("/articles/{id}/comment")
-    public String postComment(@PathVariable("id") Long id,
-                              @RequestParam("content") String content,
-                              Principal principal) {
+    @PostMapping("/articles/{id}/comment/ajax")
+    @ResponseBody
+    public ResponseEntity<?> postCommentAjax(@PathVariable("id") Long id,
+                                             @RequestParam("content") String content,
+                                             Principal principal) {
         if (principal != null) {
             String email = principal.getName();
             User user = userService.findByEmail(email).orElse(null);
@@ -119,11 +121,20 @@ public class ArticleController {
                 comment.setArticle(article);
 
                 commentService.saveComment(comment);
+
+                // Trả về dữ liệu JSON của comment mới
+                Map<String, Object> response = new HashMap<>();
+                response.put("fullName", user.getFullName());
+                response.put("createdAt", comment.getCreatedAt().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm")));
+                response.put("content", comment.getContent());
+
+                return ResponseEntity.ok(response);
             }
         }
 
-        return "redirect:/articles/" + id;
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Bạn chưa đăng nhập.");
     }
+
 
 
     @GetMapping("/articles/new")
