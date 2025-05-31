@@ -7,4 +7,5 @@ import khiem.nhg.Project_64131000.model.Comment;
 
 public interface CommentRepository extends JpaRepository<Comment, Long> {
     List<Comment> findByArticleArticleId(Long articleId);
+    List<Comment> findByArticleIdOrderByCreatedAtDesc(Long articleId);
 }

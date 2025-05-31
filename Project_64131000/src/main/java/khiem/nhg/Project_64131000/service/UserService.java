@@ -3,6 +3,7 @@ package khiem.nhg.Project_64131000.service;
 import khiem.nhg.Project_64131000.model.User;
 import khiem.nhg.Project_64131000.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -24,6 +25,9 @@ public class UserService {
     }
 
     public Optional<User> getUserByEmail(String email) {
+        return userRepository.findByEmail(email);
+    }
+    public Optional<User> findByEmail(String email) {
         return userRepository.findByEmail(email);
     }
 

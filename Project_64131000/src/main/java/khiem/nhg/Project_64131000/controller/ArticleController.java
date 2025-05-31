@@ -27,12 +27,14 @@ import org.springframework.web.multipart.MultipartFile;
 import jakarta.validation.Valid;
 import khiem.nhg.Project_64131000.model.Article;
 import khiem.nhg.Project_64131000.model.ArticleTag;
+import khiem.nhg.Project_64131000.model.Comment;
 import khiem.nhg.Project_64131000.model.Interaction;
 import khiem.nhg.Project_64131000.model.User;
 import khiem.nhg.Project_64131000.repository.ArticleRepository;
 import khiem.nhg.Project_64131000.repository.UserRepository;
 import khiem.nhg.Project_64131000.service.ArticleService;
 import khiem.nhg.Project_64131000.service.ArticleTagService;
+import khiem.nhg.Project_64131000.service.CommentService;
 import khiem.nhg.Project_64131000.service.InteractionService;
 import khiem.nhg.Project_64131000.service.UserService;
 
@@ -46,6 +48,7 @@ public class ArticleController {
     @Autowired private UserRepository userRepository;
     @Autowired private UserService userService;
     @Autowired private ArticleTagService articleTagService;
+    @Autowired private CommentService commentService;
 
     @Autowired
     private InteractionService interactionService;
@@ -98,6 +101,30 @@ public class ArticleController {
         interactionService.unlikeArticle(articleId, principal.getName());
         return ResponseEntity.ok("Unliked");
     }
+
+    @PostMapping("/articles/{id}/comment")
+    public String postComment(@PathVariable("id") Long id,
+                              @RequestParam("content") String content,
+                              Principal principal) {
+        if (principal != null) {
+            String email = principal.getName();
+            User user = userService.findByEmail(email).orElse(null);
+            Article article = articleService.findById(id);
+
+            if (user != null && article != null) {
+                Comment comment = new Comment();
+                comment.setContent(content);
+                comment.setCreatedAt(LocalDateTime.now());
+                comment.setUser(user);
+                comment.setArticle(article);
+
+                commentService.saveComment(comment);
+            }
+        }
+
+        return "redirect:/articles/" + id;
+    }
+
 
     @GetMapping("/articles/new")
     public String showCreateForm(Model model) {
@@ -234,6 +261,10 @@ public class ArticleController {
         article.setInteractions(interactions);
         model.addAttribute("article", article);
         model.addAttribute("latestArticles", articleService.findTop5Latest());
+        
+
+        List<Comment> comments = commentService.getCommentsByArticleId(articleId);
+        model.addAttribute("comments", comments);
         
         return "/frontEndModel/articleDetail";
     }

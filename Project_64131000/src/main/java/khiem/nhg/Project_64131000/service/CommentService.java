@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import khiem.nhg.Project_64131000.model.Comment;
 import khiem.nhg.Project_64131000.repository.CommentRepository;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -19,8 +20,7 @@ public class CommentService {
     }
 
     public List<Comment> getCommentsByArticleId(Long articleId) {
-        return commentRepository.findByArticleArticleId(articleId);
-    }
+    	return commentRepository.findByArticleIdOrderByCreatedAtDesc(articleId);    }
 
     public Optional<Comment> getCommentById(Long commentId) {
         return commentRepository.findById(commentId);
@@ -28,5 +28,10 @@ public class CommentService {
 
     public void deleteComment(Long commentId) {
         commentRepository.deleteById(commentId);
+    }
+    public void saveComment(Comment comment) {
+        comment.setCreatedAt(LocalDateTime.now());
+        comment.setUpdatedAt(LocalDateTime.now());
+        commentRepository.save(comment);
     }
 }
