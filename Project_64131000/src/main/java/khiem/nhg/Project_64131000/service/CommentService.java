@@ -30,7 +30,10 @@ public class CommentService {
         commentRepository.deleteById(commentId);
     }
     public void saveComment(Comment comment) {
-        comment.setCreatedAt(LocalDateTime.now());
+        if (comment.getCommentId() == null) {
+            // Tạo mới
+            comment.setCreatedAt(LocalDateTime.now());
+        }
         comment.setUpdatedAt(LocalDateTime.now());
         commentRepository.save(comment);
     }

@@ -15,7 +15,10 @@ public class Comment {
 
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
-
+    @PreUpdate
+    public void onUpdate() {
+        this.updatedAt = LocalDateTime.now();
+    }
     @ManyToOne
     @JoinColumn(name = "userId")
     private User user;

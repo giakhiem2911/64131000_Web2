@@ -32,6 +32,7 @@ import khiem.nhg.Project_64131000.model.Comment;
 import khiem.nhg.Project_64131000.model.Interaction;
 import khiem.nhg.Project_64131000.model.User;
 import khiem.nhg.Project_64131000.repository.ArticleRepository;
+import khiem.nhg.Project_64131000.repository.CommentRepository;
 import khiem.nhg.Project_64131000.repository.UserRepository;
 import khiem.nhg.Project_64131000.service.ArticleService;
 import khiem.nhg.Project_64131000.service.ArticleTagService;
@@ -135,7 +136,53 @@ public class ArticleController {
         return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Bạn chưa đăng nhập.");
     }
 
+	@Autowired
+	public CommentRepository commentRepository;
+	
+	
+	@DeleteMapping("/comments/{commentId}/delete")
+	@ResponseBody
+	public ResponseEntity<?> deleteComment(@PathVariable Long commentId, Principal principal) {
+	    Optional<Comment> optionalComment = commentRepository.findById(commentId);
 
+	    if (optionalComment.isEmpty()) {
+	        return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Không tìm thấy bình luận.");
+	    }
+
+	    Comment comment = optionalComment.get();
+	    if (!comment.getUser().getEmail().equals(principal.getName())) {
+	        return ResponseEntity.status(HttpStatus.FORBIDDEN).body("Bạn không có quyền xóa bình luận này.");
+	    }
+
+	    commentService.deleteComment(commentId);
+	    return ResponseEntity.ok("Xóa thành công.");
+	}
+	@PutMapping("/comments/{commentId}/edit")
+	@ResponseBody
+	public ResponseEntity<?> editComment(@PathVariable Long commentId,
+	                                     @RequestParam("content") String content,
+	                                     Principal principal) {
+	    Optional<Comment> optionalComment = commentRepository.findById(commentId);
+
+	    if (optionalComment.isEmpty()) {
+	        return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Không tìm thấy bình luận.");
+	    }
+
+	    Comment comment = optionalComment.get();
+	    if (!comment.getUser().getEmail().equals(principal.getName())) {
+	        return ResponseEntity.status(HttpStatus.FORBIDDEN).body("Bạn không có quyền sửa bình luận này.");
+	    }
+
+	    comment.setContent(content);
+	    comment.setUpdatedAt(LocalDateTime.now());
+	    commentService.saveComment(comment);
+
+	    Map<String, Object> response = new HashMap<>();
+	    response.put("updatedAt", comment.getUpdatedAt().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm")));
+	    response.put("content", comment.getContent());
+
+	    return ResponseEntity.ok(response);
+	}
 
     @GetMapping("/articles/new")
     public String showCreateForm(Model model) {

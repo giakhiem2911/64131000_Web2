@@ -19,8 +19,8 @@
 	        </li>
 	    </ul>
 		<!-- Hoạt động gần đây -->
-		<h2 class="font-bold text-gray-700 m-5">Hoạt động gần đây</h2>
-		<ul th:if="${userActivities != null}" class="space-y-3 text-sm text-gray-700">
+		<h2 th:if="${userActivities != null}" class="font-bold text-gray-700 m-5">Hoạt động gần đây</h2>
+		<ul class="space-y-3 text-sm text-gray-700">
 		    <li th:each="activity,iterStat : ${userActivities}" 
 		        class="flex items-start gap-3 p-3 rounded-md bg-white shadow-sm cursor-pointer animate-fadeInUp"
 		        th:style="'animation-delay: ' + (0.1 * ${iterStat.index}) + 's;'">
