@@ -34,7 +34,6 @@
     <fullyQualifiedTypeName name="java.beans.Statement"/>
     <fullyQualifiedTypeName name="java.sql.Statement"/>
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
-    <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
     <fullyQualifiedTypeName name="khiem.nhg.Project_64131000.repository.UserRepository"/>
     <fullyQualifiedTypeName name="org.springframework.security.crypto.password.NoOpPasswordEncoder"/>
     <fullyQualifiedTypeName name="khiem.nhg.Project_64131000.model.Article"/>
@@ -42,7 +41,6 @@
     <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
     <fullyQualifiedTypeName name="khiem.nhg.Project_64131000.repository.ArticleTagRepository"/>
     <fullyQualifiedTypeName name="java.util.Locale.Category"/>
-    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="org.springframework.web.multipart.MultipartFile"/>
     <fullyQualifiedTypeName name="khiem.nhg.Project_64131000.model.ArticleImage"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
@@ -53,4 +51,10 @@
     <fullyQualifiedTypeName name="khiem.nhg.Project_64131000.model.User"/>
     <fullyQualifiedTypeName name="khiem.nhg.Project_64131000.model.InteractionType"/>
     <fullyQualifiedTypeName name="khiem.nhg.Project_64131000.repository.InteractionRepository"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="khiem.nhg.Project_64131000.repository.CommentRepository"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.DeleteMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PutMapping"/>
+    <fullyQualifiedTypeName name="khiem.nhg.Project_64131000.service.CommentService"/>
 </qualifiedTypeNameHistroy>

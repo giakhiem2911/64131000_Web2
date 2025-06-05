@@ -152,6 +152,28 @@
         <div class="w-full col-right" th:replace="~{frontEndModel/latestArticles :: latestArticlesSidebar}"></div>
     </div>
 </section>
+<!-- templates/fragments/scrollTop.html -->
+<div th:fragment="scrollTopButton">
+    <button onclick="scrollToTop()" id="scrollTopBtn"
+        class="hidden fixed bottom-6 right-6 bg-blue-600 text-white p-5 rounded-full shadow-lg hover:bg-blue-700 transition duration-300 z-50">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <script>
+        window.onscroll = function () {
+            const btn = document.getElementById("scrollTopBtn");
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                btn.classList.remove("hidden");
+            } else {
+                btn.classList.add("hidden");
+            }
+        };
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</div>
 <footer th:fragment="footer" class="bg-blue-800 text-white py-6">
     <div class="container mx-auto text-center px-4">
         <p>© 2025 TechNews. Mọi quyền được bảo lưu.</p>
